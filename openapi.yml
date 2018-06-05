@@ -1,0 +1,1246 @@
+components:
+  securitySchemes:
+    basicAuth:
+      scheme: basic
+      type: http
+    bearerAuth:
+      bearerFormat: Simplicite token
+      scheme: bearer
+      type: http
+servers:
+- url: https://dev40.dev.simplicite.io/api
+openapi: 3.0.0
+paths:
+  /rest/TestJavaObject:
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object metadata or search records
+      operationId: obj-testjavaobject-search
+      responses:
+        '200':
+          description: Business object metadata or records of search result
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Search filter for Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Search filter for Description
+        required: false
+      tags:
+      - TestJavaObject
+  /rest/TestJavaUser:
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object metadata or search records
+      operationId: obj-testjavauser-search
+      responses:
+        '200':
+          description: Business object metadata or records of search result
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_login
+        description: Search filter for Login
+        required: false
+      - schema:
+          type: string
+          enum:
+          - ENU
+          - FRA
+        in: query
+        name: usr_lang
+        description: Search filter for Language
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: usr_image_id
+        description: Search filter for Picture
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_timezone
+        description: Search filter for Time zone
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: usr_minrows
+        description: Search filter for Min size of lists
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: usr_maxrows
+        description: Search filter for Max size of lists
+        required: false
+      - schema:
+          type: string
+          enum:
+          - '0'
+          - '1'
+          - '3'
+        in: query
+        name: usr_active
+        description: Search filter for Active
+        required: false
+      - schema:
+          type: string
+          enum:
+          - MR
+          - MRS
+          - MS
+        in: query
+        name: usr_title
+        description: Search filter for Title
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_last_name
+        description: Search filter for Name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_first_name
+        description: Search filter for First name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_email
+        description: Search filter for Email
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_id
+        description: Search filter for Home page
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_id__viw_name
+        description: Search filter for Home page
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_work_num
+        description: Search filter for Work phone
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_num
+        description: Search filter for Home phone
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_cell_num
+        description: Search filter for Mobile phone
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_address1
+        description: Search filter for Address
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_address2
+        description: Search filter for Address complement
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_zipcode
+        description: Search filter for Zip code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_city
+        description: Search filter for City
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_state
+        description: Search filter for State
+        required: false
+      - schema:
+          type: string
+          enum:
+          - FR
+          - UK
+          - ES
+          - DE
+          - BE
+          - CH
+          - IE
+          - CA
+          - US
+        in: query
+        name: usr_country
+        description: Search filter for Country
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Search filter for Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Search filter for Module Name
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_menu
+        description: Search filter for Menu visible
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_menu_defhidden
+        description: Search filter for Menu hidden by default
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_menu_defcollapsed
+        description: Search filter for Menu collapsed by default
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_menu_defdomain_id
+        description: Search filter for Domain menu by default
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_menu_defdomain_id__obd_name
+        description: Search filter for Domain menu by default Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_extra
+        description: Search filter for Extra zone visible
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_subhead
+        description: Search filter for Sub-head
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_logout
+        description: Search filter for Logout
+        required: false
+      tags:
+      - TestJavaUser
+  /login:
+    get:
+      security:
+      - basicAuth: []
+      description: Login
+      operationId: login
+      responses:
+        '200':
+          description: User token
+          content:
+            application/json: {}
+            text/plain: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+          enum:
+          - json
+          - oauth2
+        in: query
+        name: _output
+        description: Optional output format
+        required: false
+      tags:
+      - Application
+  /logout:
+    get:
+      security:
+      - bearerAuth: []
+      description: Logout
+      operationId: logout
+      responses:
+        '200':
+          description: Logout confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      tags:
+      - Application
+  /rest/TestJavaUser/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      description: Create business object record
+      operationId: obj-testjavauser-create
+      responses:
+        '200':
+          description: Created business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: usr_login
+        description: Login
+        required: false
+      - schema:
+          type: string
+          enum:
+          - ENU
+          - FRA
+        in: query
+        name: usr_lang
+        description: Language
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: usr_image_id
+        description: Picture
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_timezone
+        description: Time zone
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: usr_minrows
+        description: Min size of lists
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: usr_maxrows
+        description: Max size of lists
+        required: false
+      - schema:
+          type: string
+          enum:
+          - '0'
+          - '1'
+          - '3'
+        in: query
+        name: usr_active
+        description: Active
+        required: false
+      - schema:
+          type: string
+          enum:
+          - MR
+          - MRS
+          - MS
+        in: query
+        name: usr_title
+        description: Title
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_last_name
+        description: Name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_first_name
+        description: First name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_email
+        description: Email
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_id
+        description: Home page
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_id__viw_name
+        description: Home page
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_work_num
+        description: Work phone
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_num
+        description: Home phone
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_cell_num
+        description: Mobile phone
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_address1
+        description: Address
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_address2
+        description: Address complement
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_zipcode
+        description: Zip code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_city
+        description: City
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_state
+        description: State
+        required: false
+      - schema:
+          type: string
+          enum:
+          - FR
+          - UK
+          - ES
+          - DE
+          - BE
+          - CH
+          - IE
+          - CA
+          - US
+        in: query
+        name: usr_country
+        description: Country
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Module Name
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_menu
+        description: Menu visible
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_menu_defhidden
+        description: Menu hidden by default
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_menu_defcollapsed
+        description: Menu collapsed by default
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_menu_defdomain_id
+        description: Domain menu by default
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_menu_defdomain_id__obd_name
+        description: Domain menu by default Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_extra
+        description: Extra zone visible
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_subhead
+        description: Sub-head
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_logout
+        description: Logout
+        required: false
+      tags:
+      - TestJavaUser
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object record
+      operationId: obj-testjavauser-get
+      responses:
+        '200':
+          description: Business object record
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - TestJavaUser
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete business object record
+      operationId: obj-testjavauser-delete
+      responses:
+        '200':
+          description: Business object deletion confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      tags:
+      - TestJavaUser
+    put:
+      security:
+      - bearerAuth: []
+      description: Update business object record
+      operationId: obj-testjavauser-update
+      responses:
+        '200':
+          description: Updated business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: usr_login
+        description: Login
+        required: false
+      - schema:
+          type: string
+          enum:
+          - ENU
+          - FRA
+        in: query
+        name: usr_lang
+        description: Language
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: usr_image_id
+        description: Picture
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_timezone
+        description: Time zone
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: usr_minrows
+        description: Min size of lists
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: usr_maxrows
+        description: Max size of lists
+        required: false
+      - schema:
+          type: string
+          enum:
+          - '0'
+          - '1'
+          - '3'
+        in: query
+        name: usr_active
+        description: Active
+        required: false
+      - schema:
+          type: string
+          enum:
+          - MR
+          - MRS
+          - MS
+        in: query
+        name: usr_title
+        description: Title
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_last_name
+        description: Name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_first_name
+        description: First name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_email
+        description: Email
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_id
+        description: Home page
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_id__viw_name
+        description: Home page
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_work_num
+        description: Work phone
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_num
+        description: Home phone
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_cell_num
+        description: Mobile phone
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_address1
+        description: Address
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_address2
+        description: Address complement
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_zipcode
+        description: Zip code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_city
+        description: City
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_state
+        description: State
+        required: false
+      - schema:
+          type: string
+          enum:
+          - FR
+          - UK
+          - ES
+          - DE
+          - BE
+          - CH
+          - IE
+          - CA
+          - US
+        in: query
+        name: usr_country
+        description: Country
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Module Name
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_menu
+        description: Menu visible
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_menu_defhidden
+        description: Menu hidden by default
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_menu_defcollapsed
+        description: Menu collapsed by default
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_menu_defdomain_id
+        description: Domain menu by default
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_menu_defdomain_id__obd_name
+        description: Domain menu by default Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_extra
+        description: Extra zone visible
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: usr_subhead
+        description: Sub-head
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_logout
+        description: Logout
+        required: false
+      tags:
+      - TestJavaUser
+  /rest/TestJavaObjectChild:
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object metadata or search records
+      operationId: obj-testjavaobjectchild-search
+      responses:
+        '200':
+          description: Business object metadata or records of search result
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Search filter for Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Search filter for Description
+        required: false
+      tags:
+      - TestJavaObjectChild
+  /rest:
+    get:
+      security:
+      - bearerAuth: []
+      description: Application session information
+      operationId: info
+      responses:
+        '200':
+          description: Application information
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+            text/plain: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: texts
+        description: Texts?
+        required: false
+      tags:
+      - Application
+  /rest/TestJavaObjectChild/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      description: Create business object record
+      operationId: obj-testjavaobjectchild-create
+      responses:
+        '200':
+          description: Created business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Description
+        required: false
+      tags:
+      - TestJavaObjectChild
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object record
+      operationId: obj-testjavaobjectchild-get
+      responses:
+        '200':
+          description: Business object record
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - TestJavaObjectChild
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete business object record
+      operationId: obj-testjavaobjectchild-delete
+      responses:
+        '200':
+          description: Business object deletion confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      tags:
+      - TestJavaObjectChild
+    put:
+      security:
+      - bearerAuth: []
+      description: Update business object record
+      operationId: obj-testjavaobjectchild-update
+      responses:
+        '200':
+          description: Updated business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Description
+        required: false
+      tags:
+      - TestJavaObjectChild
+  /rest/TestJavaObject/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      description: Create business object record
+      operationId: obj-testjavaobject-create
+      responses:
+        '200':
+          description: Created business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Description
+        required: false
+      tags:
+      - TestJavaObject
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object record
+      operationId: obj-testjavaobject-get
+      responses:
+        '200':
+          description: Business object record
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - TestJavaObject
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete business object record
+      operationId: obj-testjavaobject-delete
+      responses:
+        '200':
+          description: Business object deletion confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      tags:
+      - TestJavaObject
+    put:
+      security:
+      - bearerAuth: []
+      description: Update business object record
+      operationId: obj-testjavaobject-update
+      responses:
+        '200':
+          description: Updated business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Description
+        required: false
+      tags:
+      - TestJavaObject
+info:
+  license:
+    name: Simplicite license
+    url: http://www.simplicitesoftware.com
+  contact:
+    name: Simplicite Software
+    url: http://www.simplicitesoftware.com
+    email: contact@simplicitesoftware.com
+  description: REST APIs for TestJava
+  title: TestJava
+  version: '4.0'

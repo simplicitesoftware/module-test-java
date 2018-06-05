@@ -5,6 +5,8 @@ import com.simplicite.util.AppLog;
 import com.simplicite.util.Message;
 import com.simplicite.bpm.Processus;
 
+import com.simplicite.commons.TestJava.TestJavaCommon;
+
 /**
  * Test workflow
  */
@@ -16,6 +18,7 @@ public class TestJavaWorkflow extends Processus {
 	 */
 	@Override
 	public void postInstantiate(Grant g) {
+		AppLog.info(getClass(), "postInstantiate", TestJavaCommon.helloworld() + " from " + getName(), g);
 		AppLog.info(getClass(), "postInstantiate", "Post instantiate (java)", g);
 	}
 	

@@ -17,6 +17,22 @@ Test Java object
 | ------------------------------------------------------------ | ---------------------------------------- | --- | --- | -------------------------------------------------------------------------------- |
 | `tstjCode`                                                   | char(50)                                 | x*  | x   | -                                                                                |
 | `tstjDesc`                                                   | html(4000)                               |     | x   | -                                                                                |
+| `tstjFlag`                                                   | boolean                                  |     | x   | -                                                                                |
+| `tstjDesc`                                                   | html(4000)                               |     | x   | -                                                                                |
+
+### Custom actions
+
+No custom action
+
+`TestJavaObjectChild` business object definition
+------------------------------------------------
+
+Child of TestJavaObject
+
+### Fields
+
+| Name                                                         | Type                                     | Req | Upd | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | --- | --- | -------------------------------------------------------------------------------- |
 
 ### Custom actions
 
@@ -36,3 +52,13 @@ No custom action
 
 No custom action
 
+`TestJavaWorkflow` business process definition
+----------------------------------------------
+
+
+
+### Activities
+
+* `Begin`: 
+* `Create`: 
+* `End`: 
