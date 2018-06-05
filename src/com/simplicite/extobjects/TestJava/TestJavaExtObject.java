@@ -1,7 +1,7 @@
 package com.simplicite.extobjects.TestJava;
 
-import com.simplicite.util.AppLog;
 import com.simplicite.commons.TestJava.TestJavaCommon;
+import com.simplicite.util.AppLog;
 import com.simplicite.util.ExternalObject;
 import com.simplicite.util.tools.Parameters;
 
@@ -18,7 +18,7 @@ public class TestJavaExtObject extends ExternalObject {
 	@Override
 	public String display(Parameters params) {
 		try {
-			StringBuilder h = new StringBuilder("<p>Hello (external object) World!");
+			StringBuilder h = new StringBuilder("<p>Hello (external XXX object) World!");
 			h.append("<br/>" + new TestJavaCommon(getGrant().getLogin()).hello() + "</p>");
 			AppLog.info(getClass(), "display", TestJavaCommon.helloworld() + " from external object " + getName(), getGrant());
 			return h + "<p><a href=\"" + params.getLocation() + "\">" + getGrant().T("REFRESH") + "</a></p>";
