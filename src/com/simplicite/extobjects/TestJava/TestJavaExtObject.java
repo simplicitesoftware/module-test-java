@@ -18,8 +18,9 @@ public class TestJavaExtObject extends ExternalObject {
 	@Override
 	public String display(Parameters params) {
 		try {
-			StringBuilder h = new StringBuilder("<p>Hello (external object) World!");
-			h.append("<br/>" + new TestJavaCommon(getGrant().getLogin()).hello() + "</p>");
+			String hello = "Hello (external object) World!";
+			StringBuilder h = new StringBuilder("<p>" + hello + "</p>");
+			h.append("<p>" + new TestJavaCommon(getGrant().getLogin()).hello() + "</p>");
 			AppLog.info(getClass(), "display", TestJavaCommon.helloworld() + " from external object " + getName(), getGrant());
 			return h + "<p><a href=\"" + params.getLocation() + "\">" + getGrant().T("REFRESH") + "</a></p>";
 		} catch (Exception e) {
