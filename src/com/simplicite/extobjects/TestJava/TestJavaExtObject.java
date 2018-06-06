@@ -18,7 +18,7 @@ public class TestJavaExtObject extends ExternalObject {
 	@Override
 	public String display(Parameters params) {
 		try {
-			String hello = "Hello (external object) World!";
+			String hello = "Hello (external XXXX object) World!";
 			StringBuilder h = new StringBuilder("<p>" + hello + "</p>");
 			h.append("<p>" + new TestJavaCommon(getGrant().getLogin()).hello() + "</p>");
 			AppLog.info(getClass(), "display", TestJavaCommon.helloworld() + " from external object " + getName(), getGrant());
