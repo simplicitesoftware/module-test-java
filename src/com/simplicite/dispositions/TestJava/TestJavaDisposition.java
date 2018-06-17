@@ -1,9 +1,12 @@
 package com.simplicite.dispositions.TestJava;
 
+import com.simplicite.util.Globals;
 import com.simplicite.util.AppLog;
 import com.simplicite.util.Disposition;
-import com.simplicite.util.Globals;
+import com.simplicite.util.tools.HTMLTool;
 import com.simplicite.util.tools.Parameters;
+
+import com.simplicite.commons.TestJava.TestJavaCommon;
 
 /**
  * Java disposition
