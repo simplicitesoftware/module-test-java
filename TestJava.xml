@@ -1010,8 +1010,8 @@
 		<res_lang>ANY</res_lang>
 		<res_code>STYLES</res_code>
 		<res_cached>0</res_cached>
-		<res_file>ObjectExternal/TestJavaExtObject-resources/STYLES.css</res_file>
-		<res_file_compiled/>
+		<res_file>ObjectExternal/TestJavaExtObject-resources/STYLES.less</res_file>
+		<res_file_compiled>ObjectExternal/TestJavaExtObject-resources/STYLES.css</res_file_compiled>
 		<res_image/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
