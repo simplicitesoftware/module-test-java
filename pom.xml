@@ -4,7 +4,7 @@
   <groupId>com.simplicite.modules</groupId>
   <artifactId>TestJava</artifactId>
   <version>4.0</version>
-  <name>Simplicite</name>
+  <name>Simplicite-TestJava</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
