@@ -1,4 +1,171 @@
 components:
+  schemas:
+    ArrayOfTestJavaObject:
+      type: array
+      items:
+        $ref: '#/components/schemas/TestJavaObject'
+    TestJavaObject:
+      type: object
+      properties:
+        tstjDesc:
+          description: Description
+          type: string
+        row_id:
+          description: ID
+          type: string
+        tstjCode:
+          description: Code
+          type: string
+        tstjFlag:
+          description: Flag
+          type: boolean
+    TestJavaObjectChild:
+      type: object
+      properties:
+        tstjDesc:
+          description: Description
+          type: string
+        row_id:
+          description: ID
+          type: string
+        tstjCode:
+          description: Code
+          type: string
+        tstjFlag:
+          description: Flag
+          type: boolean
+    ArrayOfTestJavaObjectChild:
+      type: array
+      items:
+        $ref: '#/components/schemas/TestJavaObjectChild'
+    TestJavaUser:
+      type: object
+      properties:
+        usr_timezone:
+          description: Time zone
+          type: string
+        row_module_id__mdl_name:
+          description: Module Name
+          type: string
+        usr_image_id:
+          description: Picture
+          type: object
+        usr_subhead:
+          description: Sub-head
+          type: boolean
+        usr_minrows:
+          description: Min size of lists
+          type: integer
+        row_module_id:
+          description: Module
+          type: string
+        usr_login:
+          description: Login
+          type: string
+        usr_country:
+          description: Country
+          type: string
+          enum:
+          - FR
+          - UK
+          - ES
+          - DE
+          - BE
+          - CH
+          - IE
+          - US
+          - CA
+        usr_title:
+          description: Title
+          type: string
+          enum:
+          - MR
+          - MRS
+          - MS
+        usr_logout:
+          description: Logout
+          type: string
+        usr_home_id__viw_name:
+          description: Home page
+          type: string
+        usr_menu_defdomain_id:
+          description: Domain menu by default
+          type: string
+        usr_menu_defhidden:
+          description: Menu hidden by default
+          type: boolean
+        usr_menu_defcollapsed:
+          description: Menu collapsed by default
+          type: boolean
+        usr_first_name:
+          description: First name
+          type: string
+        usr_home_num:
+          description: Home phone
+          type: string
+        usr_email:
+          description: Email
+          type: string
+        usr_active:
+          description: Active
+          type: string
+          enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+        usr_menu:
+          description: Menu visible
+          type: boolean
+        usr_zipcode:
+          description: Zip code
+          type: string
+        usr_address1:
+          description: Address
+          type: string
+        usr_address2:
+          description: Address complement
+          type: string
+        usr_last_name:
+          description: Name
+          type: string
+        usr_cell_num:
+          description: Mobile phone
+          type: string
+        usr_menu_defdomain_id__obd_name:
+          description: Domain menu by default Code
+          type: string
+        usr_city:
+          description: City
+          type: string
+        usr_lang:
+          description: Language
+          type: string
+          enum:
+          - ENU
+          - FRA
+        usr_maxrows:
+          description: Max size of lists
+          type: integer
+        row_id:
+          description: ID
+          type: string
+        usr_work_num:
+          description: Work phone
+          type: string
+        usr_home_id:
+          description: Home page
+          type: string
+        usr_state:
+          description: State
+          type: string
+        usr_extra:
+          description: Extra zone visible
+          type: boolean
+    ArrayOfTestJavaUser:
+      type: array
+      items:
+        $ref: '#/components/schemas/TestJavaUser'
   securitySchemes:
     basicAuth:
       scheme: basic
@@ -21,7 +188,9 @@ paths:
         '200':
           description: Business object metadata or records of search result
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfTestJavaObject'
         '401':
           description: Authentication error
           content:
@@ -69,7 +238,9 @@ paths:
         '200':
           description: Business object metadata or records of search result
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfTestJavaUser'
         '401':
           description: Authentication error
           content:
@@ -131,6 +302,7 @@ paths:
           enum:
           - '0'
           - '1'
+          - '2'
           - '3'
         in: query
         name: usr_active
@@ -357,7 +529,9 @@ paths:
         '200':
           description: Created business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaUser'
         '401':
           description: Authentication error
           content:
@@ -413,6 +587,7 @@ paths:
           enum:
           - '0'
           - '1'
+          - '2'
           - '3'
         in: query
         name: usr_active
@@ -592,6 +767,14 @@ paths:
       responses:
         '200':
           description: Business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaUser'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
       parameters:
       - schema:
           type: string
@@ -627,8 +810,6 @@ paths:
       responses:
         '200':
           description: Business object deletion confirmation
-          content:
-            application/json: {}
         '401':
           description: Authentication error
           content:
@@ -651,7 +832,9 @@ paths:
         '200':
           description: Updated business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaUser'
         '401':
           description: Authentication error
           content:
@@ -707,6 +890,7 @@ paths:
           enum:
           - '0'
           - '1'
+          - '2'
           - '3'
         in: query
         name: usr_active
@@ -888,7 +1072,9 @@ paths:
         '200':
           description: Business object metadata or records of search result
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfTestJavaObjectChild'
         '401':
           description: Authentication error
           content:
@@ -961,7 +1147,9 @@ paths:
         '200':
           description: Created business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObjectChild'
         '401':
           description: Authentication error
           content:
@@ -1001,6 +1189,14 @@ paths:
       responses:
         '200':
           description: Business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObjectChild'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
       parameters:
       - schema:
           type: string
@@ -1036,8 +1232,6 @@ paths:
       responses:
         '200':
           description: Business object deletion confirmation
-          content:
-            application/json: {}
         '401':
           description: Authentication error
           content:
@@ -1060,7 +1254,9 @@ paths:
         '200':
           description: Updated business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObjectChild'
         '401':
           description: Authentication error
           content:
@@ -1102,7 +1298,9 @@ paths:
         '200':
           description: Created business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObject'
         '401':
           description: Authentication error
           content:
@@ -1142,6 +1340,14 @@ paths:
       responses:
         '200':
           description: Business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObject'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
       parameters:
       - schema:
           type: string
@@ -1177,8 +1383,6 @@ paths:
       responses:
         '200':
           description: Business object deletion confirmation
-          content:
-            application/json: {}
         '401':
           description: Authentication error
           content:
@@ -1201,7 +1405,9 @@ paths:
         '200':
           description: Updated business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObject'
         '401':
           description: Authentication error
           content:

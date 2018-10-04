@@ -115,6 +115,7 @@
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
+		<fld_classification/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -148,6 +149,7 @@
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
+		<fld_classification/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -181,6 +183,7 @@
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
+		<fld_classification/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 </object>
@@ -269,6 +272,8 @@
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
 		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
 	</data>
 	<data>
 		<obo_name>TestJavaObjectChild</obo_name>
@@ -324,6 +329,8 @@
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
 		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
 	</data>
 	<data>
 		<obo_name>User</obo_name>
@@ -379,12 +386,14 @@
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
 		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
 	</data>
 	<data>
 		<obo_name>TestJavaUser</obo_name>
 		<obo_dbtable>m_user</obo_dbtable>
 		<obo_class/>
-		<obo_script_id>ObjectInternal/User.js</obo_script_id>
+		<obo_script_id>src/com/simplicite/objects/System/User.java</obo_script_id>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>1</obo_nosearch>
 		<obo_comment/>
@@ -434,6 +443,8 @@
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
 		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
 	</data>
 </object>
 <object>
