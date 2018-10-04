@@ -3,9 +3,9 @@ package com.simplicite.objects.TestJava;
 import com.simplicite.util.AppLog;
 
 /**
- * Test business object (child)
+ * Test business object (grand child)
  */
-public class TestJavaObjectChild extends TestJavaObject {
+public class TestJavaObjectGrandChild extends TestJavaObjectChild {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -15,7 +15,7 @@ public class TestJavaObjectChild extends TestJavaObject {
 	public void postLoad() {
 		try {
 			super.postLoad();
-			AppLog.info(getClass(), "postLoad", "Post load child (java)", getGrant());
+			AppLog.info(getClass(), "postLoad", "Post load grand child (java)", getGrant());
 		} catch (Exception e) {}
 	}
 }

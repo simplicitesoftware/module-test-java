@@ -38,6 +38,20 @@ Child of TestJavaObject
 
 No custom action
 
+`TestJavaObjectGrandChild` business object definition
+-----------------------------------------------------
+
+
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+
+### Custom actions
+
+No custom action
+
 `TestJavaUser` business object definition
 -----------------------------------------
 

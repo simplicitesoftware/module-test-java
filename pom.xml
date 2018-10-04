@@ -16,6 +16,13 @@
   </build>
   <dependencies>
     <dependency>
+      <groupId>com.simplicite</groupId>
+      <artifactId>simplicite</artifactId>
+      <version>4.0.P21b</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/simplicite-4.0.P21b.jar</systemPath>
+    </dependency>
+    <dependency>
       <groupId>org.json</groupId>
       <artifactId>json</artifactId>
       <version>20180813</version>
