@@ -28,7 +28,7 @@ public class TestJavaObject extends ObjectDB {
 	 */
 	@Override
 	public void initUpdate() {
-		AppLog.info(getClass(), "initUpdate", "Init update (java) for " + getRowId(), getGrant());
+		AppLog.info(getClass(), "initUpdate", "Init XXXXXXXXXXXXXXX update (java) for " + getRowId(), getGrant());
 	}
 
 	/**
