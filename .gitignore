@@ -4,5 +4,6 @@
 /effective.pom
 /.idea
 /*.iml
+/.scannerwork
 /**/Thumbs.db
 /**/.DS_Store

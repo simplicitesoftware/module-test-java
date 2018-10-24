@@ -4,11 +4,13 @@
   <groupId>com.simplicite.modules</groupId>
   <artifactId>TestJava</artifactId>
   <version>4.0</version>
-  <name>Simplicite-TestJava</name>
+  <name>TestJava</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <sonar.exclusions>**.min.js,**.min.css</sonar.exclusions>
+    <sonar.coverage.exclusions>**.js,src/**.java</sonar.coverage.exclusions>
   </properties>
   <build>
     <sourceDirectory>${project.basedir}/src</sourceDirectory>
@@ -18,9 +20,9 @@
     <dependency>
       <groupId>com.simplicite</groupId>
       <artifactId>simplicite</artifactId>
-      <version>4.0.P21b</version>
+      <version>4.0.P22b</version>
       <scope>system</scope>
-      <systemPath>${project.basedir}/lib/simplicite-4.0.P21b.jar</systemPath>
+      <systemPath>${project.basedir}/lib/simplicite-4.0.P22b.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.json</groupId>
