@@ -12,6 +12,6 @@ public class GrantHooks extends GrantHooksInterface {
 	 * Post load grant hook
 	 */
 	public static void postLoadGrant(Grant g) {
-		AppLog.info(GrantHooks.class, "postLoadGrant", "Grant " + g.getLogin() + " loaded (java) !", g);
+		AppLog.info(GrantHooks.class, "postLoadGrant", "Grant " + g.getLogin() + " (endpoint " + g.getEndpoint() + ") loaded (java) !", g);
 	}
 }
