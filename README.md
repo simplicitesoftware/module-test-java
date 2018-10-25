@@ -4,7 +4,7 @@
 `TestJava` module definition
 ============================
 
-This module is for testing Java features
+This module is for testing Java features.
 
 `TestJavaObject` business object definition
 -------------------------------------------

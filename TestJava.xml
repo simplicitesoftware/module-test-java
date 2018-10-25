@@ -7,7 +7,7 @@
 		<mdl_name>TestJava</mdl_name>
 		<mdl_version>4.0</mdl_version>
 		<mdl_url><![CDATA[https://www.simplicite.io/resources/modules/testjava-app-4.0.xml]]></mdl_url>
-		<mdl_lastupd>2018-10-24 13:16:07</mdl_lastupd>
+		<mdl_lastupd>2018-10-25 22:38:16</mdl_lastupd>
 		<mdl_comment><![CDATA[This module is for testing Java features.]]></mdl_comment>
 	</data>
 </object>
@@ -516,9 +516,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -527,17 +524,12 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
 		<obf_area_id.ofa_name/>
@@ -553,9 +545,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>0</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -564,17 +553,12 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>2</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research/>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
 		<obf_area_id.ofa_name/>
@@ -590,9 +574,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>0</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -601,17 +582,12 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[0]]></obf_field_id.fld_dfault>
 		<obf_area_id.ofa_name/>
@@ -627,9 +603,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>0</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -638,17 +611,12 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>2</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research/>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
 		<obf_area_id.ofa_name/>

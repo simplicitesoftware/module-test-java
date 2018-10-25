@@ -7,18 +7,9 @@ components:
     TestJavaObjectGrandChild:
       type: object
       properties:
-        tstjDesc:
-          description: Description
-          type: string
         row_id:
           description: ID
           type: string
-        tstjCode:
-          description: Code
-          type: string
-        tstjFlag:
-          description: Flag
-          type: boolean
     ActionResult:
       type: object
       properties:
@@ -28,33 +19,15 @@ components:
     TestJavaObject:
       type: object
       properties:
-        tstjDesc:
-          description: Description
-          type: string
         row_id:
           description: ID
           type: string
-        tstjCode:
-          description: Code
-          type: string
-        tstjFlag:
-          description: Flag
-          type: boolean
     TestJavaObjectChild:
       type: object
       properties:
-        tstjDesc:
-          description: Description
-          type: string
         row_id:
           description: ID
           type: string
-        tstjCode:
-          description: Code
-          type: string
-        tstjFlag:
-          description: Flag
-          type: boolean
     PublicationResult:
       type: object
       properties:
@@ -607,24 +580,6 @@ paths:
         name: _doc
         description: Documentation?
         required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Search filter for Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Search filter for Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Search filter for Description
-        required: false
       tags:
       - TestJavaObjectChild
   /rest:
@@ -676,24 +631,6 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Description
-        required: false
       tags:
       - TestJavaObjectChild
     get:
@@ -783,24 +720,6 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Description
-        required: false
       tags:
       - TestJavaObjectChild
   /rest/TestJavaUser/{row_id}/pivot:User-EXCEL:
@@ -909,24 +828,6 @@ paths:
         name: _doc
         description: Documentation?
         required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Search filter for Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Search filter for Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Search filter for Description
-        required: false
       tags:
       - TestJavaObjectGrandChild
   /rest/TestJavaObject:
@@ -982,24 +883,6 @@ paths:
         in: query
         name: _doc
         description: Documentation?
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Search filter for Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Search filter for Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Search filter for Description
         required: false
       tags:
       - TestJavaObject
@@ -1596,24 +1479,6 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Description
-        required: false
       tags:
       - TestJavaObjectGrandChild
     get:
@@ -1703,24 +1568,6 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Description
-        required: false
       tags:
       - TestJavaObjectGrandChild
   /rest/TestJavaObject/{row_id}:
@@ -1747,24 +1594,6 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Description
-        required: false
       tags:
       - TestJavaObject
     get:
@@ -1854,24 +1683,6 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Description
-        required: false
       tags:
       - TestJavaObject
 info:

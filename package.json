@@ -1,8 +1,8 @@
 {
-    "date": "Wed Oct 24 13:16:07 CEST 2018",
+    "date": "Thu Oct 25 22:38:16 CEST 2018",
     "name": "TestJava",
     "format": "xml",
-    "description": "This module is for testing Java features",
+    "description": "This module is for testing Java features.",
     "repository": {
         "type": "url",
         "url": "https://www.simplicite.io/resources/modules/testjava-app-4.0.xml"
