@@ -19,7 +19,7 @@ public class TestJavaObject extends ObjectDB {
 	public void postLoad() {
 		try {
 			AppLog.info(getClass(), "postLoad", TestJavaCommon.helloworld() + " from " + getName(), getGrant());
-			AppLog.info(getClass(), "postLoad", "Post XXX load (java)", getGrant());
+			AppLog.info(getClass(), "postLoad", "Post load (java)", getGrant());
 		} catch (Exception e) {}
 	}
 
