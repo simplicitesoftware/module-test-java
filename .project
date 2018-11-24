@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>testjava-4.0</name>
+	<name>testjava</name>
 	<buildSpec>
 		<buildCommand><name>org.eclipse.wst.common.project.facet.core.builder</name><arguments/></buildCommand>
 		<buildCommand><name>org.eclipse.jdt.core.javabuilder</name><arguments/></buildCommand>

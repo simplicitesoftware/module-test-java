@@ -390,63 +390,6 @@
 		<obo_dashboard>1</obo_dashboard>
 	</data>
 	<data>
-		<obo_name>User</obo_name>
-		<obo_dbtable>m_user</obo_dbtable>
-		<obo_class/>
-		<obo_script_id/>
-		<obo_usets>1</obo_usets>
-		<obo_nosearch>1</obo_nosearch>
-		<obo_comment><![CDATA[Utilisateur et préférences]]></obo_comment>
-		<obo_type>O</obo_type>
-		<obo_searchspec><![CDATA[t.usr_login is not null]]></obo_searchspec>
-		<obo_delspec/>
-		<obo_exportorder/>
-		<obo_distinct>0</obo_distinct>
-		<obo_indexable>1</obo_indexable>
-		<obo_groupby>0</obo_groupby>
-		<obo_dfltref>Responsability;rsp_login_id</obo_dfltref>
-		<obo_template_id.tpl_name>User</obo_template_id.tpl_name>
-		<obo_cache>D</obo_cache>
-		<obo_copy>1</obo_copy>
-		<obo_export>1</obo_export>
-		<obo_pagine>1</obo_pagine>
-		<obo_srh_predef>1</obo_srh_predef>
-		<obo_selrow>1</obo_selrow>
-		<obo_updall>1</obo_updall>
-		<obo_delall>1</obo_delall>
-		<obo_listsearch>1</obo_listsearch>
-		<obo_list_edit>N;L;E</obo_list_edit>
-		<obo_useform>1</obo_useform>
-		<obo_title/>
-		<obo_icon>user</obo_icon>
-		<obo_refcount>0</obo_refcount>
-		<obo_tree>0</obo_tree>
-		<obo_viewmode>T</obo_viewmode>
-		<obo_historic>0</obo_historic>
-		<obo_printable>1</obo_printable>
-		<obo_followlink>1</obo_followlink>
-		<obo_mergeable>0</obo_mergeable>
-		<obo_social>1</obo_social>
-		<obo_rowid_id.fld_name/>
-		<obo_extend_id.obj_name/>
-		<row_module_id.mdl_name>System</row_module_id.mdl_name>
-		<obo_btn_reload>P</obo_btn_reload>
-		<obo_btn_prefs>P</obo_btn_prefs>
-		<obo_btn_del>P</obo_btn_del>
-		<obo_btn_copy>P</obo_btn_copy>
-		<obo_btn_export>P</obo_btn_export>
-		<obo_btn_listadd>1</obo_btn_listadd>
-		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_updall>P</obo_btn_updall>
-		<obo_btn_delall>P</obo_btn_delall>
-		<obo_btn_merge>P</obo_btn_merge>
-		<obo_btn_save>1</obo_btn_save>
-		<obo_btn_saveclose>1</obo_btn_saveclose>
-		<obo_btn_close>1</obo_btn_close>
-		<obo_tray>1</obo_tray>
-		<obo_dashboard>1</obo_dashboard>
-	</data>
-	<data>
 		<obo_name>TestJavaUser</obo_name>
 		<obo_dbtable>m_user</obo_dbtable>
 		<obo_class/>

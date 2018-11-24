@@ -7,27 +7,60 @@ components:
     TestJavaObjectGrandChild:
       type: object
       properties:
+        tstjDesc:
+          description: Description
+          type: string
         row_id:
           description: ID
           type: string
+        tstjCode:
+          description: Code
+          type: string
+        tstjFlag:
+          description: Flag
+          type: boolean
     ActionResult:
       type: object
       properties:
         result:
           description: Action result
           type: string
+    TreeviewData:
+      type: object
+      properties:
+        item:
+          description: Object item with lists of linked objects' items
+          type: object
     TestJavaObject:
       type: object
       properties:
+        tstjDesc:
+          description: Description
+          type: string
         row_id:
           description: ID
           type: string
+        tstjCode:
+          description: Code
+          type: string
+        tstjFlag:
+          description: Flag
+          type: boolean
     TestJavaObjectChild:
       type: object
       properties:
+        tstjDesc:
+          description: Description
+          type: string
         row_id:
           description: ID
           type: string
+        tstjCode:
+          description: Code
+          type: string
+        tstjFlag:
+          description: Flag
+          type: boolean
     PublicationResult:
       type: object
       properties:
@@ -80,8 +113,8 @@ components:
           - BE
           - CH
           - IE
-          - CA
           - US
+          - CA
         usr_title:
           description: Title
           type: string
@@ -214,24 +247,6 @@ paths:
         in: query
         name: _count
         description: Count?
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: _indexsearch
-        description: Index search query
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: _crosstab
-        description: Apply pivot table
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _crosstabcubes
-        description: pivot table data as cubes?
         required: false
       - schema:
           type: boolean
@@ -387,8 +402,8 @@ paths:
           - BE
           - CH
           - IE
-          - CA
           - US
+          - CA
         in: query
         name: usr_country
         description: Search filter for Country
@@ -455,12 +470,12 @@ paths:
         required: false
       tags:
       - TestJavaUser
-  /rest/TestJavaUser/{row_id}/pivot:User-VCARD:
+  /rest/TestJavaUser/{row_id}/publication:User-DEFAULT:
     get:
       security:
       - bearerAuth: []
       description: Call custom publication for one object record or all object records
-      operationId: obj-testjavauser-publication-user-vcard
+      operationId: obj-testjavauser-publication-user-default
       responses:
         '200':
           description: Custom publication result
@@ -557,28 +572,28 @@ paths:
         description: Count?
         required: false
       - schema:
-          type: string
-        in: query
-        name: _indexsearch
-        description: Index search query
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: _crosstab
-        description: Apply pivot table
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _crosstabcubes
-        description: pivot table data as cubes?
-        required: false
-      - schema:
           type: boolean
         in: query
         name: _doc
         description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Search filter for Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Search filter for Description
         required: false
       tags:
       - TestJavaObjectChild
@@ -631,6 +646,24 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Description
+        required: false
       tags:
       - TestJavaObjectChild
     get:
@@ -720,60 +753,26 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Description
+        required: false
       tags:
       - TestJavaObjectChild
-  /rest/TestJavaUser/{row_id}/pivot:User-EXCEL:
-    get:
-      security:
-      - bearerAuth: []
-      description: Call custom publication for one object record or all object records
-      operationId: obj-testjavauser-publication-user-excel
-      responses:
-        '200':
-          description: Custom publication result
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PublicationResult'
-        '401':
-          description: Authentication error
-          content:
-            application/json: {}
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaUser
-  /rest/TestJavaUser/{row_id}/pivot:User-DEFAULT:
-    get:
-      security:
-      - bearerAuth: []
-      description: Call custom publication for one object record or all object records
-      operationId: obj-testjavauser-publication-user-default
-      responses:
-        '200':
-          description: Custom publication result
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PublicationResult'
-        '401':
-          description: Authentication error
-          content:
-            application/json: {}
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaUser
   /rest/TestJavaObjectGrandChild:
     get:
       security:
@@ -805,28 +804,28 @@ paths:
         description: Count?
         required: false
       - schema:
-          type: string
-        in: query
-        name: _indexsearch
-        description: Index search query
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: _crosstab
-        description: Apply pivot table
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _crosstabcubes
-        description: pivot table data as cubes?
-        required: false
-      - schema:
           type: boolean
         in: query
         name: _doc
         description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Search filter for Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Search filter for Description
         required: false
       tags:
       - TestJavaObjectGrandChild
@@ -861,31 +860,83 @@ paths:
         description: Count?
         required: false
       - schema:
-          type: string
-        in: query
-        name: _indexsearch
-        description: Index search query
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: _crosstab
-        description: Apply pivot table
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _crosstabcubes
-        description: pivot table data as cubes?
-        required: false
-      - schema:
           type: boolean
         in: query
         name: _doc
         description: Documentation?
         required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Search filter for Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Search filter for Description
+        required: false
       tags:
       - TestJavaObject
+  /rest/TestJavaUser/{row_id}/publication:User-EXCEL:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call custom publication for one object record or all object records
+      operationId: obj-testjavauser-publication-user-excel
+      responses:
+        '200':
+          description: Custom publication result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicationResult'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaUser
+  /rest/TestJavaUser/{row_id}/publication:User-WORD:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call custom publication for one object record or all object records
+      operationId: obj-testjavauser-publication-user-word
+      responses:
+        '200':
+          description: Custom publication result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicationResult'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaUser
   /rest/TestJavaUser/{row_id}:
     post:
       security:
@@ -1058,8 +1109,8 @@ paths:
           - BE
           - CH
           - IE
-          - CA
           - US
+          - CA
         in: query
         name: usr_country
         description: Country
@@ -1361,8 +1412,8 @@ paths:
           - BE
           - CH
           - IE
-          - CA
           - US
+          - CA
         in: query
         name: usr_country
         description: Country
@@ -1429,12 +1480,12 @@ paths:
         required: false
       tags:
       - TestJavaUser
-  /rest/TestJavaUser/{row_id}/pivot:User-WORD:
+  /rest/TestJavaUser/{row_id}/publication:User-VCARD:
     get:
       security:
       - bearerAuth: []
       description: Call custom publication for one object record or all object records
-      operationId: obj-testjavauser-publication-user-word
+      operationId: obj-testjavauser-publication-user-vcard
       responses:
         '200':
           description: Custom publication result
@@ -1479,6 +1530,24 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Description
+        required: false
       tags:
       - TestJavaObjectGrandChild
     get:
@@ -1568,6 +1637,24 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Description
+        required: false
       tags:
       - TestJavaObjectGrandChild
   /rest/TestJavaObject/{row_id}:
@@ -1594,6 +1681,24 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Description
+        required: false
       tags:
       - TestJavaObject
     get:
@@ -1683,6 +1788,24 @@ paths:
         name: row_id
         description: row ID (or _ for all row IDs)
         required: true
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Description
+        required: false
       tags:
       - TestJavaObject
 info:

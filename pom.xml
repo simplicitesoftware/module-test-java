@@ -5,7 +5,7 @@
   <artifactId>TestJava</artifactId>
   <version>4.0</version>
   <name>TestJava</name>
-  <properties>
+  <url>https://dev40.dev.simplicite.io</url>  <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -16,33 +16,21 @@
     <sourceDirectory>${project.basedir}/src</sourceDirectory>
     <testSourceDirectory>${project.basedir}/test/src</testSourceDirectory>
   </build>
+  <repositories>
+    <repository>
+      <id>simplicite</id>
+      <name>simplicite</name>
+      <url>https://dev40.dev.simplicite.io/maven</url>
+    </repository>
+  </repositories>
+  <scm>
+    <url>https://dev40.dev.simplicite.io/git/TestJava</url>
+  </scm>
   <dependencies>
     <dependency>
       <groupId>com.simplicite</groupId>
-      <artifactId>simplicite</artifactId>
-      <version>4.0.P22b</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/lib/simplicite-4.0.P22b.jar</systemPath>
-    </dependency>
-    <dependency>
-      <groupId>org.json</groupId>
-      <artifactId>json</artifactId>
-      <version>20180813</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.poi</groupId>
-      <artifactId>poi</artifactId>
-      <version>3.17</version>
-    </dependency>
-    <dependency>
-      <groupId>com.lowagie</groupId>
-      <artifactId>itext</artifactId>
-      <version>2.1.7</version>
-    </dependency>
-    <dependency>
-      <groupId>org.docx4j</groupId>
-      <artifactId>docx4j</artifactId>
-      <version>6.0.1</version>
+      <artifactId>simplicite-api</artifactId>
+      <version>4.0.P23b.201811241249</version>
     </dependency>
   </dependencies>
 </project>
