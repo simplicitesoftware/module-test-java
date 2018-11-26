@@ -5,7 +5,8 @@
   <artifactId>TestJava</artifactId>
   <version>4.0</version>
   <name>TestJava</name>
-  <url>https://dev40.dev.simplicite.io</url>  <properties>
+  <url>https://dev40.dev.simplicite.io</url>
+  <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -30,7 +31,7 @@
     <dependency>
       <groupId>com.simplicite</groupId>
       <artifactId>simplicite-api</artifactId>
-      <version>4.0.P23b.201811241249</version>
+      <version>4.0.P23b.201811262243</version>
     </dependency>
   </dependencies>
 </project>
