@@ -4,7 +4,15 @@
 Build:
 
 ``` text
-mvn clean package
+mvn -U clean package
+```
+
+
+
+Analyse:
+
+``` text
+mvn sonar:sonar
 ```
 
 

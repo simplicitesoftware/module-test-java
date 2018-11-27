@@ -20,8 +20,9 @@
   <repositories>
     <repository>
       <id>simplicite</id>
-      <name>simplicite</name>
       <url>https://dev40.dev.simplicite.io/maven</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
     </repository>
   </repositories>
   <scm>
@@ -31,7 +32,7 @@
     <dependency>
       <groupId>com.simplicite</groupId>
       <artifactId>simplicite-api</artifactId>
-      <version>4.0.P23b.201811262259</version>
+      <version>4.0.P23b-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </project>
