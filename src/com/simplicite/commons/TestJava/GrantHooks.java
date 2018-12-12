@@ -9,6 +9,13 @@ import com.simplicite.util.GrantHooksInterface;
  */
 public class GrantHooks extends GrantHooksInterface {
 	/**
+	 * Post platform init hook
+	 */
+	public static String postPlatformInit(Grant sys) {
+		return "Hello Simplicite (" + sys.getLogin() + ")!";
+	}
+
+	/**
 	 * Post load grant hook
 	 */
 	public static void postLoadGrant(Grant g) {

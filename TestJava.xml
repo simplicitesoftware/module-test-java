@@ -214,6 +214,17 @@
 		<obe_icon>science</obe_icon>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
+	<data>
+		<obe_name>TestJavaRESTExtObject</obe_name>
+		<obe_type>E</obe_type>
+		<obe_url/>
+		<obe_comment><![CDATA[Test REST service external object]]></obe_comment>
+		<obe_help/>
+		<obe_class/>
+		<obe_script_id>src/com/simplicite/extobjects/TestJava/TestJavaRESTExtObject.java</obe_script_id>
+		<obe_icon/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
 </object>
 <object>
 	<name>ObjectInternal</name>
@@ -619,6 +630,14 @@
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
+		<fct_name>TestJavaRESTExtObject-E</fct_name>
+		<fct_object_id.obj_name>TestJavaRESTExtObject</fct_object_id.obj_name>
+		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
 		<fct_name>TestJavaUser-CUD</fct_name>
 		<fct_object_id.obj_name>TestJavaUser</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
@@ -685,6 +704,16 @@
 		<grt_function_id.fct_name>TestJavaObjectGrandChild-CUD</grt_function_id.fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>TestJavaObjectGrandChild</fct_object_id.obj_name>
+		<fct_action_id.act_name/>
+		<grt_function_id.fct_function>L</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>TestJavaRESTExtObject-E</grt_function_id.fct_name>
+		<fct_object_id.obj_type>E</fct_object_id.obj_type>
+		<fct_object_id.obj_name>TestJavaRESTExtObject</fct_object_id.obj_name>
 		<fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -1315,10 +1344,26 @@
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaRESTExtObject</tsl_id.obe_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Test REST service</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obe_name>TestJavaExtObject</tsl_id.obe_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Object externe Java</tsl_value>
 		<tsl_help><![CDATA[<p>Cet object externe utilise une classe <strong>Java</strong></p>]]></tsl_help>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaRESTExtObject</tsl_id.obe_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Service REST de test</tsl_value>
+		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 </object>
