@@ -22,6 +22,9 @@ import com.simplicite.util.tools.Parameters;
 public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExternalObject {
 	private static final long serialVersionUID = 1L;
 
+	private static final boolean cache = true;
+	private static final boolean debug = true;
+
 	private static HashMap<String, String> objectNames = new HashMap<>();
 	private static HashMap<String, String> fkNames = new HashMap<>();
 	private static HashMap<String, DualHashBidiMap<String, String>> fieldNames = new HashMap<>();
@@ -48,9 +51,9 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 		// TODO: to be completed: other objects
 	}
 
-	private static DataCache<Object> cache = new DataCache<>(Grant.getSystemAdmin().getIntParameter("TEST_CACHE_SIZE", 1000), Grant.getSystemAdmin().getIntParameter("TEST_CACHE_EXPIRY", 60));
+	private static DataCache<Object> dataCache = cache ? new DataCache<>(Grant.getSystemAdmin().getIntParameter("TEST_CACHE_SIZE", 1000), Grant.getSystemAdmin().getIntParameter("TEST_CACHE_EXPIRY", 60)) : null;
 
-	private String cacheKey(Parameters params, String objName, String rowId) {
+	private String dataCacheKey(Parameters params, String objName, String rowId) {
 		DualHashBidiMap<String, String> fields = fieldNames.get(objName);
 		StringBuilder key = new StringBuilder(objName);
 		if (rowId != null) key.append("/").append(rowId);
@@ -65,19 +68,25 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 	private JSONArray search(Parameters params, String objName) throws Exception {
 		ObjectDB obj = null;
 		try {
-			// First try in cache...
-			String key = cacheKey(params, objName, null);
-			JSONArray c = (JSONArray)cache.get(key);
-			if (c!=null) return c;
-			// ...or request it from database
+			String key = null;
+			if (cache) {
+				// First try in cache...
+				key = dataCacheKey(params, objName, null);
+				JSONArray c = (JSONArray)dataCache.get(key);
+				if (c!=null) {
+					if (debug) AppLog.info(getClass(), "search", "Key " + key + " found in cache", getGrant());
+					return c;
+				} else if (debug)
+					AppLog.info(getClass(), "search", "No key " + key + " in cache", getGrant());
+				// ...or request it from database
+			}
 
 			String o = objectNames.get(objName);
 			obj = borrowAPIObject(o);
-			//AppLog.info(getClass(), "search", "Using " + obj.getInstanceName(), getGrant());
-			if (obj == null) throw new HTTPException(500, "Unable to borrow object " + o);
-			DualHashBidiMap<String, String> fields = fieldNames.get(objName);
+			if (debug) AppLog.info(getClass(), "search", "Using " + obj.getInstanceName(), getGrant());
 
 			obj.resetFilters();
+			DualHashBidiMap<String, String> fields = fieldNames.get(objName);
 			for (ObjectField f : obj.getFields())
 				if (params.hasParam(fields.get(f.getName())))
 					f.setFilter(params.getParameter(fields.get(f.getName())).replace('*', '%').replace('?', '_'));
@@ -98,8 +107,10 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 				l.put(r);
 			}
 
-			// Store in cache
-			cache.put(key, l);
+			if (cache) {
+				// Store in cache
+				dataCache.put(key, l);
+			}
 
 			return l;
 		} finally {
@@ -111,19 +122,25 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 	private JSONObject select(Parameters params, String objName, String rowId) throws Exception {
 		ObjectDB obj = null;
 		try {
-			// First try in cache...
-			String key = cacheKey(params, objName, rowId);
-			JSONObject c = (JSONObject)cache.get(key);
-			if (c!=null) return c;
-			// ...or request it from database
+			String key = null;
+			if (cache) {
+				// First try in cache...
+				key = dataCacheKey(params, objName, rowId);
+				JSONObject c = (JSONObject)dataCache.get(key);
+				if (c!=null) {
+					if (debug) AppLog.info(getClass(), "search", "Key " + key + " found in cache", getGrant());
+					return c;
+				} else if (debug)
+					AppLog.info(getClass(), "search", "No key " + key + " in cache", getGrant());
+				// ...or request it from database
+			}
 
 			String o = objectNames.get(objName);
 			obj = borrowAPIObject(o);
-			//AppLog.info(getClass(), "select", "Using " + obj.getInstanceName(), getGrant());
-			if (obj == null) throw new HTTPException(500, "Unable to borrow object " + o);
-			DualHashBidiMap<String, String> fields = fieldNames.get(objName);
+			if (debug) AppLog.info(getClass(), "select", "Using " + obj.getInstanceName(), getGrant());
 
 			obj.resetFilters();
+			DualHashBidiMap<String, String> fields = fieldNames.get(objName);
 			for (ObjectField f : obj.getFields()) // TODO: improve parent row ID constraint enforcement
 				if (f.getType()==ObjectField.TYPE_ID && params.hasParam(fields.get(f.getName())))
 					f.setFilter(params.getParameter(fields.get(f.getName())));
@@ -137,8 +154,10 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 				if (f != null) r.put(fields.get(k), obj.getFieldValue(k));
 			}
 
-			// Store in cache
-			cache.put(key, r);
+			if (cache) {
+				// Store in cache
+				dataCache.put(key, r);
+			}
 
 			return r;
 		} finally {
@@ -149,7 +168,7 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 
 	@Override
 	public Object get(Parameters params) throws HTTPException {
-		long t0 = new Date().getTime();
+		long t0 = debug ? new Date().getTime() : 0;
 		try {
 			List<String> parts = getURIParts();
 			if (parts.size()==0 || objectNames.get(parts.get(0))==null)
@@ -171,7 +190,7 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 			AppLog.error(getClass(), "get", null, e, getGrant());
 			return error(e);
 		} finally {
-			AppLog.info(getClass(), "get", "Elapsed time " + (new Date().getTime() - t0) + "ms", getGrant());
+			if (debug) AppLog.info(getClass(), "get", "Elapsed time " + (new Date().getTime() - t0) + "ms", getGrant());
 		}
 	}
 }
