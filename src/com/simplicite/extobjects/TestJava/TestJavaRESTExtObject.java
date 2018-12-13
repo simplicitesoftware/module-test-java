@@ -94,7 +94,7 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 			for (String[] row : obj.search()) {
 				JSONObject r = new JSONObject().put("row_id", row[0]);
 				for (i = 0; i < fields.size(); i++)
-					r.put(flds[i], row[idx[i]]);
+					if (idx[i] >= 0) r.put(flds[i], row[idx[i]]);
 				l.put(r);
 			}
 
@@ -132,8 +132,10 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 				return notFound("No " + obj.getName() + " record found for row ID " + rowId);
 
 			JSONObject r = new JSONObject().put("row_id", obj.getRowId());
-			for (String k : fields.keySet())
-				r.put(fields.get(k), obj.getFieldValue(k));
+			for (String k : fields.keySet()) {
+				ObjectField f = obj.getField(k, false);
+				if (f != null) r.put(fields.get(k), obj.getFieldValue(k));
+			}
 
 			// Store in cache
 			cache.put(key, r);
