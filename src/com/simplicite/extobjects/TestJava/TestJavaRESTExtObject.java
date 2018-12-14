@@ -51,9 +51,7 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 		// TODO: to be completed: other objects
 	}
 
-	private static DataCache<Object> dataCache = cache ? new DataCache<>(Grant.getSystemAdmin().getIntParameter("TEST_CACHE_SIZE", 1000), Grant.getSystemAdmin().getIntParameter("TEST_CACHE_EXPIRY", 60)) : null;
-
-	private String dataCacheKey(Parameters params, String objName, String rowId) {
+	private String getCacheKey(Parameters params, String objName, String rowId) {
 		DualHashBidiMap<String, String> fields = fieldNames.get(objName);
 		StringBuilder key = new StringBuilder(objName);
 		if (rowId != null) key.append("/").append(rowId);
@@ -71,8 +69,8 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 			String key = null;
 			if (cache) {
 				// First try in cache...
-				key = dataCacheKey(params, objName, null);
-				JSONArray c = (JSONArray)dataCache.get(key);
+				key = getCacheKey(params, objName, null);
+				JSONArray c = (JSONArray)getFromDataCache(key);
 				if (c!=null) {
 					if (debug) AppLog.info(getClass(), "search", "Key " + key + " found in cache", getGrant());
 					return c;
@@ -109,7 +107,7 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 
 			if (cache) {
 				// Store in cache
-				dataCache.put(key, l);
+				storeInDataCache(key, l);
 			}
 
 			return l;
@@ -125,8 +123,8 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 			String key = null;
 			if (cache) {
 				// First try in cache...
-				key = dataCacheKey(params, objName, rowId);
-				JSONObject c = (JSONObject)dataCache.get(key);
+				key = getCacheKey(params, objName, rowId);
+				JSONObject c = (JSONObject)getFromDataCache(key);
 				if (c!=null) {
 					if (debug) AppLog.info(getClass(), "search", "Key " + key + " found in cache", getGrant());
 					return c;
@@ -156,7 +154,7 @@ public class TestJavaRESTExtObject extends com.simplicite.util.RESTServiceExtern
 
 			if (cache) {
 				// Store in cache
-				dataCache.put(key, r);
+				storeInDataCache(key, r);
 			}
 
 			return r;

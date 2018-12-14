@@ -1029,6 +1029,26 @@
 	</data>
 </object>
 <object>
+	<name>DispSysParam</name>
+	<action>upsert</action>
+	<data>
+		<dsp_disp_id.dis_code>default</dsp_disp_id.dis_code>
+		<dsp_param_id.sys_code>USE_WEBSERVICES_DATACACHE</dsp_param_id.sys_code>
+		<dsp_value><![CDATA[yes]]></dsp_value>
+		<dsp_param_id.sys_value><![CDATA[no]]></dsp_param_id.sys_value>
+		<dsp_param_id.sys_desc><![CDATA[Use data cache for the API endpoint ?]]></dsp_param_id.sys_desc>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<dsp_disp_id.dis_code>default</dsp_disp_id.dis_code>
+		<dsp_param_id.sys_code>USE_WEBSERVICES_OBJECTPOOL</dsp_param_id.sys_code>
+		<dsp_value><![CDATA[yes]]></dsp_value>
+		<dsp_param_id.sys_value><![CDATA[no]]></dsp_param_id.sys_value>
+		<dsp_param_id.sys_desc><![CDATA[Use business object pool for the API endpoint ?]]></dsp_param_id.sys_desc>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
 	<name>Resource</name>
 	<action>upsert</action>
 	<data>

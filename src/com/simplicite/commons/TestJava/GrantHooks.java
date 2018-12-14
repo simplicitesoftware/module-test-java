@@ -16,6 +16,14 @@ public class GrantHooks extends GrantHooksInterface {
 	}
 
 	/**
+	 * Event hook
+	 */
+	public static String event(Grant g, String origin, Object data) throws Exception
+	{
+		return data.getClass().getName();	
+	}
+
+	/**
 	 * Post load grant hook
 	 */
 	public static void postLoadGrant(Grant g) {
