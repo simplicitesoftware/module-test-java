@@ -264,1038 +264,10 @@ components:
       scheme: bearer
       type: http
 servers:
-- url: https://dev40.dev.simplicite.io/api/rest
+- url: https://dev40.dev.simplicite.io/api
 openapi: 3.0.2
 paths:
-  /TestJavaObject:
-    get:
-      security:
-      - bearerAuth: []
-      description: Search business object records (or get contextualized business
-        object metadata, documenation, ...)
-      operationId: obj-testjavaobject-search
-      responses:
-        '200':
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ArrayOfTestJavaObject'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: boolean
-        in: query
-        name: _metadata
-        description: Metadata?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _count
-        description: Count?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _doc
-        description: Documentation?
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Search filter for Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Search filter for Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Search filter for Description
-        required: false
-      tags:
-      - TestJavaObject
-  /TestJavaObject/{row_id}:
-    post:
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TestJavaObject'
-      description: Create a new business object record
-      operationId: obj-testjavaobject-create
-      responses:
-        '200':
-          description: Success in creating a new business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaObject'
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaObject
-    get:
-      security:
-      - bearerAuth: []
-      description: Get a single business object record
-      operationId: obj-testjavaobject-get
-      responses:
-        '200':
-          description: Success in getting a single business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaObject'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_documents
-        description: Inline documents?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_objects
-        description: Inline objects?
-        required: false
-      tags:
-      - TestJavaObject
-    delete:
-      security:
-      - bearerAuth: []
-      description: Delete a business object record
-      operationId: obj-testjavaobject-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-          content:
-            application/json: {}
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaObject
-    put:
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TestJavaObject'
-      description: Update a business object record
-      operationId: obj-testjavaobject-update
-      responses:
-        '200':
-          description: Success in updating a business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaObject'
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaObject
-  /login:
-    get:
-      security:
-      - basicAuth: []
-      description: Login (obtain bearer token)
-      operationId: login
-      responses:
-        '200':
-          description: Successful login
-          content:
-            application/json: {}
-            text/plain: {}
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-      parameters:
-      - schema:
-          type: string
-          enum:
-          - json
-          - oauth2
-        in: query
-        name: _output
-        description: Optional output format
-        required: false
-      tags:
-      - Application
-  /TestJavaUser/{row_id}/publication:User-VCARD:
-    get:
-      security:
-      - bearerAuth: []
-      description: Call a custom publication for one business object record or for
-        all business object records
-      operationId: obj-testjavauser-publication-user-vcard
-      responses:
-        '200':
-          description: Success in calling the custom publication
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PublicationResult'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaUser
-  /logout:
-    get:
-      security:
-      - bearerAuth: []
-      description: Logout (revoke bearer token)
-      operationId: logout
-      responses:
-        '200':
-          description: Successfull logout
-          content:
-            application/json: {}
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-      tags:
-      - Application
-  /TestJavaObjectChild/{row_id}:
-    post:
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TestJavaObjectChild'
-      description: Create a new business object record
-      operationId: obj-testjavaobjectchild-create
-      responses:
-        '200':
-          description: Success in creating a new business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaObjectChild'
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaObjectChild
-    get:
-      security:
-      - bearerAuth: []
-      description: Get a single business object record
-      operationId: obj-testjavaobjectchild-get
-      responses:
-        '200':
-          description: Success in getting a single business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaObjectChild'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_documents
-        description: Inline documents?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_objects
-        description: Inline objects?
-        required: false
-      tags:
-      - TestJavaObjectChild
-    delete:
-      security:
-      - bearerAuth: []
-      description: Delete a business object record
-      operationId: obj-testjavaobjectchild-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-          content:
-            application/json: {}
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaObjectChild
-    put:
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TestJavaObjectChild'
-      description: Update a business object record
-      operationId: obj-testjavaobjectchild-update
-      responses:
-        '200':
-          description: Success in updating a business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaObjectChild'
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaObjectChild
-  /TestJavaObjectGrandChild/{row_id}:
-    post:
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TestJavaObjectGrandChild'
-      description: Create a new business object record
-      operationId: obj-testjavaobjectgrandchild-create
-      responses:
-        '200':
-          description: Success in creating a new business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaObjectGrandChild'
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaObjectGrandChild
-    get:
-      security:
-      - bearerAuth: []
-      description: Get a single business object record
-      operationId: obj-testjavaobjectgrandchild-get
-      responses:
-        '200':
-          description: Success in getting a single business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaObjectGrandChild'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_documents
-        description: Inline documents?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_objects
-        description: Inline objects?
-        required: false
-      tags:
-      - TestJavaObjectGrandChild
-    delete:
-      security:
-      - bearerAuth: []
-      description: Delete a business object record
-      operationId: obj-testjavaobjectgrandchild-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-          content:
-            application/json: {}
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaObjectGrandChild
-    put:
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TestJavaObjectGrandChild'
-      description: Update a business object record
-      operationId: obj-testjavaobjectgrandchild-update
-      responses:
-        '200':
-          description: Success in updating a business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaObjectGrandChild'
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaObjectGrandChild
-  /TestJavaUser/{row_id}:
-    post:
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TestJavaUser'
-      description: Create a new business object record
-      operationId: obj-testjavauser-create
-      responses:
-        '200':
-          description: Success in creating a new business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaUser'
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaUser
-    get:
-      security:
-      - bearerAuth: []
-      description: Get a single business object record
-      operationId: obj-testjavauser-get
-      responses:
-        '200':
-          description: Success in getting a single business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaUser'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_documents
-        description: Inline documents?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_objects
-        description: Inline objects?
-        required: false
-      tags:
-      - TestJavaUser
-    delete:
-      security:
-      - bearerAuth: []
-      description: Delete a business object record
-      operationId: obj-testjavauser-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-          content:
-            application/json: {}
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaUser
-    put:
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TestJavaUser'
-      description: Update a business object record
-      operationId: obj-testjavauser-update
-      responses:
-        '200':
-          description: Success in updating a business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestJavaUser'
-        '400':
-          description: Error 400
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaUser
-  /TestJavaObjectChild:
-    get:
-      security:
-      - bearerAuth: []
-      description: Search business object records (or get contextualized business
-        object metadata, documenation, ...)
-      operationId: obj-testjavaobjectchild-search
-      responses:
-        '200':
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ArrayOfTestJavaObjectChild'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: boolean
-        in: query
-        name: _metadata
-        description: Metadata?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _count
-        description: Count?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _doc
-        description: Documentation?
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjCode
-        description: Search filter for Code
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: tstjFlag
-        description: Search filter for Flag
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstjDesc
-        description: Search filter for Description
-        required: false
-      tags:
-      - TestJavaObjectChild
-  /:
-    get:
-      security:
-      - bearerAuth: []
-      description: Get user session information
-      operationId: info
-      responses:
-        '200':
-          description: Success in getting user session information
-          content:
-            application/json: {}
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-      parameters:
-      - schema:
-          type: boolean
-        in: query
-        name: texts
-        description: Texts?
-        required: false
-      tags:
-      - Application
-  /TestJavaUser:
+  /rest/TestJavaUser:
     get:
       security:
       - bearerAuth: []
@@ -1557,7 +529,358 @@ paths:
         required: false
       tags:
       - TestJavaUser
-  /TestJavaObjectGrandChild:
+  /rest/TestJavaUser/{row_id}/publication:User-DEFAULT:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call a custom publication for one business object record or for
+        all business object records
+      operationId: obj-testjavauser-publication-user-default
+      responses:
+        '200':
+          description: Success in calling the custom publication
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicationResult'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaUser
+  /login:
+    get:
+      security:
+      - basicAuth: []
+      description: Login (obtain bearer token)
+      operationId: login
+      responses:
+        '200':
+          description: Successful login
+          content:
+            application/json: {}
+            text/plain: {}
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      parameters:
+      - schema:
+          type: string
+          enum:
+          - json
+          - oauth2
+        in: query
+        name: _output
+        description: Optional output format
+        required: false
+      tags:
+      - Application
+  /logout:
+    get:
+      security:
+      - bearerAuth: []
+      description: Logout (revoke bearer token)
+      operationId: logout
+      responses:
+        '200':
+          description: Successfull logout
+          content:
+            application/json: {}
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      tags:
+      - Application
+  /rest/TestJavaObjectChild:
+    get:
+      security:
+      - bearerAuth: []
+      description: Search business object records (or get contextualized business
+        object metadata, documenation, ...)
+      operationId: obj-testjavaobjectchild-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfTestJavaObjectChild'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Search filter for Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Search filter for Description
+        required: false
+      tags:
+      - TestJavaObjectChild
+  /rest/TestJavaObjectChild/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestJavaObjectChild'
+      description: Create a new business object record
+      operationId: obj-testjavaobjectchild-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObjectChild'
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaObjectChild
+    get:
+      security:
+      - bearerAuth: []
+      description: Get a single business object record
+      operationId: obj-testjavaobjectchild-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObjectChild'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - TestJavaObjectChild
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete a business object record
+      operationId: obj-testjavaobjectchild-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaObjectChild
+    put:
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestJavaObjectChild'
+      description: Update a business object record
+      operationId: obj-testjavaobjectchild-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObjectChild'
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaObjectChild
+  /rest/TestJavaObjectGrandChild:
     get:
       security:
       - bearerAuth: []
@@ -1623,20 +946,47 @@ paths:
         required: false
       tags:
       - TestJavaObjectGrandChild
-  /TestJavaUser/{row_id}/publication:User-WORD:
+  /:
     get:
       security:
       - bearerAuth: []
-      description: Call a custom publication for one business object record or for
-        all business object records
-      operationId: obj-testjavauser-publication-user-word
+      description: Get user session information
+      operationId: info
       responses:
         '200':
-          description: Success in calling the custom publication
+          description: Success in getting user session information
+          content:
+            application/json: {}
+        '401':
+          description: Error 401
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PublicationResult'
+                $ref: '#/components/schemas/Error401'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: texts
+        description: Texts?
+        required: false
+      tags:
+      - Application
+  /rest/TestJavaObject:
+    get:
+      security:
+      - bearerAuth: []
+      description: Search business object records (or get contextualized business
+        object metadata, documenation, ...)
+      operationId: obj-testjavaobject-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfTestJavaObject'
         '401':
           description: Error 401
           content:
@@ -1649,63 +999,46 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
       parameters:
       - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
-      tags:
-      - TestJavaUser
-  /TestJavaUser/{row_id}/publication:User-DEFAULT:
-    get:
-      security:
-      - bearerAuth: []
-      description: Call a custom publication for one business object record or for
-        all business object records
-      operationId: obj-testjavauser-publication-user-default
-      responses:
-        '200':
-          description: Success in calling the custom publication
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PublicationResult'
-        '401':
-          description: Error 401
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Error 500
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Error 404
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
       - schema:
           type: string
-        in: path
-        name: row_id
-        description: row ID (or _ for all row IDs)
-        required: true
+        in: query
+        name: tstjCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: tstjFlag
+        description: Search filter for Flag
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: tstjDesc
+        description: Search filter for Description
+        required: false
       tags:
-      - TestJavaUser
-  /TestJavaUser/{row_id}/publication:User-EXCEL:
+      - TestJavaObject
+  /rest/TestJavaUser/{row_id}/publication:User-EXCEL:
     get:
       security:
       - bearerAuth: []
@@ -1746,6 +1079,673 @@ paths:
         required: true
       tags:
       - TestJavaUser
+  /rest/TestJavaUser/{row_id}/publication:User-WORD:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call a custom publication for one business object record or for
+        all business object records
+      operationId: obj-testjavauser-publication-user-word
+      responses:
+        '200':
+          description: Success in calling the custom publication
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicationResult'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaUser
+  /rest/TestJavaUser/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestJavaUser'
+      description: Create a new business object record
+      operationId: obj-testjavauser-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaUser'
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaUser
+    get:
+      security:
+      - bearerAuth: []
+      description: Get a single business object record
+      operationId: obj-testjavauser-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaUser'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - TestJavaUser
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete a business object record
+      operationId: obj-testjavauser-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaUser
+    put:
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestJavaUser'
+      description: Update a business object record
+      operationId: obj-testjavauser-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaUser'
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaUser
+  /rest/TestJavaUser/{row_id}/publication:User-VCARD:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call a custom publication for one business object record or for
+        all business object records
+      operationId: obj-testjavauser-publication-user-vcard
+      responses:
+        '200':
+          description: Success in calling the custom publication
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicationResult'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaUser
+  /rest/TestJavaObjectGrandChild/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestJavaObjectGrandChild'
+      description: Create a new business object record
+      operationId: obj-testjavaobjectgrandchild-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObjectGrandChild'
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaObjectGrandChild
+    get:
+      security:
+      - bearerAuth: []
+      description: Get a single business object record
+      operationId: obj-testjavaobjectgrandchild-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObjectGrandChild'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - TestJavaObjectGrandChild
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete a business object record
+      operationId: obj-testjavaobjectgrandchild-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaObjectGrandChild
+    put:
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestJavaObjectGrandChild'
+      description: Update a business object record
+      operationId: obj-testjavaobjectgrandchild-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObjectGrandChild'
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaObjectGrandChild
+  /rest/TestJavaObject/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestJavaObject'
+      description: Create a new business object record
+      operationId: obj-testjavaobject-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObject'
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaObject
+    get:
+      security:
+      - bearerAuth: []
+      description: Get a single business object record
+      operationId: obj-testjavaobject-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObject'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - TestJavaObject
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete a business object record
+      operationId: obj-testjavaobject-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaObject
+    put:
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestJavaObject'
+      description: Update a business object record
+      operationId: obj-testjavaobject-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaObject'
+        '400':
+          description: Error 400
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Error 401
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Error 500
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Error 404
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaObject
 info:
   license:
     name: Simplicite license
