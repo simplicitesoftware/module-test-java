@@ -21,12 +21,12 @@ public class TestJavaDisposition extends Disposition {
 	@Override
 	public String display(Parameters params) {
 		try {
-			BootstrapWebPage p = new BootstrapWebPage(HTMLTool.getRoot(), "Custom disposition");
+			BootstrapWebPage p = new BootstrapWebPage("Custom disposition");
 			p.appendCore(getGrant()); // Global variables for current user
 			p.appendAjax(); // Ajax API
 
 			p.appendHTML("<div id=\"grant\">...</div>"
-				+ "<div><a href=\"" + Globals.WEB_UI_PATH + "?scope=Home\">" + getGrant().T("HOME") + "</a></div>");
+				+ "<div><a href=\"" + HTMLTool.getUIRoot() + "?scope=Home\">" + getGrant().T("HOME") + "</a></div>");
 
 			p.setReady("var app = new Simplicite.Ajax(); app.getGrant(function(g) { $('#grant').text('Hello ' + g.firstname + ' ' + g.lastname +  ' (' + g.login + ')'); });");
 
