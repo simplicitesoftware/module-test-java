@@ -61,4 +61,18 @@ public class TestJavaObject extends ObjectDB {
 	public String getUserKeyLabel(String[] row) {
 		return "Record #" + (row==null ? getRowId() : row[0]);
 	}
+	
+	/**
+	 * Unit tests
+	 */
+	@Override
+    public String unitTests() {
+        try {
+            // TODO
+            return "OK";
+        } catch (Exception e) {
+            AppLog.error(getClass(), "unitTests", null, e, getGrant());
+            return e.getMessage();
+        }
+    }
 }

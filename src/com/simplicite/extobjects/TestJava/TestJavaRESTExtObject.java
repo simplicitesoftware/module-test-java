@@ -1,6 +1,7 @@
 package com.simplicite.extobjects.TestJava;
 
 import com.simplicite.util.tools.Parameters;
+import com.simplicite.util.tools.JSONTool;
 
 /**
  * Custom REST web service for search and get for users and responsibilities
@@ -12,6 +13,14 @@ public class TestJavaRESTExtObject extends com.simplicite.webapp.services.RESTMa
 	protected void init(Parameters params) {
 		setDebug(true);
 		setUseCache(true);
+
+		setOpenAPIVersion(JSONTool.OPENAPI_OAS2);
+		setOpenAPIDesc("This is a **custom API** for various business object\n\n- System parameters\n- Users\n- Responsibilities\n\n> NB: these are system objets");
+
+		addObject("params", "SystemParam", "This is the **system parameter** object");
+		addField("params", "code", "sys_code", "This is the system parameter **code**", "TEST_CODE");
+		addField("params", "value", "sys_value", "This is the system parameter **value**", "Test value");
+		addField("params", "type", "sys_type", "This is the system parameter **type**", null); // Example is taken from list of values
 
 		addObject("users", "User");
 		addField("users", "login", "usr_login");

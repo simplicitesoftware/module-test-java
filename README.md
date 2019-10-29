@@ -5,7 +5,7 @@
 |___/_|_|_|_| .__/_|_\__|_|\__\___|
             |_| 
 -->
-![](https://www.simplicite.io/resources//logos/logo250.png)
+![](https://docs.simplicite.io//logos/logo250.png)
 * * *
 
 `TestJava` module definition
@@ -54,6 +54,22 @@ No custom action
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+
+### Custom actions
+
+No custom action
+
+`TestJavaService` business object definition
+--------------------------------------------
+
+
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `testSrv1`                                                   | char(100)                                |          | yes       |          | -                                                                                |
+| `testSrv2`                                                   | text(1000000)                            |          | yes       |          | -                                                                                |
 
 ### Custom actions
 

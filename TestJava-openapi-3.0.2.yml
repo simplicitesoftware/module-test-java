@@ -35,6 +35,22 @@ components:
         tstjFlag:
           description: Flag
           type: boolean
+    TestJavaService:
+      type: object
+      properties:
+        testSrv2:
+          description: Test 2
+          type: string
+        testSrv1:
+          description: Test 1
+          type: string
+        row_id:
+          description: ID
+          type: string
+    ArrayOfTestJavaService:
+      type: array
+      items:
+        $ref: '#/components/schemas/TestJavaService'
     TestJavaObject:
       type: object
       properties:
@@ -84,6 +100,635 @@ components:
         usr_timezone:
           description: Time zone
           type: string
+          enum:
+          - Etc/GMT+12
+          - Etc/GMT+11
+          - Pacific/Midway
+          - Pacific/Niue
+          - Pacific/Pago_Pago
+          - Pacific/Samoa
+          - US/Samoa
+          - America/Adak
+          - America/Atka
+          - Etc/GMT+10
+          - Pacific/Honolulu
+          - Pacific/Johnston
+          - Pacific/Rarotonga
+          - Pacific/Tahiti
+          - SystemV/HST10
+          - US/Aleutian
+          - US/Hawaii
+          - HST
+          - Pacific/Marquesas
+          - America/Anchorage
+          - America/Juneau
+          - America/Metlakatla
+          - America/Nome
+          - America/Sitka
+          - America/Yakutat
+          - Etc/GMT+9
+          - Pacific/Gambier
+          - SystemV/YST9
+          - SystemV/YST9YDT
+          - US/Alaska
+          - AST
+          - America/Dawson
+          - America/Ensenada
+          - America/Los_Angeles
+          - America/Santa_Isabel
+          - America/Tijuana
+          - America/Vancouver
+          - America/Whitehorse
+          - Canada/Pacific
+          - Canada/Yukon
+          - Etc/GMT+8
+          - Mexico/BajaNorte
+          - PST8PDT
+          - Pacific/Pitcairn
+          - SystemV/PST8
+          - SystemV/PST8PDT
+          - US/Pacific
+          - US/Pacific-New
+          - PST
+          - America/Boise
+          - America/Cambridge_Bay
+          - America/Chihuahua
+          - America/Creston
+          - America/Dawson_Creek
+          - America/Denver
+          - America/Edmonton
+          - America/Fort_Nelson
+          - America/Hermosillo
+          - America/Inuvik
+          - America/Mazatlan
+          - America/Ojinaga
+          - America/Phoenix
+          - America/Shiprock
+          - America/Yellowknife
+          - Canada/Mountain
+          - Etc/GMT+7
+          - MST7MDT
+          - Mexico/BajaSur
+          - Navajo
+          - SystemV/MST7
+          - SystemV/MST7MDT
+          - US/Arizona
+          - US/Mountain
+          - MST
+          - PNT
+          - America/Bahia_Banderas
+          - America/Belize
+          - America/Chicago
+          - America/Costa_Rica
+          - America/El_Salvador
+          - America/Guatemala
+          - America/Indiana/Knox
+          - America/Indiana/Tell_City
+          - America/Knox_IN
+          - America/Managua
+          - America/Matamoros
+          - America/Menominee
+          - America/Merida
+          - America/Mexico_City
+          - America/Monterrey
+          - America/North_Dakota/Beulah
+          - America/North_Dakota/Center
+          - America/North_Dakota/New_Salem
+          - America/Rainy_River
+          - America/Rankin_Inlet
+          - America/Regina
+          - America/Resolute
+          - America/Swift_Current
+          - America/Tegucigalpa
+          - America/Winnipeg
+          - CST6CDT
+          - Canada/Central
+          - Canada/Saskatchewan
+          - Chile/EasterIsland
+          - Etc/GMT+6
+          - Mexico/General
+          - Pacific/Easter
+          - Pacific/Galapagos
+          - SystemV/CST6
+          - SystemV/CST6CDT
+          - US/Central
+          - US/Indiana-Starke
+          - CST
+          - America/Atikokan
+          - America/Bogota
+          - America/Cancun
+          - America/Cayman
+          - America/Coral_Harbour
+          - America/Detroit
+          - America/Eirunepe
+          - America/Fort_Wayne
+          - America/Grand_Turk
+          - America/Guayaquil
+          - America/Havana
+          - America/Indiana/Indianapolis
+          - America/Indiana/Marengo
+          - America/Indiana/Petersburg
+          - America/Indiana/Vevay
+          - America/Indiana/Vincennes
+          - America/Indiana/Winamac
+          - America/Indianapolis
+          - America/Iqaluit
+          - America/Jamaica
+          - America/Kentucky/Louisville
+          - America/Kentucky/Monticello
+          - America/Lima
+          - America/Louisville
+          - America/Montreal
+          - America/Nassau
+          - America/New_York
+          - America/Nipigon
+          - America/Panama
+          - America/Pangnirtung
+          - America/Port-au-Prince
+          - America/Porto_Acre
+          - America/Rio_Branco
+          - America/Thunder_Bay
+          - America/Toronto
+          - Brazil/Acre
+          - Canada/Eastern
+          - Cuba
+          - EST5EDT
+          - Etc/GMT+5
+          - Jamaica
+          - SystemV/EST5
+          - SystemV/EST5EDT
+          - US/East-Indiana
+          - US/Eastern
+          - US/Michigan
+          - EST
+          - IET
+          - America/Anguilla
+          - America/Antigua
+          - America/Aruba
+          - America/Asuncion
+          - America/Barbados
+          - America/Blanc-Sablon
+          - America/Boa_Vista
+          - America/Campo_Grande
+          - America/Caracas
+          - America/Cuiaba
+          - America/Curacao
+          - America/Dominica
+          - America/Glace_Bay
+          - America/Goose_Bay
+          - America/Grenada
+          - America/Guadeloupe
+          - America/Guyana
+          - America/Halifax
+          - America/Kralendijk
+          - America/La_Paz
+          - America/Lower_Princes
+          - America/Manaus
+          - America/Marigot
+          - America/Martinique
+          - America/Moncton
+          - America/Montserrat
+          - America/Port_of_Spain
+          - America/Porto_Velho
+          - America/Puerto_Rico
+          - America/Santiago
+          - America/Santo_Domingo
+          - America/St_Barthelemy
+          - America/St_Kitts
+          - America/St_Lucia
+          - America/St_Thomas
+          - America/St_Vincent
+          - America/Thule
+          - America/Tortola
+          - America/Virgin
+          - Atlantic/Bermuda
+          - Brazil/West
+          - Canada/Atlantic
+          - Chile/Continental
+          - Etc/GMT+4
+          - SystemV/AST4
+          - SystemV/AST4ADT
+          - PRT
+          - America/St_Johns
+          - Canada/Newfoundland
+          - CNT
+          - America/Araguaina
+          - America/Argentina/Buenos_Aires
+          - America/Argentina/Catamarca
+          - America/Argentina/ComodRivadavia
+          - America/Argentina/Cordoba
+          - America/Argentina/Jujuy
+          - America/Argentina/La_Rioja
+          - America/Argentina/Mendoza
+          - America/Argentina/Rio_Gallegos
+          - America/Argentina/Salta
+          - America/Argentina/San_Juan
+          - America/Argentina/San_Luis
+          - America/Argentina/Tucuman
+          - America/Argentina/Ushuaia
+          - America/Bahia
+          - America/Belem
+          - America/Buenos_Aires
+          - America/Catamarca
+          - America/Cayenne
+          - America/Cordoba
+          - America/Fortaleza
+          - America/Godthab
+          - America/Jujuy
+          - America/Maceio
+          - America/Mendoza
+          - America/Miquelon
+          - America/Montevideo
+          - America/Paramaribo
+          - America/Punta_Arenas
+          - America/Recife
+          - America/Rosario
+          - America/Santarem
+          - America/Sao_Paulo
+          - Antarctica/Palmer
+          - Antarctica/Rothera
+          - Atlantic/Stanley
+          - Brazil/East
+          - Etc/GMT+3
+          - AGT
+          - BET
+          - America/Noronha
+          - Atlantic/South_Georgia
+          - Brazil/DeNoronha
+          - Etc/GMT+2
+          - America/Scoresbysund
+          - Atlantic/Azores
+          - Atlantic/Cape_Verde
+          - Etc/GMT+1
+          - Africa/Abidjan
+          - Africa/Accra
+          - Africa/Bamako
+          - Africa/Banjul
+          - Africa/Bissau
+          - Africa/Casablanca
+          - Africa/Conakry
+          - Africa/Dakar
+          - Africa/El_Aaiun
+          - Africa/Freetown
+          - Africa/Lome
+          - Africa/Monrovia
+          - Africa/Nouakchott
+          - Africa/Ouagadougou
+          - Africa/Sao_Tome
+          - Africa/Timbuktu
+          - America/Danmarkshavn
+          - Antarctica/Troll
+          - Atlantic/Canary
+          - Atlantic/Faeroe
+          - Atlantic/Faroe
+          - Atlantic/Madeira
+          - Atlantic/Reykjavik
+          - Atlantic/St_Helena
+          - Eire
+          - Etc/GMT
+          - Etc/GMT+0
+          - Etc/GMT-0
+          - Etc/GMT0
+          - Etc/Greenwich
+          - Etc/UCT
+          - Etc/UTC
+          - Etc/Universal
+          - Etc/Zulu
+          - Europe/Belfast
+          - Europe/Dublin
+          - Europe/Guernsey
+          - Europe/Isle_of_Man
+          - Europe/Jersey
+          - Europe/Lisbon
+          - Europe/London
+          - GB
+          - GB-Eire
+          - GMT
+          - GMT0
+          - Greenwich
+          - Iceland
+          - Portugal
+          - UCT
+          - UTC
+          - Universal
+          - WET
+          - Zulu
+          - Africa/Algiers
+          - Africa/Bangui
+          - Africa/Brazzaville
+          - Africa/Ceuta
+          - Africa/Douala
+          - Africa/Kinshasa
+          - Africa/Lagos
+          - Africa/Libreville
+          - Africa/Luanda
+          - Africa/Malabo
+          - Africa/Ndjamena
+          - Africa/Niamey
+          - Africa/Porto-Novo
+          - Africa/Tunis
+          - Arctic/Longyearbyen
+          - Atlantic/Jan_Mayen
+          - CET
+          - Etc/GMT-1
+          - Europe/Amsterdam
+          - Europe/Andorra
+          - Europe/Belgrade
+          - Europe/Berlin
+          - Europe/Bratislava
+          - Europe/Brussels
+          - Europe/Budapest
+          - Europe/Busingen
+          - Europe/Copenhagen
+          - Europe/Gibraltar
+          - Europe/Ljubljana
+          - Europe/Luxembourg
+          - Europe/Madrid
+          - Europe/Malta
+          - Europe/Monaco
+          - Europe/Oslo
+          - Europe/Paris
+          - Europe/Podgorica
+          - Europe/Prague
+          - Europe/Rome
+          - Europe/San_Marino
+          - Europe/Sarajevo
+          - Europe/Skopje
+          - Europe/Stockholm
+          - Europe/Tirane
+          - Europe/Vaduz
+          - Europe/Vatican
+          - Europe/Vienna
+          - Europe/Warsaw
+          - Europe/Zagreb
+          - Europe/Zurich
+          - MET
+          - Poland
+          - ECT
+          - Africa/Blantyre
+          - Africa/Bujumbura
+          - Africa/Cairo
+          - Africa/Gaborone
+          - Africa/Harare
+          - Africa/Johannesburg
+          - Africa/Khartoum
+          - Africa/Kigali
+          - Africa/Lubumbashi
+          - Africa/Lusaka
+          - Africa/Maputo
+          - Africa/Maseru
+          - Africa/Mbabane
+          - Africa/Tripoli
+          - Africa/Windhoek
+          - Asia/Amman
+          - Asia/Beirut
+          - Asia/Damascus
+          - Asia/Famagusta
+          - Asia/Gaza
+          - Asia/Hebron
+          - Asia/Jerusalem
+          - Asia/Nicosia
+          - Asia/Tel_Aviv
+          - EET
+          - Egypt
+          - Etc/GMT-2
+          - Europe/Athens
+          - Europe/Bucharest
+          - Europe/Chisinau
+          - Europe/Helsinki
+          - Europe/Kaliningrad
+          - Europe/Kiev
+          - Europe/Mariehamn
+          - Europe/Nicosia
+          - Europe/Riga
+          - Europe/Sofia
+          - Europe/Tallinn
+          - Europe/Tiraspol
+          - Europe/Uzhgorod
+          - Europe/Vilnius
+          - Europe/Zaporozhye
+          - Israel
+          - Libya
+          - ART
+          - CAT
+          - Africa/Addis_Ababa
+          - Africa/Asmara
+          - Africa/Asmera
+          - Africa/Dar_es_Salaam
+          - Africa/Djibouti
+          - Africa/Juba
+          - Africa/Kampala
+          - Africa/Mogadishu
+          - Africa/Nairobi
+          - Antarctica/Syowa
+          - Asia/Aden
+          - Asia/Baghdad
+          - Asia/Bahrain
+          - Asia/Istanbul
+          - Asia/Kuwait
+          - Asia/Qatar
+          - Asia/Riyadh
+          - Etc/GMT-3
+          - Europe/Istanbul
+          - Europe/Kirov
+          - Europe/Minsk
+          - Europe/Moscow
+          - Europe/Simferopol
+          - Indian/Antananarivo
+          - Indian/Comoro
+          - Indian/Mayotte
+          - Turkey
+          - W-SU
+          - EAT
+          - Asia/Tehran
+          - Iran
+          - Asia/Baku
+          - Asia/Dubai
+          - Asia/Muscat
+          - Asia/Tbilisi
+          - Asia/Yerevan
+          - Etc/GMT-4
+          - Europe/Astrakhan
+          - Europe/Samara
+          - Europe/Saratov
+          - Europe/Ulyanovsk
+          - Europe/Volgograd
+          - Indian/Mahe
+          - Indian/Mauritius
+          - Indian/Reunion
+          - NET
+          - Asia/Kabul
+          - Antarctica/Mawson
+          - Asia/Aqtau
+          - Asia/Aqtobe
+          - Asia/Ashgabat
+          - Asia/Ashkhabad
+          - Asia/Atyrau
+          - Asia/Dushanbe
+          - Asia/Karachi
+          - Asia/Oral
+          - Asia/Qyzylorda
+          - Asia/Samarkand
+          - Asia/Tashkent
+          - Asia/Yekaterinburg
+          - Etc/GMT-5
+          - Indian/Kerguelen
+          - Indian/Maldives
+          - PLT
+          - Asia/Calcutta
+          - Asia/Colombo
+          - Asia/Kolkata
+          - IST
+          - Asia/Kathmandu
+          - Asia/Katmandu
+          - Antarctica/Vostok
+          - Asia/Almaty
+          - Asia/Bishkek
+          - Asia/Dacca
+          - Asia/Dhaka
+          - Asia/Kashgar
+          - Asia/Omsk
+          - Asia/Qostanay
+          - Asia/Thimbu
+          - Asia/Thimphu
+          - Asia/Urumqi
+          - Etc/GMT-6
+          - Indian/Chagos
+          - BST
+          - Asia/Rangoon
+          - Asia/Yangon
+          - Indian/Cocos
+          - Antarctica/Davis
+          - Asia/Bangkok
+          - Asia/Barnaul
+          - Asia/Ho_Chi_Minh
+          - Asia/Hovd
+          - Asia/Jakarta
+          - Asia/Krasnoyarsk
+          - Asia/Novokuznetsk
+          - Asia/Novosibirsk
+          - Asia/Phnom_Penh
+          - Asia/Pontianak
+          - Asia/Saigon
+          - Asia/Tomsk
+          - Asia/Vientiane
+          - Etc/GMT-7
+          - Indian/Christmas
+          - VST
+          - Antarctica/Casey
+          - Asia/Brunei
+          - Asia/Choibalsan
+          - Asia/Chongqing
+          - Asia/Chungking
+          - Asia/Harbin
+          - Asia/Hong_Kong
+          - Asia/Irkutsk
+          - Asia/Kuala_Lumpur
+          - Asia/Kuching
+          - Asia/Macao
+          - Asia/Macau
+          - Asia/Makassar
+          - Asia/Manila
+          - Asia/Shanghai
+          - Asia/Singapore
+          - Asia/Taipei
+          - Asia/Ujung_Pandang
+          - Asia/Ulaanbaatar
+          - Asia/Ulan_Bator
+          - Australia/Perth
+          - Australia/West
+          - Etc/GMT-8
+          - Hongkong
+          - PRC
+          - Singapore
+          - CTT
+          - Australia/Eucla
+          - Asia/Chita
+          - Asia/Dili
+          - Asia/Jayapura
+          - Asia/Khandyga
+          - Asia/Pyongyang
+          - Asia/Seoul
+          - Asia/Tokyo
+          - Asia/Yakutsk
+          - Etc/GMT-9
+          - Japan
+          - Pacific/Palau
+          - ROK
+          - JST
+          - Australia/Adelaide
+          - Australia/Broken_Hill
+          - Australia/Darwin
+          - Australia/North
+          - Australia/South
+          - Australia/Yancowinna
+          - ACT
+          - Antarctica/DumontDUrville
+          - Asia/Ust-Nera
+          - Asia/Vladivostok
+          - Australia/ACT
+          - Australia/Brisbane
+          - Australia/Canberra
+          - Australia/Currie
+          - Australia/Hobart
+          - Australia/Lindeman
+          - Australia/Melbourne
+          - Australia/NSW
+          - Australia/Queensland
+          - Australia/Sydney
+          - Australia/Tasmania
+          - Australia/Victoria
+          - Etc/GMT-10
+          - Pacific/Chuuk
+          - Pacific/Guam
+          - Pacific/Port_Moresby
+          - Pacific/Saipan
+          - Pacific/Truk
+          - Pacific/Yap
+          - AET
+          - Australia/LHI
+          - Australia/Lord_Howe
+          - Antarctica/Macquarie
+          - Asia/Magadan
+          - Asia/Sakhalin
+          - Asia/Srednekolymsk
+          - Etc/GMT-11
+          - Pacific/Bougainville
+          - Pacific/Efate
+          - Pacific/Guadalcanal
+          - Pacific/Kosrae
+          - Pacific/Norfolk
+          - Pacific/Noumea
+          - Pacific/Pohnpei
+          - Pacific/Ponape
+          - SST
+          - Antarctica/McMurdo
+          - Antarctica/South_Pole
+          - Asia/Anadyr
+          - Asia/Kamchatka
+          - Etc/GMT-12
+          - Kwajalein
+          - NZ
+          - Pacific/Auckland
+          - Pacific/Fiji
+          - Pacific/Funafuti
+          - Pacific/Kwajalein
+          - Pacific/Majuro
+          - Pacific/Nauru
+          - Pacific/Tarawa
+          - Pacific/Wake
+          - Pacific/Wallis
+          - NST
+          - NZ-CHAT
+          - Pacific/Chatham
+          - Etc/GMT-13
+          - Pacific/Apia
+          - Pacific/Enderbury
+          - Pacific/Fakaofo
+          - Pacific/Tongatapu
+          - MIT
+          - Etc/GMT-14
+          - Pacific/Kiritimati
         row_module_id__mdl_name:
           description: Module Name
           type: string
@@ -132,11 +777,17 @@ components:
           description: Domain menu by default
           type: string
         usr_menu_defhidden:
-          description: Menu hidden by default
+          description: deprecated
           type: boolean
         usr_menu_defcollapsed:
           description: Menu collapsed by default
           type: boolean
+        usr_uuid:
+          description: UUID
+          type: string
+        usr_last_logon:
+          description: Last logon
+          type: string
         usr_first_name:
           description: First name
           type: string
@@ -144,7 +795,7 @@ components:
           description: Home phone
           type: string
         usr_email:
-          description: Email
+          description: Email address
           type: string
         usr_active:
           description: Active
@@ -158,22 +809,22 @@ components:
           description: Menu visible
           type: boolean
         usr_zipcode:
-          description: Zip code
+          description: Postal/ZIP code
           type: string
         usr_address1:
-          description: Address
+          description: Address line 1
           type: string
         usr_address2:
-          description: Address complement
+          description: Address line 2
           type: string
         usr_last_name:
-          description: Name
+          description: Last name
           type: string
         usr_cell_num:
-          description: Mobile phone
+          description: Mobile/cellular phone number
           type: string
         usr_menu_defdomain_id__obd_name:
-          description: Domain menu by default Code
+          description: Default opened domain
           type: string
         usr_city:
           description: City
@@ -191,7 +842,7 @@ components:
           description: ID
           type: string
         usr_work_num:
-          description: Work phone
+          description: Work phone number
           type: string
         usr_home_id:
           description: Home page
@@ -202,6 +853,14 @@ components:
         usr_extra:
           description: Extra zone visible
           type: boolean
+        usr_dateformat:
+          description: Date format
+          type: string
+          enum:
+          - YMD
+          - DMY
+          - MDY
+          - CHF
     ActionResult:
       type: object
       properties:
@@ -255,6 +914,17 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/TestJavaUser'
+    Error403:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 403
   securitySchemes:
     basicAuth:
       scheme: basic
@@ -263,16 +933,13 @@ components:
       bearerFormat: Simplicite token
       scheme: bearer
       type: http
-servers:
-- url: https://dev40.dev.simplicite.io/api
 openapi: 3.0.2
 paths:
   /rest/TestJavaUser:
     get:
+      summary: Search TestJavaUser business object records or get contextualized metadata
       security:
       - bearerAuth: []
-      description: Search business object records (or get contextualized business
-        object metadata, documenation, ...)
       operationId: obj-testjavauser-search
       responses:
         '200':
@@ -283,13 +950,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/ArrayOfTestJavaUser'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
@@ -336,6 +1003,635 @@ paths:
         required: false
       - schema:
           type: string
+          enum:
+          - Etc/GMT+12
+          - Etc/GMT+11
+          - Pacific/Midway
+          - Pacific/Niue
+          - Pacific/Pago_Pago
+          - Pacific/Samoa
+          - US/Samoa
+          - America/Adak
+          - America/Atka
+          - Etc/GMT+10
+          - Pacific/Honolulu
+          - Pacific/Johnston
+          - Pacific/Rarotonga
+          - Pacific/Tahiti
+          - SystemV/HST10
+          - US/Aleutian
+          - US/Hawaii
+          - HST
+          - Pacific/Marquesas
+          - America/Anchorage
+          - America/Juneau
+          - America/Metlakatla
+          - America/Nome
+          - America/Sitka
+          - America/Yakutat
+          - Etc/GMT+9
+          - Pacific/Gambier
+          - SystemV/YST9
+          - SystemV/YST9YDT
+          - US/Alaska
+          - AST
+          - America/Dawson
+          - America/Ensenada
+          - America/Los_Angeles
+          - America/Santa_Isabel
+          - America/Tijuana
+          - America/Vancouver
+          - America/Whitehorse
+          - Canada/Pacific
+          - Canada/Yukon
+          - Etc/GMT+8
+          - Mexico/BajaNorte
+          - PST8PDT
+          - Pacific/Pitcairn
+          - SystemV/PST8
+          - SystemV/PST8PDT
+          - US/Pacific
+          - US/Pacific-New
+          - PST
+          - America/Boise
+          - America/Cambridge_Bay
+          - America/Chihuahua
+          - America/Creston
+          - America/Dawson_Creek
+          - America/Denver
+          - America/Edmonton
+          - America/Fort_Nelson
+          - America/Hermosillo
+          - America/Inuvik
+          - America/Mazatlan
+          - America/Ojinaga
+          - America/Phoenix
+          - America/Shiprock
+          - America/Yellowknife
+          - Canada/Mountain
+          - Etc/GMT+7
+          - MST7MDT
+          - Mexico/BajaSur
+          - Navajo
+          - SystemV/MST7
+          - SystemV/MST7MDT
+          - US/Arizona
+          - US/Mountain
+          - MST
+          - PNT
+          - America/Bahia_Banderas
+          - America/Belize
+          - America/Chicago
+          - America/Costa_Rica
+          - America/El_Salvador
+          - America/Guatemala
+          - America/Indiana/Knox
+          - America/Indiana/Tell_City
+          - America/Knox_IN
+          - America/Managua
+          - America/Matamoros
+          - America/Menominee
+          - America/Merida
+          - America/Mexico_City
+          - America/Monterrey
+          - America/North_Dakota/Beulah
+          - America/North_Dakota/Center
+          - America/North_Dakota/New_Salem
+          - America/Rainy_River
+          - America/Rankin_Inlet
+          - America/Regina
+          - America/Resolute
+          - America/Swift_Current
+          - America/Tegucigalpa
+          - America/Winnipeg
+          - CST6CDT
+          - Canada/Central
+          - Canada/Saskatchewan
+          - Chile/EasterIsland
+          - Etc/GMT+6
+          - Mexico/General
+          - Pacific/Easter
+          - Pacific/Galapagos
+          - SystemV/CST6
+          - SystemV/CST6CDT
+          - US/Central
+          - US/Indiana-Starke
+          - CST
+          - America/Atikokan
+          - America/Bogota
+          - America/Cancun
+          - America/Cayman
+          - America/Coral_Harbour
+          - America/Detroit
+          - America/Eirunepe
+          - America/Fort_Wayne
+          - America/Grand_Turk
+          - America/Guayaquil
+          - America/Havana
+          - America/Indiana/Indianapolis
+          - America/Indiana/Marengo
+          - America/Indiana/Petersburg
+          - America/Indiana/Vevay
+          - America/Indiana/Vincennes
+          - America/Indiana/Winamac
+          - America/Indianapolis
+          - America/Iqaluit
+          - America/Jamaica
+          - America/Kentucky/Louisville
+          - America/Kentucky/Monticello
+          - America/Lima
+          - America/Louisville
+          - America/Montreal
+          - America/Nassau
+          - America/New_York
+          - America/Nipigon
+          - America/Panama
+          - America/Pangnirtung
+          - America/Port-au-Prince
+          - America/Porto_Acre
+          - America/Rio_Branco
+          - America/Thunder_Bay
+          - America/Toronto
+          - Brazil/Acre
+          - Canada/Eastern
+          - Cuba
+          - EST5EDT
+          - Etc/GMT+5
+          - Jamaica
+          - SystemV/EST5
+          - SystemV/EST5EDT
+          - US/East-Indiana
+          - US/Eastern
+          - US/Michigan
+          - EST
+          - IET
+          - America/Anguilla
+          - America/Antigua
+          - America/Aruba
+          - America/Asuncion
+          - America/Barbados
+          - America/Blanc-Sablon
+          - America/Boa_Vista
+          - America/Campo_Grande
+          - America/Caracas
+          - America/Cuiaba
+          - America/Curacao
+          - America/Dominica
+          - America/Glace_Bay
+          - America/Goose_Bay
+          - America/Grenada
+          - America/Guadeloupe
+          - America/Guyana
+          - America/Halifax
+          - America/Kralendijk
+          - America/La_Paz
+          - America/Lower_Princes
+          - America/Manaus
+          - America/Marigot
+          - America/Martinique
+          - America/Moncton
+          - America/Montserrat
+          - America/Port_of_Spain
+          - America/Porto_Velho
+          - America/Puerto_Rico
+          - America/Santiago
+          - America/Santo_Domingo
+          - America/St_Barthelemy
+          - America/St_Kitts
+          - America/St_Lucia
+          - America/St_Thomas
+          - America/St_Vincent
+          - America/Thule
+          - America/Tortola
+          - America/Virgin
+          - Atlantic/Bermuda
+          - Brazil/West
+          - Canada/Atlantic
+          - Chile/Continental
+          - Etc/GMT+4
+          - SystemV/AST4
+          - SystemV/AST4ADT
+          - PRT
+          - America/St_Johns
+          - Canada/Newfoundland
+          - CNT
+          - America/Araguaina
+          - America/Argentina/Buenos_Aires
+          - America/Argentina/Catamarca
+          - America/Argentina/ComodRivadavia
+          - America/Argentina/Cordoba
+          - America/Argentina/Jujuy
+          - America/Argentina/La_Rioja
+          - America/Argentina/Mendoza
+          - America/Argentina/Rio_Gallegos
+          - America/Argentina/Salta
+          - America/Argentina/San_Juan
+          - America/Argentina/San_Luis
+          - America/Argentina/Tucuman
+          - America/Argentina/Ushuaia
+          - America/Bahia
+          - America/Belem
+          - America/Buenos_Aires
+          - America/Catamarca
+          - America/Cayenne
+          - America/Cordoba
+          - America/Fortaleza
+          - America/Godthab
+          - America/Jujuy
+          - America/Maceio
+          - America/Mendoza
+          - America/Miquelon
+          - America/Montevideo
+          - America/Paramaribo
+          - America/Punta_Arenas
+          - America/Recife
+          - America/Rosario
+          - America/Santarem
+          - America/Sao_Paulo
+          - Antarctica/Palmer
+          - Antarctica/Rothera
+          - Atlantic/Stanley
+          - Brazil/East
+          - Etc/GMT+3
+          - AGT
+          - BET
+          - America/Noronha
+          - Atlantic/South_Georgia
+          - Brazil/DeNoronha
+          - Etc/GMT+2
+          - America/Scoresbysund
+          - Atlantic/Azores
+          - Atlantic/Cape_Verde
+          - Etc/GMT+1
+          - Africa/Abidjan
+          - Africa/Accra
+          - Africa/Bamako
+          - Africa/Banjul
+          - Africa/Bissau
+          - Africa/Casablanca
+          - Africa/Conakry
+          - Africa/Dakar
+          - Africa/El_Aaiun
+          - Africa/Freetown
+          - Africa/Lome
+          - Africa/Monrovia
+          - Africa/Nouakchott
+          - Africa/Ouagadougou
+          - Africa/Sao_Tome
+          - Africa/Timbuktu
+          - America/Danmarkshavn
+          - Antarctica/Troll
+          - Atlantic/Canary
+          - Atlantic/Faeroe
+          - Atlantic/Faroe
+          - Atlantic/Madeira
+          - Atlantic/Reykjavik
+          - Atlantic/St_Helena
+          - Eire
+          - Etc/GMT
+          - Etc/GMT+0
+          - Etc/GMT-0
+          - Etc/GMT0
+          - Etc/Greenwich
+          - Etc/UCT
+          - Etc/UTC
+          - Etc/Universal
+          - Etc/Zulu
+          - Europe/Belfast
+          - Europe/Dublin
+          - Europe/Guernsey
+          - Europe/Isle_of_Man
+          - Europe/Jersey
+          - Europe/Lisbon
+          - Europe/London
+          - GB
+          - GB-Eire
+          - GMT
+          - GMT0
+          - Greenwich
+          - Iceland
+          - Portugal
+          - UCT
+          - UTC
+          - Universal
+          - WET
+          - Zulu
+          - Africa/Algiers
+          - Africa/Bangui
+          - Africa/Brazzaville
+          - Africa/Ceuta
+          - Africa/Douala
+          - Africa/Kinshasa
+          - Africa/Lagos
+          - Africa/Libreville
+          - Africa/Luanda
+          - Africa/Malabo
+          - Africa/Ndjamena
+          - Africa/Niamey
+          - Africa/Porto-Novo
+          - Africa/Tunis
+          - Arctic/Longyearbyen
+          - Atlantic/Jan_Mayen
+          - CET
+          - Etc/GMT-1
+          - Europe/Amsterdam
+          - Europe/Andorra
+          - Europe/Belgrade
+          - Europe/Berlin
+          - Europe/Bratislava
+          - Europe/Brussels
+          - Europe/Budapest
+          - Europe/Busingen
+          - Europe/Copenhagen
+          - Europe/Gibraltar
+          - Europe/Ljubljana
+          - Europe/Luxembourg
+          - Europe/Madrid
+          - Europe/Malta
+          - Europe/Monaco
+          - Europe/Oslo
+          - Europe/Paris
+          - Europe/Podgorica
+          - Europe/Prague
+          - Europe/Rome
+          - Europe/San_Marino
+          - Europe/Sarajevo
+          - Europe/Skopje
+          - Europe/Stockholm
+          - Europe/Tirane
+          - Europe/Vaduz
+          - Europe/Vatican
+          - Europe/Vienna
+          - Europe/Warsaw
+          - Europe/Zagreb
+          - Europe/Zurich
+          - MET
+          - Poland
+          - ECT
+          - Africa/Blantyre
+          - Africa/Bujumbura
+          - Africa/Cairo
+          - Africa/Gaborone
+          - Africa/Harare
+          - Africa/Johannesburg
+          - Africa/Khartoum
+          - Africa/Kigali
+          - Africa/Lubumbashi
+          - Africa/Lusaka
+          - Africa/Maputo
+          - Africa/Maseru
+          - Africa/Mbabane
+          - Africa/Tripoli
+          - Africa/Windhoek
+          - Asia/Amman
+          - Asia/Beirut
+          - Asia/Damascus
+          - Asia/Famagusta
+          - Asia/Gaza
+          - Asia/Hebron
+          - Asia/Jerusalem
+          - Asia/Nicosia
+          - Asia/Tel_Aviv
+          - EET
+          - Egypt
+          - Etc/GMT-2
+          - Europe/Athens
+          - Europe/Bucharest
+          - Europe/Chisinau
+          - Europe/Helsinki
+          - Europe/Kaliningrad
+          - Europe/Kiev
+          - Europe/Mariehamn
+          - Europe/Nicosia
+          - Europe/Riga
+          - Europe/Sofia
+          - Europe/Tallinn
+          - Europe/Tiraspol
+          - Europe/Uzhgorod
+          - Europe/Vilnius
+          - Europe/Zaporozhye
+          - Israel
+          - Libya
+          - ART
+          - CAT
+          - Africa/Addis_Ababa
+          - Africa/Asmara
+          - Africa/Asmera
+          - Africa/Dar_es_Salaam
+          - Africa/Djibouti
+          - Africa/Juba
+          - Africa/Kampala
+          - Africa/Mogadishu
+          - Africa/Nairobi
+          - Antarctica/Syowa
+          - Asia/Aden
+          - Asia/Baghdad
+          - Asia/Bahrain
+          - Asia/Istanbul
+          - Asia/Kuwait
+          - Asia/Qatar
+          - Asia/Riyadh
+          - Etc/GMT-3
+          - Europe/Istanbul
+          - Europe/Kirov
+          - Europe/Minsk
+          - Europe/Moscow
+          - Europe/Simferopol
+          - Indian/Antananarivo
+          - Indian/Comoro
+          - Indian/Mayotte
+          - Turkey
+          - W-SU
+          - EAT
+          - Asia/Tehran
+          - Iran
+          - Asia/Baku
+          - Asia/Dubai
+          - Asia/Muscat
+          - Asia/Tbilisi
+          - Asia/Yerevan
+          - Etc/GMT-4
+          - Europe/Astrakhan
+          - Europe/Samara
+          - Europe/Saratov
+          - Europe/Ulyanovsk
+          - Europe/Volgograd
+          - Indian/Mahe
+          - Indian/Mauritius
+          - Indian/Reunion
+          - NET
+          - Asia/Kabul
+          - Antarctica/Mawson
+          - Asia/Aqtau
+          - Asia/Aqtobe
+          - Asia/Ashgabat
+          - Asia/Ashkhabad
+          - Asia/Atyrau
+          - Asia/Dushanbe
+          - Asia/Karachi
+          - Asia/Oral
+          - Asia/Qyzylorda
+          - Asia/Samarkand
+          - Asia/Tashkent
+          - Asia/Yekaterinburg
+          - Etc/GMT-5
+          - Indian/Kerguelen
+          - Indian/Maldives
+          - PLT
+          - Asia/Calcutta
+          - Asia/Colombo
+          - Asia/Kolkata
+          - IST
+          - Asia/Kathmandu
+          - Asia/Katmandu
+          - Antarctica/Vostok
+          - Asia/Almaty
+          - Asia/Bishkek
+          - Asia/Dacca
+          - Asia/Dhaka
+          - Asia/Kashgar
+          - Asia/Omsk
+          - Asia/Qostanay
+          - Asia/Thimbu
+          - Asia/Thimphu
+          - Asia/Urumqi
+          - Etc/GMT-6
+          - Indian/Chagos
+          - BST
+          - Asia/Rangoon
+          - Asia/Yangon
+          - Indian/Cocos
+          - Antarctica/Davis
+          - Asia/Bangkok
+          - Asia/Barnaul
+          - Asia/Ho_Chi_Minh
+          - Asia/Hovd
+          - Asia/Jakarta
+          - Asia/Krasnoyarsk
+          - Asia/Novokuznetsk
+          - Asia/Novosibirsk
+          - Asia/Phnom_Penh
+          - Asia/Pontianak
+          - Asia/Saigon
+          - Asia/Tomsk
+          - Asia/Vientiane
+          - Etc/GMT-7
+          - Indian/Christmas
+          - VST
+          - Antarctica/Casey
+          - Asia/Brunei
+          - Asia/Choibalsan
+          - Asia/Chongqing
+          - Asia/Chungking
+          - Asia/Harbin
+          - Asia/Hong_Kong
+          - Asia/Irkutsk
+          - Asia/Kuala_Lumpur
+          - Asia/Kuching
+          - Asia/Macao
+          - Asia/Macau
+          - Asia/Makassar
+          - Asia/Manila
+          - Asia/Shanghai
+          - Asia/Singapore
+          - Asia/Taipei
+          - Asia/Ujung_Pandang
+          - Asia/Ulaanbaatar
+          - Asia/Ulan_Bator
+          - Australia/Perth
+          - Australia/West
+          - Etc/GMT-8
+          - Hongkong
+          - PRC
+          - Singapore
+          - CTT
+          - Australia/Eucla
+          - Asia/Chita
+          - Asia/Dili
+          - Asia/Jayapura
+          - Asia/Khandyga
+          - Asia/Pyongyang
+          - Asia/Seoul
+          - Asia/Tokyo
+          - Asia/Yakutsk
+          - Etc/GMT-9
+          - Japan
+          - Pacific/Palau
+          - ROK
+          - JST
+          - Australia/Adelaide
+          - Australia/Broken_Hill
+          - Australia/Darwin
+          - Australia/North
+          - Australia/South
+          - Australia/Yancowinna
+          - ACT
+          - Antarctica/DumontDUrville
+          - Asia/Ust-Nera
+          - Asia/Vladivostok
+          - Australia/ACT
+          - Australia/Brisbane
+          - Australia/Canberra
+          - Australia/Currie
+          - Australia/Hobart
+          - Australia/Lindeman
+          - Australia/Melbourne
+          - Australia/NSW
+          - Australia/Queensland
+          - Australia/Sydney
+          - Australia/Tasmania
+          - Australia/Victoria
+          - Etc/GMT-10
+          - Pacific/Chuuk
+          - Pacific/Guam
+          - Pacific/Port_Moresby
+          - Pacific/Saipan
+          - Pacific/Truk
+          - Pacific/Yap
+          - AET
+          - Australia/LHI
+          - Australia/Lord_Howe
+          - Antarctica/Macquarie
+          - Asia/Magadan
+          - Asia/Sakhalin
+          - Asia/Srednekolymsk
+          - Etc/GMT-11
+          - Pacific/Bougainville
+          - Pacific/Efate
+          - Pacific/Guadalcanal
+          - Pacific/Kosrae
+          - Pacific/Norfolk
+          - Pacific/Noumea
+          - Pacific/Pohnpei
+          - Pacific/Ponape
+          - SST
+          - Antarctica/McMurdo
+          - Antarctica/South_Pole
+          - Asia/Anadyr
+          - Asia/Kamchatka
+          - Etc/GMT-12
+          - Kwajalein
+          - NZ
+          - Pacific/Auckland
+          - Pacific/Fiji
+          - Pacific/Funafuti
+          - Pacific/Kwajalein
+          - Pacific/Majuro
+          - Pacific/Nauru
+          - Pacific/Tarawa
+          - Pacific/Wake
+          - Pacific/Wallis
+          - NST
+          - NZ-CHAT
+          - Pacific/Chatham
+          - Etc/GMT-13
+          - Pacific/Apia
+          - Pacific/Enderbury
+          - Pacific/Fakaofo
+          - Pacific/Tongatapu
+          - MIT
+          - Etc/GMT-14
+          - Pacific/Kiritimati
         in: query
         name: usr_timezone
         description: Search filter for Time zone
@@ -377,7 +1673,7 @@ paths:
           type: string
         in: query
         name: usr_last_name
-        description: Search filter for Name
+        description: Search filter for Last name
         required: false
       - schema:
           type: string
@@ -389,7 +1685,7 @@ paths:
           type: string
         in: query
         name: usr_email
-        description: Search filter for Email
+        description: Search filter for Email address
         required: false
       - schema:
           type: string
@@ -407,7 +1703,7 @@ paths:
           type: string
         in: query
         name: usr_work_num
-        description: Search filter for Work phone
+        description: Search filter for Work phone number
         required: false
       - schema:
           type: string
@@ -419,25 +1715,25 @@ paths:
           type: string
         in: query
         name: usr_cell_num
-        description: Search filter for Mobile phone
+        description: Search filter for Mobile/cellular phone number
         required: false
       - schema:
           type: string
         in: query
         name: usr_address1
-        description: Search filter for Address
+        description: Search filter for Address line 1
         required: false
       - schema:
           type: string
         in: query
         name: usr_address2
-        description: Search filter for Address complement
+        description: Search filter for Address line 2
         required: false
       - schema:
           type: string
         in: query
         name: usr_zipcode
-        description: Search filter for Zip code
+        description: Search filter for Postal/ZIP code
         required: false
       - schema:
           type: string
@@ -489,7 +1785,7 @@ paths:
           type: boolean
         in: query
         name: usr_menu_defhidden
-        description: Search filter for Menu hidden by default
+        description: Search filter for deprecated
         required: false
       - schema:
           type: boolean
@@ -507,7 +1803,7 @@ paths:
           type: string
         in: query
         name: usr_menu_defdomain_id__obd_name
-        description: Search filter for Domain menu by default Code
+        description: Search filter for Default opened domain
         required: false
       - schema:
           type: boolean
@@ -527,14 +1823,37 @@ paths:
         name: usr_logout
         description: Search filter for Logout
         required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_last_logon
+        description: Search filter for Last logon
+        required: false
+      - schema:
+          type: string
+          enum:
+          - YMD
+          - DMY
+          - MDY
+          - CHF
+        in: query
+        name: usr_dateformat
+        description: Search filter for Date format
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_uuid
+        description: Search filter for UUID
+        required: false
       tags:
       - TestJavaUser
   /rest/TestJavaUser/{row_id}/publication:User-DEFAULT:
     get:
+      summary: Call a custom publication for a TestJavaUser business object record
+        or for all records
       security:
       - bearerAuth: []
-      description: Call a custom publication for one business object record or for
-        all business object records
       operationId: obj-testjavauser-publication-user-default
       responses:
         '200':
@@ -544,19 +1863,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/PublicationResult'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -566,15 +1885,15 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaUser
   /login:
     get:
+      summary: Login (obtain bearer token)
       security:
       - basicAuth: []
-      description: Login (obtain bearer token)
       operationId: login
       responses:
         '200':
@@ -583,7 +1902,7 @@ paths:
             application/json: {}
             text/plain: {}
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
@@ -594,17 +1913,18 @@ paths:
           enum:
           - json
           - oauth2
+          - token
         in: query
         name: _output
         description: Optional output format
         required: false
       tags:
-      - Application
+      - session
   /logout:
     get:
+      summary: Logout (revoke bearer token)
       security:
       - bearerAuth: []
-      description: Logout (revoke bearer token)
       operationId: logout
       responses:
         '200':
@@ -612,19 +1932,19 @@ paths:
           content:
             application/json: {}
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
       tags:
-      - Application
+      - session
   /rest/TestJavaObjectChild:
     get:
+      summary: Search TestJavaObjectChild business object records or get contextualized
+        metadata
       security:
       - bearerAuth: []
-      description: Search business object records (or get contextualized business
-        object metadata, documenation, ...)
       operationId: obj-testjavaobjectchild-search
       responses:
         '200':
@@ -635,13 +1955,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/ArrayOfTestJavaObjectChild'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
@@ -687,6 +2007,7 @@ paths:
       - TestJavaObjectChild
   /rest/TestJavaObjectChild/{row_id}:
     post:
+      summary: Create a new TestJavaObjectChildbusiness object record
       security:
       - bearerAuth: []
       requestBody:
@@ -694,7 +2015,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TestJavaObjectChild'
-      description: Create a new business object record
       operationId: obj-testjavaobjectchild-create
       responses:
         '200':
@@ -704,19 +2024,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaObjectChild'
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
@@ -726,14 +2046,14 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaObjectChild
     get:
+      summary: Get a TestJavaObjectChild business object record
       security:
       - bearerAuth: []
-      description: Get a single business object record
       operationId: obj-testjavaobjectchild-get
       responses:
         '200':
@@ -743,19 +2063,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaObjectChild'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -765,7 +2085,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -788,9 +2108,9 @@ paths:
       tags:
       - TestJavaObjectChild
     delete:
+      summary: Delete a TestJavaObjectChild business object record
       security:
       - bearerAuth: []
-      description: Delete a business object record
       operationId: obj-testjavaobjectchild-delete
       responses:
         '200':
@@ -798,25 +2118,25 @@ paths:
           content:
             application/json: {}
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -826,11 +2146,12 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaObjectChild
     put:
+      summary: Update a TestJavaObjectChildbusiness object record
       security:
       - bearerAuth: []
       requestBody:
@@ -838,7 +2159,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TestJavaObjectChild'
-      description: Update a business object record
       operationId: obj-testjavaobjectchild-update
       responses:
         '200':
@@ -848,25 +2168,25 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaObjectChild'
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -876,16 +2196,16 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaObjectChild
   /rest/TestJavaObjectGrandChild:
     get:
+      summary: Search TestJavaObjectGrandChild business object records or get contextualized
+        metadata
       security:
       - bearerAuth: []
-      description: Search business object records (or get contextualized business
-        object metadata, documenation, ...)
       operationId: obj-testjavaobjectgrandchild-search
       responses:
         '200':
@@ -896,13 +2216,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/ArrayOfTestJavaObjectGrandChild'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
@@ -948,9 +2268,9 @@ paths:
       - TestJavaObjectGrandChild
   /:
     get:
+      summary: Get user session information
       security:
       - bearerAuth: []
-      description: Get user session information
       operationId: info
       responses:
         '200':
@@ -958,7 +2278,7 @@ paths:
           content:
             application/json: {}
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
@@ -971,13 +2291,13 @@ paths:
         description: Texts?
         required: false
       tags:
-      - Application
+      - session
   /rest/TestJavaObject:
     get:
+      summary: Search TestJavaObject business object records or get contextualized
+        metadata
       security:
       - bearerAuth: []
-      description: Search business object records (or get contextualized business
-        object metadata, documenation, ...)
       operationId: obj-testjavaobject-search
       responses:
         '200':
@@ -988,13 +2308,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/ArrayOfTestJavaObject'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
@@ -1040,10 +2360,10 @@ paths:
       - TestJavaObject
   /rest/TestJavaUser/{row_id}/publication:User-EXCEL:
     get:
+      summary: Call a custom publication for a TestJavaUser business object record
+        or for all records
       security:
       - bearerAuth: []
-      description: Call a custom publication for one business object record or for
-        all business object records
       operationId: obj-testjavauser-publication-user-excel
       responses:
         '200':
@@ -1053,19 +2373,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/PublicationResult'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1075,16 +2395,16 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaUser
   /rest/TestJavaUser/{row_id}/publication:User-WORD:
     get:
+      summary: Call a custom publication for a TestJavaUser business object record
+        or for all records
       security:
       - bearerAuth: []
-      description: Call a custom publication for one business object record or for
-        all business object records
       operationId: obj-testjavauser-publication-user-word
       responses:
         '200':
@@ -1094,19 +2414,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/PublicationResult'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1116,12 +2436,13 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaUser
   /rest/TestJavaUser/{row_id}:
     post:
+      summary: Create a new TestJavaUserbusiness object record
       security:
       - bearerAuth: []
       requestBody:
@@ -1129,7 +2450,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TestJavaUser'
-      description: Create a new business object record
       operationId: obj-testjavauser-create
       responses:
         '200':
@@ -1139,19 +2459,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaUser'
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
@@ -1161,14 +2481,14 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaUser
     get:
+      summary: Get a TestJavaUser business object record
       security:
       - bearerAuth: []
-      description: Get a single business object record
       operationId: obj-testjavauser-get
       responses:
         '200':
@@ -1178,19 +2498,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaUser'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1200,7 +2520,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1223,9 +2543,9 @@ paths:
       tags:
       - TestJavaUser
     delete:
+      summary: Delete a TestJavaUser business object record
       security:
       - bearerAuth: []
-      description: Delete a business object record
       operationId: obj-testjavauser-delete
       responses:
         '200':
@@ -1233,25 +2553,25 @@ paths:
           content:
             application/json: {}
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1261,11 +2581,12 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaUser
     put:
+      summary: Update a TestJavaUserbusiness object record
       security:
       - bearerAuth: []
       requestBody:
@@ -1273,7 +2594,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TestJavaUser'
-      description: Update a business object record
       operationId: obj-testjavauser-update
       responses:
         '200':
@@ -1283,25 +2603,25 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaUser'
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1311,16 +2631,16 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaUser
   /rest/TestJavaUser/{row_id}/publication:User-VCARD:
     get:
+      summary: Call a custom publication for a TestJavaUser business object record
+        or for all records
       security:
       - bearerAuth: []
-      description: Call a custom publication for one business object record or for
-        all business object records
       operationId: obj-testjavauser-publication-user-vcard
       responses:
         '200':
@@ -1330,19 +2650,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/PublicationResult'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1352,12 +2672,13 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaUser
   /rest/TestJavaObjectGrandChild/{row_id}:
     post:
+      summary: Create a new TestJavaObjectGrandChildbusiness object record
       security:
       - bearerAuth: []
       requestBody:
@@ -1365,7 +2686,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TestJavaObjectGrandChild'
-      description: Create a new business object record
       operationId: obj-testjavaobjectgrandchild-create
       responses:
         '200':
@@ -1375,19 +2695,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaObjectGrandChild'
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
@@ -1397,14 +2717,14 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaObjectGrandChild
     get:
+      summary: Get a TestJavaObjectGrandChild business object record
       security:
       - bearerAuth: []
-      description: Get a single business object record
       operationId: obj-testjavaobjectgrandchild-get
       responses:
         '200':
@@ -1414,19 +2734,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaObjectGrandChild'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1436,7 +2756,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1459,9 +2779,9 @@ paths:
       tags:
       - TestJavaObjectGrandChild
     delete:
+      summary: Delete a TestJavaObjectGrandChild business object record
       security:
       - bearerAuth: []
-      description: Delete a business object record
       operationId: obj-testjavaobjectgrandchild-delete
       responses:
         '200':
@@ -1469,25 +2789,25 @@ paths:
           content:
             application/json: {}
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1497,11 +2817,12 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaObjectGrandChild
     put:
+      summary: Update a TestJavaObjectGrandChildbusiness object record
       security:
       - bearerAuth: []
       requestBody:
@@ -1509,7 +2830,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TestJavaObjectGrandChild'
-      description: Update a business object record
       operationId: obj-testjavaobjectgrandchild-update
       responses:
         '200':
@@ -1519,25 +2839,25 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaObjectGrandChild'
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1547,12 +2867,208 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaObjectGrandChild
+  /rest/TestJavaService/{row_id}:
+    post:
+      summary: Create a new TestJavaServicebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestJavaService'
+      operationId: obj-testjavaservice-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaService'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaService
+    get:
+      summary: Get a TestJavaService business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-testjavaservice-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaService'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - TestJavaService
+    delete:
+      summary: Delete a TestJavaService business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-testjavaservice-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaService
+    put:
+      summary: Update a TestJavaServicebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestJavaService'
+      operationId: obj-testjavaservice-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestJavaService'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - TestJavaService
   /rest/TestJavaObject/{row_id}:
     post:
+      summary: Create a new TestJavaObjectbusiness object record
       security:
       - bearerAuth: []
       requestBody:
@@ -1560,7 +3076,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TestJavaObject'
-      description: Create a new business object record
       operationId: obj-testjavaobject-create
       responses:
         '200':
@@ -1570,19 +3085,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaObject'
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
@@ -1592,14 +3107,14 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaObject
     get:
+      summary: Get a TestJavaObject business object record
       security:
       - bearerAuth: []
-      description: Get a single business object record
       operationId: obj-testjavaobject-get
       responses:
         '200':
@@ -1609,19 +3124,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaObject'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1631,7 +3146,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1654,9 +3169,9 @@ paths:
       tags:
       - TestJavaObject
     delete:
+      summary: Delete a TestJavaObject business object record
       security:
       - bearerAuth: []
-      description: Delete a business object record
       operationId: obj-testjavaobject-delete
       responses:
         '200':
@@ -1664,25 +3179,25 @@ paths:
           content:
             application/json: {}
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1692,11 +3207,12 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaObject
     put:
+      summary: Update a TestJavaObjectbusiness object record
       security:
       - bearerAuth: []
       requestBody:
@@ -1704,7 +3220,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TestJavaObject'
-      description: Update a business object record
       operationId: obj-testjavaobject-update
       responses:
         '200':
@@ -1714,25 +3229,25 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestJavaObject'
         '400':
-          description: Error 400
+          description: Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error400'
         '401':
-          description: Error 401
+          description: Unauthorized
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error401'
         '500':
-          description: Error 500
+          description: Internal server error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error500'
         '404':
-          description: Error 404
+          description: Not found
           content:
             application/json:
               schema:
@@ -1742,10 +3257,70 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or _ for all row IDs)
+        description: row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestJavaObject
+  /rest/TestJavaService:
+    get:
+      summary: Search TestJavaService business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-testjavaservice-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfTestJavaService'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: testSrv1
+        description: Search filter for Test 1
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: testSrv2
+        description: Search filter for Test 2
+        required: false
+      tags:
+      - TestJavaService
 info:
   license:
     name: Simplicite license
@@ -1754,6 +3329,17 @@ info:
     name: Simplicite Software
     url: http://www.simplicitesoftware.com
     email: contact@simplicitesoftware.com
-  description: REST APIs for TestJava
+  description: API for module TestJava
   title: TestJava
   version: '4.0'
+tags:
+- name: TestJavaObject
+  description: Java object
+- name: TestJavaObjectChild
+  description: Java object (child)
+- name: TestJavaObjectGrandChild
+  description: Java object (grand child)
+- name: TestJavaService
+  description: Java service
+- name: TestJavaUser
+  description: Test java user

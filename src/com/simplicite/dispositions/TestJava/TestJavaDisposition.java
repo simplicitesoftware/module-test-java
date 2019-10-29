@@ -4,10 +4,12 @@ import com.simplicite.commons.TestJava.TestJavaCommon;
 import com.simplicite.util.AppLog;
 import com.simplicite.util.Disposition;
 import com.simplicite.util.Globals;
+import com.simplicite.util.tools.HTMLTool;
 import com.simplicite.util.tools.Parameters;
+import com.simplicite.webapp.web.BootstrapWebPage;
 
 /**
- * Java disposition
+ * Custom Java disposition
  */
 public class TestJavaDisposition extends Disposition {
 	private static final long serialVersionUID = 1L;
@@ -19,7 +21,16 @@ public class TestJavaDisposition extends Disposition {
 	@Override
 	public String display(Parameters params) {
 		try {
-			return "<p>" + TestJavaCommon.helloworld() + "</p><p><a href=\"" + Globals.WEB_UI_PATH + "?scope=Home\">" + getGrant().T("HOME") + "</a></p>";
+			BootstrapWebPage p = new BootstrapWebPage(HTMLTool.getRoot(), "Custom disposition");
+			p.appendCore(getGrant()); // Global variables for current user
+			p.appendAjax(); // Ajax API
+
+			p.appendHTML("<div id=\"grant\">...</div>"
+				+ "<div><a href=\"" + Globals.WEB_UI_PATH + "?scope=Home\">" + getGrant().T("HOME") + "</a></div>");
+
+			p.setReady("var app = new Simplicite.Ajax(); app.getGrant(function(g) { $('#grant').text('Hello ' + g.firstname + ' ' + g.lastname +  ' (' + g.login + ')'); });");
+
+			return p.toString();
 		} catch (Exception e) {
 			AppLog.error(getClass(), "display", null, e, getGrant());
 			return e.getMessage();
