@@ -1113,7 +1113,7 @@
 	<name>ConstraintObject</name>
 	<action>upsert</action>
 	<data>
-		<cst_name>TestJavaObject-C1</cst_name>
+		<cst_name>TestjObject-C1</cst_name>
 		<cst_object_id.obo_name>TestjObject</cst_object_id.obo_name>
 		<cst_order>1</cst_order>
 		<cst_desc/>
@@ -1122,6 +1122,25 @@
 		<cst_field_id.fld_name/>
 		<cst_expr><![CDATA[true]]></cst_expr>
 		<cst_method/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>ConstraintImpact</name>
+	<action>upsert</action>
+	<data>
+		<csi_const_id.cst_name>TestjObject-C1</csi_const_id.cst_name>
+		<csi_const_id.cst_object_id.obo_name>TestjObject</csi_const_id.cst_object_id.obo_name>
+		<csi_const_id.cst_order>1</csi_const_id.cst_order>
+		<csi_order>1</csi_order>
+		<csi_object_prop/>
+		<csi_field_prop>V</csi_field_prop>
+		<csi_apply>F</csi_apply>
+		<csi_expr><![CDATA[[VALUE:tstjFlag] == Tool.TRUE]]></csi_expr>
+		<csi_target/>
+		<csi_objfield_id.obf_object_id.obo_name/>
+		<csi_objfield_id.obf_field_id.fld_name/>
+		<csi_objfield_id.obf_order/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 </object>
