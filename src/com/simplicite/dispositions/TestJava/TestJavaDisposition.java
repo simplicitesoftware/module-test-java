@@ -21,7 +21,7 @@ public class TestJavaDisposition extends Disposition {
 	@Override
 	public String display(Parameters params) {
 		try {
-			BootstrapWebPage p = new BootstrapWebPage("Custom disposition");
+			BootstrapWebPage p = new BootstrapWebPage("Custom disposition (Java)");
 			p.appendCore(getGrant()); // Global variables for current user
 			p.appendAjax(); // Ajax API
 

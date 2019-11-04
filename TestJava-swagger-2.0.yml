@@ -875,6 +875,168 @@ paths:
         required: false
       tags:
       - TestJavaUser
+  /rest/TestjObjectChild/{row_id}:
+    post:
+      summary: Create a new TestjObjectChildbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobjectchild-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestjObjectChild'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/TestjObjectChild'
+        in: body
+        name: body
+      tags:
+      - TestjObjectChild
+      consumes:
+      - application/json
+    get:
+      summary: Get a TestjObjectChild business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobjectchild-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestjObjectChild'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - TestjObjectChild
+    delete:
+      summary: Delete a TestjObjectChild business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobjectchild-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - TestjObjectChild
+    put:
+      summary: Update a TestjObjectChildbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobjectchild-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestjObjectChild'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/TestjObjectChild'
+        in: body
+        name: body
+      tags:
+      - TestjObjectChild
+      consumes:
+      - application/json
   /rest/TestJavaUser/{row_id}/publication:User-DEFAULT:
     get:
       summary: Call a custom publication for a TestJavaUser business object record
@@ -937,91 +1099,18 @@ paths:
         - token
       tags:
       - session
-  /logout:
-    get:
-      summary: Logout (revoke bearer token)
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: logout
-      responses:
-        '200':
-          description: Successfull logout
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-      tags:
-      - session
-  /rest/TestJavaObjectChild:
-    get:
-      summary: Search TestJavaObjectChild business object records or get contextualized
-        metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testjavaobjectchild-search
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ArrayOfTestJavaObjectChild'
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: query
-        name: _metadata
-        description: Metadata?
-        type: boolean
-        required: false
-      - in: query
-        name: _count
-        description: Count?
-        type: boolean
-        required: false
-      - in: query
-        name: _doc
-        description: Documentation?
-        type: boolean
-        required: false
-      - in: query
-        name: tstjCode
-        description: Search filter for Code
-        type: string
-        required: false
-      - in: query
-        name: tstjFlag
-        description: Search filter for Flag
-        type: boolean
-        required: false
-      - in: query
-        name: tstjDesc
-        description: Search filter for Description
-        type: string
-        required: false
-      tags:
-      - TestJavaObjectChild
-  /rest/TestJavaObjectChild/{row_id}:
+  /rest/TestjObjectGrandChild/{row_id}:
     post:
-      summary: Create a new TestJavaObjectChildbusiness object record
+      summary: Create a new TestjObjectGrandChildbusiness object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-testjavaobjectchild-create
+      operationId: obj-testjobjectgrandchild-create
       responses:
         '200':
           schema:
-            $ref: '#/definitions/TestJavaObjectChild'
+            $ref: '#/definitions/TestjObjectGrandChild'
           description: Success in creating a new business object record
         '400':
           schema:
@@ -1042,24 +1131,24 @@ paths:
         type: string
         required: true
       - schema:
-          $ref: '#/definitions/TestJavaObjectChild'
+          $ref: '#/definitions/TestjObjectGrandChild'
         in: body
         name: body
       tags:
-      - TestJavaObjectChild
+      - TestjObjectGrandChild
       consumes:
       - application/json
     get:
-      summary: Get a TestJavaObjectChild business object record
+      summary: Get a TestjObjectGrandChild business object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-testjavaobjectchild-get
+      operationId: obj-testjobjectgrandchild-get
       responses:
         '200':
           schema:
-            $ref: '#/definitions/TestJavaObjectChild'
+            $ref: '#/definitions/TestjObjectGrandChild'
           description: Success in getting a single business object record
         '401':
           schema:
@@ -1095,14 +1184,14 @@ paths:
         type: boolean
         required: false
       tags:
-      - TestJavaObjectChild
+      - TestjObjectGrandChild
     delete:
-      summary: Delete a TestJavaObjectChild business object record
+      summary: Delete a TestjObjectGrandChild business object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-testjavaobjectchild-delete
+      operationId: obj-testjobjectgrandchild-delete
       responses:
         '200':
           description: Success in deleting a business object record
@@ -1129,18 +1218,18 @@ paths:
         type: string
         required: true
       tags:
-      - TestJavaObjectChild
+      - TestjObjectGrandChild
     put:
-      summary: Update a TestJavaObjectChildbusiness object record
+      summary: Update a TestjObjectGrandChildbusiness object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-testjavaobjectchild-update
+      operationId: obj-testjobjectgrandchild-update
       responses:
         '200':
           schema:
-            $ref: '#/definitions/TestJavaObjectChild'
+            $ref: '#/definitions/TestjObjectGrandChild'
           description: Success in updating a business object record
         '400':
           schema:
@@ -1165,26 +1254,205 @@ paths:
         type: string
         required: true
       - schema:
-          $ref: '#/definitions/TestJavaObjectChild'
+          $ref: '#/definitions/TestjObjectGrandChild'
         in: body
         name: body
       tags:
-      - TestJavaObjectChild
+      - TestjObjectGrandChild
       consumes:
       - application/json
-  /rest/TestJavaObjectGrandChild:
+  /logout:
     get:
-      summary: Search TestJavaObjectGrandChild business object records or get contextualized
+      summary: Logout (revoke bearer token)
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: logout
+      responses:
+        '200':
+          description: Successfull logout
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+      tags:
+      - session
+  /rest/TestjObject/{row_id}:
+    post:
+      summary: Create a new TestjObjectbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobject-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestjObject'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/TestjObject'
+        in: body
+        name: body
+      tags:
+      - TestjObject
+      consumes:
+      - application/json
+    get:
+      summary: Get a TestjObject business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobject-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestjObject'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - TestjObject
+    delete:
+      summary: Delete a TestjObject business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobject-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - TestjObject
+    put:
+      summary: Update a TestjObjectbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobject-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestjObject'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/TestjObject'
+        in: body
+        name: body
+      tags:
+      - TestjObject
+      consumes:
+      - application/json
+  /rest/TestjObjectHierarchy:
+    get:
+      summary: Search TestjObjectHierarchy business object records or get contextualized
         metadata
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-testjavaobjectgrandchild-search
+      operationId: obj-testjobjecthierarchy-search
       responses:
         '200':
           schema:
-            $ref: '#/definitions/ArrayOfTestJavaObjectGrandChild'
+            $ref: '#/definitions/ArrayOfTestjObjectHierarchy'
           description: Success in searching business object records (or in getting
             contextualized business object metadata, documentation, ...)
         '401':
@@ -1211,23 +1479,170 @@ paths:
         description: Documentation?
         type: boolean
         required: false
-      - in: query
-        name: tstjCode
-        description: Search filter for Code
+      tags:
+      - TestjObjectHierarchy
+  /rest/TestjObjectHierarchy/{row_id}:
+    post:
+      summary: Create a new TestjObjectHierarchybusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobjecthierarchy-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestjObjectHierarchy'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
         type: string
-        required: false
+        required: true
+      - schema:
+          $ref: '#/definitions/TestjObjectHierarchy'
+        in: body
+        name: body
+      tags:
+      - TestjObjectHierarchy
+      consumes:
+      - application/json
+    get:
+      summary: Get a TestjObjectHierarchy business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobjecthierarchy-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestjObjectHierarchy'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
       - in: query
-        name: tstjFlag
-        description: Search filter for Flag
+        name: _inline_documents
+        description: Inline documents?
         type: boolean
         required: false
       - in: query
-        name: tstjDesc
-        description: Search filter for Description
-        type: string
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
         required: false
       tags:
-      - TestJavaObjectGrandChild
+      - TestjObjectHierarchy
+    delete:
+      summary: Delete a TestjObjectHierarchy business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobjecthierarchy-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - TestjObjectHierarchy
+    put:
+      summary: Update a TestjObjectHierarchybusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobjecthierarchy-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestjObjectHierarchy'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/TestjObjectHierarchy'
+        in: body
+        name: body
+      tags:
+      - TestjObjectHierarchy
+      consumes:
+      - application/json
   /:
     get:
       summary: Get user session information
@@ -1251,62 +1666,6 @@ paths:
         required: false
       tags:
       - session
-  /rest/TestJavaObject:
-    get:
-      summary: Search TestJavaObject business object records or get contextualized
-        metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testjavaobject-search
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ArrayOfTestJavaObject'
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: query
-        name: _metadata
-        description: Metadata?
-        type: boolean
-        required: false
-      - in: query
-        name: _count
-        description: Count?
-        type: boolean
-        required: false
-      - in: query
-        name: _doc
-        description: Documentation?
-        type: boolean
-        required: false
-      - in: query
-        name: tstjCode
-        description: Search filter for Code
-        type: string
-        required: false
-      - in: query
-        name: tstjFlag
-        description: Search filter for Flag
-        type: boolean
-        required: false
-      - in: query
-        name: tstjDesc
-        description: Search filter for Description
-        type: string
-        required: false
-      tags:
-      - TestJavaObject
   /rest/TestJavaUser/{row_id}/publication:User-EXCEL:
     get:
       summary: Call a custom publication for a TestJavaUser business object record
@@ -1375,6 +1734,62 @@ paths:
         required: true
       tags:
       - TestJavaUser
+  /rest/TestjObjectGrandChild:
+    get:
+      summary: Search TestjObjectGrandChild business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobjectgrandchild-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfTestjObjectGrandChild'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: testjObjCode
+        description: Search filter for Code
+        type: string
+        required: false
+      - in: query
+        name: testjObjFlag
+        description: Search filter for Flag
+        type: boolean
+        required: false
+      - in: query
+        name: testjObjDesc
+        description: Search filter for Description
+        type: string
+        required: false
+      tags:
+      - TestjObjectGrandChild
   /rest/TestJavaUser/{row_id}:
     post:
       summary: Create a new TestJavaUserbusiness object record
@@ -1571,57 +1986,20 @@ paths:
         required: true
       tags:
       - TestJavaUser
-  /rest/TestJavaObjectGrandChild/{row_id}:
-    post:
-      summary: Create a new TestJavaObjectGrandChildbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testjavaobjectgrandchild-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/TestJavaObjectGrandChild'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/TestJavaObjectGrandChild'
-        in: body
-        name: body
-      tags:
-      - TestJavaObjectGrandChild
-      consumes:
-      - application/json
+  /rest/TestjObject:
     get:
-      summary: Get a TestJavaObjectGrandChild business object record
+      summary: Search TestjObject business object records or get contextualized metadata
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-testjavaobjectgrandchild-get
+      operationId: obj-testjobject-search
       responses:
         '200':
           schema:
-            $ref: '#/definitions/TestJavaObjectGrandChild'
-          description: Success in getting a single business object record
+            $ref: '#/definitions/ArrayOfTestjObject'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
         '401':
           schema:
             $ref: '#/definitions/Error401'
@@ -1630,109 +2008,39 @@ paths:
           schema:
             $ref: '#/definitions/Error500'
           description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
       parameters:
-      - in: path
-        name: row_id
-        description: row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
       - in: query
-        name: _inline_documents
-        description: Inline documents?
+        name: _metadata
+        description: Metadata?
         type: boolean
         required: false
       - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
+        name: _count
+        description: Count?
         type: boolean
         required: false
       - in: query
-        name: _inline_objects
-        description: Inline objects?
+        name: _doc
+        description: Documentation?
         type: boolean
         required: false
-      tags:
-      - TestJavaObjectGrandChild
-    delete:
-      summary: Delete a TestJavaObjectGrandChild business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testjavaobjectgrandchild-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: row ID (or empty or _ for all row IDs)
+      - in: query
+        name: testjObjCode
+        description: Search filter for Code
         type: string
-        required: true
-      tags:
-      - TestJavaObjectGrandChild
-    put:
-      summary: Update a TestJavaObjectGrandChildbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testjavaobjectgrandchild-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/TestJavaObjectGrandChild'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        required: false
+      - in: query
+        name: testjObjFlag
+        description: Search filter for Flag
+        type: boolean
+        required: false
+      - in: query
+        name: testjObjDesc
+        description: Search filter for Description
         type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/TestJavaObjectGrandChild'
-        in: body
-        name: body
+        required: false
       tags:
-      - TestJavaObjectGrandChild
-      consumes:
-      - application/json
+      - TestjObject
   /rest/TestJavaService/{row_id}:
     post:
       summary: Create a new TestJavaServicebusiness object record
@@ -1895,168 +2203,6 @@ paths:
       - TestJavaService
       consumes:
       - application/json
-  /rest/TestJavaObject/{row_id}:
-    post:
-      summary: Create a new TestJavaObjectbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testjavaobject-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/TestJavaObject'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/TestJavaObject'
-        in: body
-        name: body
-      tags:
-      - TestJavaObject
-      consumes:
-      - application/json
-    get:
-      summary: Get a TestJavaObject business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testjavaobject-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/TestJavaObject'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - TestJavaObject
-    delete:
-      summary: Delete a TestJavaObject business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testjavaobject-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - TestJavaObject
-    put:
-      summary: Update a TestJavaObjectbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testjavaobject-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/TestJavaObject'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/TestJavaObject'
-        in: body
-        name: body
-      tags:
-      - TestJavaObject
-      consumes:
-      - application/json
   /rest/TestJavaService:
     get:
       summary: Search TestJavaService business object records or get contextualized
@@ -2108,6 +2254,62 @@ paths:
         required: false
       tags:
       - TestJavaService
+  /rest/TestjObjectChild:
+    get:
+      summary: Search TestjObjectChild business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testjobjectchild-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfTestjObjectChild'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: testjObjCode
+        description: Search filter for Code
+        type: string
+        required: false
+      - in: query
+        name: testjObjFlag
+        description: Search filter for Flag
+        type: boolean
+        required: false
+      - in: query
+        name: testjObjDesc
+        description: Search filter for Description
+        type: string
+        required: false
+      tags:
+      - TestjObjectChild
 securityDefinitions:
   basicAuth:
     type: basic
@@ -2127,25 +2329,6 @@ definitions:
         type: integer
         enum:
         - 404
-  ArrayOfTestJavaObject:
-    type: array
-    items:
-      $ref: '#/definitions/TestJavaObject'
-  TestJavaObjectGrandChild:
-    type: object
-    properties:
-      tstjDesc:
-        description: Description
-        type: string
-      row_id:
-        description: ID
-        type: string
-      tstjCode:
-        description: Code
-        type: string
-      tstjFlag:
-        description: Flag
-        type: boolean
   TestJavaService:
     type: object
     properties:
@@ -2162,36 +2345,14 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/TestJavaService'
-  TestJavaObject:
-    type: object
-    properties:
-      tstjDesc:
-        description: Description
-        type: string
-      row_id:
-        description: ID
-        type: string
-      tstjCode:
-        description: Code
-        type: string
-      tstjFlag:
-        description: Flag
-        type: boolean
-  TestJavaObjectChild:
-    type: object
-    properties:
-      tstjDesc:
-        description: Description
-        type: string
-      row_id:
-        description: ID
-        type: string
-      tstjCode:
-        description: Code
-        type: string
-      tstjFlag:
-        description: Flag
-        type: boolean
+  ArrayOfTestjObjectGrandChild:
+    type: array
+    items:
+      $ref: '#/definitions/TestjObjectGrandChild'
+  ArrayOfTestjObjectHierarchy:
+    type: array
+    items:
+      $ref: '#/definitions/TestjObjectHierarchy'
   PublicationResult:
     type: object
     properties:
@@ -2201,10 +2362,6 @@ definitions:
       content:
         description: Content (plain text or base64 encoded)
         type: string
-  ArrayOfTestJavaObjectChild:
-    type: array
-    items:
-      $ref: '#/definitions/TestJavaObjectChild'
   TestJavaUser:
     type: object
     properties:
@@ -2972,11 +3129,55 @@ definitions:
         - DMY
         - MDY
         - CHF
+  ArrayOfTestjObject:
+    type: array
+    items:
+      $ref: '#/definitions/TestjObject'
+  TestjObjectChild:
+    type: object
+    properties:
+      testjObjDesc:
+        description: Description
+        type: string
+      row_id:
+        description: ID
+        type: string
+      testjObjCode:
+        description: Code
+        type: string
+      testjObjFlag:
+        description: Flag
+        type: boolean
+  ArrayOfTestjObjectChild:
+    type: array
+    items:
+      $ref: '#/definitions/TestjObjectChild'
+  TestjObject:
+    type: object
+    properties:
+      testjObjDesc:
+        description: Description
+        type: string
+      row_id:
+        description: ID
+        type: string
+      testjObjCode:
+        description: Code
+        type: string
+      testjObjFlag:
+        description: Flag
+        type: boolean
   ActionResult:
     type: object
     properties:
       result:
         description: Action result
+        type: string
+  TestjObjectHierarchy:
+    type: object
+    properties:
+      row_id:
+        description: ID
         type: string
   TreeviewData:
     type: object
@@ -2984,10 +3185,21 @@ definitions:
       item:
         description: Object item with lists of linked objects' items
         type: object
-  ArrayOfTestJavaObjectGrandChild:
-    type: array
-    items:
-      $ref: '#/definitions/TestJavaObjectGrandChild'
+  TestjObjectGrandChild:
+    type: object
+    properties:
+      testjObjDesc:
+        description: Description
+        type: string
+      row_id:
+        description: ID
+        type: string
+      testjObjCode:
+        description: Code
+        type: string
+      testjObjFlag:
+        description: Flag
+        type: boolean
   Error400:
     type: object
     properties:
@@ -3049,13 +3261,15 @@ info:
   title: TestJava
   version: '4.0'
 tags:
-- name: TestJavaObject
-  description: Java object
-- name: TestJavaObjectChild
-  description: Java object (child)
-- name: TestJavaObjectGrandChild
-  description: Java object (grand child)
 - name: TestJavaService
   description: Java service
 - name: TestJavaUser
   description: Test java user
+- name: TestjObject
+  description: Java object
+- name: TestjObjectChild
+  description: Java object (child)
+- name: TestjObjectGrandChild
+  description: Java object (grand child)
+- name: TestjObjectHierarchy
+  description: Java object hierarchy

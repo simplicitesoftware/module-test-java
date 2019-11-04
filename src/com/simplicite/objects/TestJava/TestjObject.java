@@ -9,7 +9,7 @@ import com.simplicite.util.ObjectDB;
 /**
  * Test business object
  */
-public class TestJavaObject extends ObjectDB {
+public class TestjObject extends ObjectDB {
 	private static final long serialVersionUID = 1L;
 
 	/**

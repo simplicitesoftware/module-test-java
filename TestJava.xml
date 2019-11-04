@@ -6,9 +6,9 @@
 	<data>
 		<mdl_name>TestJava</mdl_name>
 		<mdl_version>4.0</mdl_version>
-		<mdl_prefix/>
+		<mdl_prefix>testj</mdl_prefix>
 		<mdl_url><![CDATA[https://www.simplicite.io/resources/modules/testjava-app-4.0.xml]]></mdl_url>
-		<mdl_lastupd>2019-10-29 17:54:25</mdl_lastupd>
+		<mdl_lastupd>2019-10-30 12:21:13</mdl_lastupd>
 		<mdl_comment><![CDATA[This module is for testing Java features.]]></mdl_comment>
 	</data>
 </object>
@@ -40,6 +40,14 @@
 <object>
 	<name>Model</name>
 	<action>upsert</action>
+	<data>
+		<mod_name>TestJava</mod_name>
+		<mod_template_id.mtp_name>ModelBusinessObject</mod_template_id.mtp_name>
+		<mod_doc>files/Model/TestJava.svg</mod_doc>
+		<mod_json/>
+		<mod_image>files/Model/TestJava.png</mod_image>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
 	<data>
 		<mod_name>TestJavaObjects</mod_name>
 		<mod_template_id.mtp_name>ModelBusinessObject</mod_template_id.mtp_name>
@@ -84,6 +92,150 @@
 <object>
 	<name>Field</name>
 	<action>upsert</action>
+	<data>
+		<fld_name>app_TestJavaObject_fk</fld_name>
+		<fld_dbname>app_testjavaobject_fk</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>1</fld_required>
+		<fld_fonctid>1</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_type>0</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_enumlist/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>11</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>testjObjCode</fld_name>
+		<fld_dbname>testj_obj_code</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>1</fld_required>
+		<fld_fonctid>1</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_type>3</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_enumlist/>
+		<fld_list_id.lov_name/>
+		<fld_copy>0</fld_copy>
+		<fld_size>50</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>testjObjDesc</fld_name>
+		<fld_dbname>testj_obj_desc</fld_dbname>
+		<fld_visible>2</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research/>
+		<fld_researchreq/>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_type>11</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_enumlist/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>4000</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>testjObjFlag</fld_name>
+		<fld_dbname>testj_obj_flag</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_type>8</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_enumlist/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>1</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault><![CDATA[0]]></fld_dfault>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering>SLIDE</fld_rendering>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
 	<data>
 		<fld_name>testSrv1</fld_name>
 		<fld_dbname/>
@@ -156,118 +308,18 @@
 		<fld_classification/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
-	<data>
-		<fld_name>tstjCode</fld_name>
-		<fld_dbname>tstj_code</fld_dbname>
-		<fld_visible>3</fld_visible>
-		<fld_updatable>1</fld_updatable>
-		<fld_required>1</fld_required>
-		<fld_fonctid>1</fld_fonctid>
-		<fld_research>1</fld_research>
-		<fld_researchreq>0</fld_researchreq>
-		<fld_sort>C</fld_sort>
-		<fld_more>0</fld_more>
-		<fld_listmore>0</fld_listmore>
-		<fld_listsum/>
-		<fld_type>3</fld_type>
-		<fld_type_id.flt_code/>
-		<fld_enumlist/>
-		<fld_list_id.lov_name/>
-		<fld_copy>0</fld_copy>
-		<fld_size>50</fld_size>
-		<fld_minsize/>
-		<fld_precision/>
-		<fld_fromdate_id.fld_name/>
-		<fld_dfault/>
-		<fld_indexable>0</fld_indexable>
-		<fld_autocomp>0</fld_autocomp>
-		<fld_groupby>0</fld_groupby>
-		<fld_updall>1</fld_updall>
-		<fld_case/>
-		<fld_righttoleft>0</fld_righttoleft>
-		<fld_rendering/>
-		<fld_calc/>
-		<fld_objlist/>
-		<fld_comment/>
-		<fld_classification/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<fld_name>tstjDesc</fld_name>
-		<fld_dbname>tstj_desc</fld_dbname>
-		<fld_visible>2</fld_visible>
-		<fld_updatable>1</fld_updatable>
-		<fld_required>0</fld_required>
-		<fld_fonctid>0</fld_fonctid>
-		<fld_research/>
-		<fld_researchreq/>
-		<fld_sort>C</fld_sort>
-		<fld_more>0</fld_more>
-		<fld_listmore>0</fld_listmore>
-		<fld_listsum/>
-		<fld_type>11</fld_type>
-		<fld_type_id.flt_code/>
-		<fld_enumlist/>
-		<fld_list_id.lov_name/>
-		<fld_copy>1</fld_copy>
-		<fld_size>4000</fld_size>
-		<fld_minsize/>
-		<fld_precision/>
-		<fld_fromdate_id.fld_name/>
-		<fld_dfault/>
-		<fld_indexable>0</fld_indexable>
-		<fld_autocomp>0</fld_autocomp>
-		<fld_groupby>0</fld_groupby>
-		<fld_updall>1</fld_updall>
-		<fld_case/>
-		<fld_righttoleft>0</fld_righttoleft>
-		<fld_rendering/>
-		<fld_calc/>
-		<fld_objlist/>
-		<fld_comment/>
-		<fld_classification/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<fld_name>tstjFlag</fld_name>
-		<fld_dbname>tstj_flag</fld_dbname>
-		<fld_visible>3</fld_visible>
-		<fld_updatable>1</fld_updatable>
-		<fld_required>0</fld_required>
-		<fld_fonctid>0</fld_fonctid>
-		<fld_research>1</fld_research>
-		<fld_researchreq>0</fld_researchreq>
-		<fld_sort>C</fld_sort>
-		<fld_more>0</fld_more>
-		<fld_listmore>0</fld_listmore>
-		<fld_listsum/>
-		<fld_type>8</fld_type>
-		<fld_type_id.flt_code/>
-		<fld_enumlist/>
-		<fld_list_id.lov_name/>
-		<fld_copy>1</fld_copy>
-		<fld_size>1</fld_size>
-		<fld_minsize/>
-		<fld_precision/>
-		<fld_fromdate_id.fld_name/>
-		<fld_dfault><![CDATA[0]]></fld_dfault>
-		<fld_indexable>0</fld_indexable>
-		<fld_autocomp>0</fld_autocomp>
-		<fld_groupby>0</fld_groupby>
-		<fld_updall>1</fld_updall>
-		<fld_case/>
-		<fld_righttoleft>0</fld_righttoleft>
-		<fld_rendering>SLIDE</fld_rendering>
-		<fld_calc/>
-		<fld_objlist/>
-		<fld_comment/>
-		<fld_classification/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
 </object>
 <object>
 	<name>Template</name>
 	<action>upsert</action>
+	<data>
+		<tpl_name>TestjObject</tpl_name>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
+]]></tpl_ui>
+		<tpl_min/>
+		<tpl_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
 	<data>
 		<tpl_name>TestServiceJava</tpl_name>
 		<tpl_ui><![CDATA[<div class="area" data-area="1:="></div>]]></tpl_ui>
@@ -279,6 +331,19 @@
 <object>
 	<name>ObjectFieldArea</name>
 	<action>upsert</action>
+	<data>
+		<ofa_name>TestjObject-1</ofa_name>
+		<ofa_position>1</ofa_position>
+		<ofa_title>0</ofa_title>
+		<ofa_ui><![CDATA[<div>
+  <div class="field" data-field="testjObjCode"></div>
+  <div class="field" data-field="testjObjFlag"></div>
+  <div class="field" data-field="testjObjDesc"></div>
+</div>
+]]></ofa_ui>
+		<ofa_icon/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
 	<data>
 		<ofa_name>TestServiceJava-1</ofa_name>
 		<ofa_position>1</ofa_position>
@@ -336,186 +401,6 @@
 <object>
 	<name>ObjectInternal</name>
 	<action>upsert</action>
-	<data>
-		<obo_name>TestJavaObject</obo_name>
-		<obo_dbtable>tstj_object</obo_dbtable>
-		<obo_class/>
-		<obo_script_id>src/com/simplicite/objects/TestJava/TestJavaObject.java</obo_script_id>
-		<obo_usets>1</obo_usets>
-		<obo_nosearch>1</obo_nosearch>
-		<obo_comment><![CDATA[Test Java object]]></obo_comment>
-		<obo_type>O</obo_type>
-		<obo_searchspec/>
-		<obo_delspec/>
-		<obo_exportorder/>
-		<obo_distinct>0</obo_distinct>
-		<obo_indexable>0</obo_indexable>
-		<obo_groupby>0</obo_groupby>
-		<obo_dfltref/>
-		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
-		<obo_cache>D</obo_cache>
-		<obo_copy>1</obo_copy>
-		<obo_export>1</obo_export>
-		<obo_pagine>1</obo_pagine>
-		<obo_srh_predef>1</obo_srh_predef>
-		<obo_selrow>1</obo_selrow>
-		<obo_updall>1</obo_updall>
-		<obo_delall>1</obo_delall>
-		<obo_listsearch>1</obo_listsearch>
-		<obo_list_edit>N;L;E</obo_list_edit>
-		<obo_useform>1</obo_useform>
-		<obo_title/>
-		<obo_icon>science</obo_icon>
-		<obo_refcount>0</obo_refcount>
-		<obo_tree>0</obo_tree>
-		<obo_viewmode>V</obo_viewmode>
-		<obo_historic/>
-		<obo_printable>1</obo_printable>
-		<obo_followlink>1</obo_followlink>
-		<obo_mergeable>0</obo_mergeable>
-		<obo_social>1</obo_social>
-		<obo_rowid_id.fld_name/>
-		<obo_extend_id.obj_name/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-		<obo_btn_reload>P</obo_btn_reload>
-		<obo_btn_prefs>P</obo_btn_prefs>
-		<obo_btn_del>P</obo_btn_del>
-		<obo_btn_copy>P</obo_btn_copy>
-		<obo_btn_export>P</obo_btn_export>
-		<obo_btn_listadd>1</obo_btn_listadd>
-		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
-		<obo_btn_updall>P</obo_btn_updall>
-		<obo_btn_delall>P</obo_btn_delall>
-		<obo_btn_merge>P</obo_btn_merge>
-		<obo_btn_save>1</obo_btn_save>
-		<obo_btn_saveclose>1</obo_btn_saveclose>
-		<obo_btn_close>1</obo_btn_close>
-		<obo_tray>1</obo_tray>
-		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
-		<obo_search_ts/>
-	</data>
-	<data>
-		<obo_name>TestJavaObjectChild</obo_name>
-		<obo_dbtable>tstj_object</obo_dbtable>
-		<obo_class/>
-		<obo_script_id>src/com/simplicite/objects/TestJava/TestJavaObjectChild.java</obo_script_id>
-		<obo_usets>1</obo_usets>
-		<obo_nosearch>1</obo_nosearch>
-		<obo_comment><![CDATA[Child of TestJavaObject]]></obo_comment>
-		<obo_type>O</obo_type>
-		<obo_searchspec/>
-		<obo_delspec/>
-		<obo_exportorder/>
-		<obo_distinct>0</obo_distinct>
-		<obo_indexable>0</obo_indexable>
-		<obo_groupby>0</obo_groupby>
-		<obo_dfltref/>
-		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
-		<obo_cache>D</obo_cache>
-		<obo_copy>1</obo_copy>
-		<obo_export>1</obo_export>
-		<obo_pagine>1</obo_pagine>
-		<obo_srh_predef>1</obo_srh_predef>
-		<obo_selrow>1</obo_selrow>
-		<obo_updall>1</obo_updall>
-		<obo_delall>1</obo_delall>
-		<obo_listsearch>1</obo_listsearch>
-		<obo_list_edit>N;L;E</obo_list_edit>
-		<obo_useform>1</obo_useform>
-		<obo_title/>
-		<obo_icon/>
-		<obo_refcount>0</obo_refcount>
-		<obo_tree>0</obo_tree>
-		<obo_viewmode>V</obo_viewmode>
-		<obo_historic/>
-		<obo_printable>1</obo_printable>
-		<obo_followlink>1</obo_followlink>
-		<obo_mergeable>0</obo_mergeable>
-		<obo_social>1</obo_social>
-		<obo_rowid_id.fld_name/>
-		<obo_extend_id.obj_name>TestJavaObject</obo_extend_id.obj_name>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-		<obo_btn_reload>P</obo_btn_reload>
-		<obo_btn_prefs>P</obo_btn_prefs>
-		<obo_btn_del>P</obo_btn_del>
-		<obo_btn_copy>P</obo_btn_copy>
-		<obo_btn_export>P</obo_btn_export>
-		<obo_btn_listadd>1</obo_btn_listadd>
-		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
-		<obo_btn_updall>P</obo_btn_updall>
-		<obo_btn_delall>P</obo_btn_delall>
-		<obo_btn_merge>P</obo_btn_merge>
-		<obo_btn_save>1</obo_btn_save>
-		<obo_btn_saveclose>1</obo_btn_saveclose>
-		<obo_btn_close>1</obo_btn_close>
-		<obo_tray>1</obo_tray>
-		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
-		<obo_search_ts/>
-	</data>
-	<data>
-		<obo_name>TestJavaObjectGrandChild</obo_name>
-		<obo_dbtable>tstj_object</obo_dbtable>
-		<obo_class/>
-		<obo_script_id>src/com/simplicite/objects/TestJava/TestJavaObjectGrandChild.java</obo_script_id>
-		<obo_usets>1</obo_usets>
-		<obo_nosearch>1</obo_nosearch>
-		<obo_comment/>
-		<obo_type>O</obo_type>
-		<obo_searchspec/>
-		<obo_delspec/>
-		<obo_exportorder/>
-		<obo_distinct>0</obo_distinct>
-		<obo_indexable>0</obo_indexable>
-		<obo_groupby>0</obo_groupby>
-		<obo_dfltref/>
-		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
-		<obo_cache>D</obo_cache>
-		<obo_copy>1</obo_copy>
-		<obo_export>1</obo_export>
-		<obo_pagine>1</obo_pagine>
-		<obo_srh_predef>1</obo_srh_predef>
-		<obo_selrow>1</obo_selrow>
-		<obo_updall>1</obo_updall>
-		<obo_delall>1</obo_delall>
-		<obo_listsearch>1</obo_listsearch>
-		<obo_list_edit>N;L;E</obo_list_edit>
-		<obo_useform>1</obo_useform>
-		<obo_title/>
-		<obo_icon/>
-		<obo_refcount>0</obo_refcount>
-		<obo_tree>0</obo_tree>
-		<obo_viewmode>V</obo_viewmode>
-		<obo_historic/>
-		<obo_printable>1</obo_printable>
-		<obo_followlink>1</obo_followlink>
-		<obo_mergeable>0</obo_mergeable>
-		<obo_social>1</obo_social>
-		<obo_rowid_id.fld_name/>
-		<obo_extend_id.obj_name>TestJavaObjectChild</obo_extend_id.obj_name>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-		<obo_btn_reload>P</obo_btn_reload>
-		<obo_btn_prefs>P</obo_btn_prefs>
-		<obo_btn_del>P</obo_btn_del>
-		<obo_btn_copy>P</obo_btn_copy>
-		<obo_btn_export>P</obo_btn_export>
-		<obo_btn_listadd>1</obo_btn_listadd>
-		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
-		<obo_btn_updall>P</obo_btn_updall>
-		<obo_btn_delall>P</obo_btn_delall>
-		<obo_btn_merge>P</obo_btn_merge>
-		<obo_btn_save>1</obo_btn_save>
-		<obo_btn_saveclose>1</obo_btn_saveclose>
-		<obo_btn_close>1</obo_btn_close>
-		<obo_tray>1</obo_tray>
-		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
-		<obo_search_ts/>
-	</data>
 	<data>
 		<obo_name>TestJavaService</obo_name>
 		<obo_dbtable>service</obo_dbtable>
@@ -636,126 +521,250 @@
 		<obo_prefix/>
 		<obo_search_ts/>
 	</data>
+	<data>
+		<obo_name>TestjObject</obo_name>
+		<obo_dbtable>testj_object</obo_dbtable>
+		<obo_class/>
+		<obo_script_id>src/com/simplicite/objects/TestJava/TestjObject.java</obo_script_id>
+		<obo_usets>1</obo_usets>
+		<obo_nosearch>1</obo_nosearch>
+		<obo_comment><![CDATA[Test Java object]]></obo_comment>
+		<obo_type>O</obo_type>
+		<obo_searchspec/>
+		<obo_delspec/>
+		<obo_exportorder/>
+		<obo_distinct>0</obo_distinct>
+		<obo_indexable>0</obo_indexable>
+		<obo_groupby>0</obo_groupby>
+		<obo_dfltref/>
+		<obo_template_id.tpl_name>TestjObject</obo_template_id.tpl_name>
+		<obo_cache>D</obo_cache>
+		<obo_copy>1</obo_copy>
+		<obo_export>1</obo_export>
+		<obo_pagine>1</obo_pagine>
+		<obo_srh_predef>1</obo_srh_predef>
+		<obo_selrow>1</obo_selrow>
+		<obo_updall>1</obo_updall>
+		<obo_delall>1</obo_delall>
+		<obo_listsearch>1</obo_listsearch>
+		<obo_list_edit>N;L;E</obo_list_edit>
+		<obo_useform>1</obo_useform>
+		<obo_title/>
+		<obo_icon>science</obo_icon>
+		<obo_refcount>0</obo_refcount>
+		<obo_tree>0</obo_tree>
+		<obo_viewmode>V</obo_viewmode>
+		<obo_historic/>
+		<obo_printable>1</obo_printable>
+		<obo_followlink>1</obo_followlink>
+		<obo_mergeable>0</obo_mergeable>
+		<obo_social>1</obo_social>
+		<obo_rowid_id.fld_name/>
+		<obo_extend_id.obj_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+		<obo_btn_reload>P</obo_btn_reload>
+		<obo_btn_prefs>P</obo_btn_prefs>
+		<obo_btn_del>P</obo_btn_del>
+		<obo_btn_copy>P</obo_btn_copy>
+		<obo_btn_export>P</obo_btn_export>
+		<obo_btn_listadd>1</obo_btn_listadd>
+		<obo_btn_listedit>1</obo_btn_listedit>
+		<obo_btn_listupsert/>
+		<obo_btn_updall>P</obo_btn_updall>
+		<obo_btn_delall>P</obo_btn_delall>
+		<obo_btn_merge>P</obo_btn_merge>
+		<obo_btn_save>1</obo_btn_save>
+		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
+		<obo_prefix>obj</obo_prefix>
+		<obo_search_ts/>
+	</data>
+	<data>
+		<obo_name>TestjObjectChild</obo_name>
+		<obo_dbtable>testj_object</obo_dbtable>
+		<obo_class/>
+		<obo_script_id>src/com/simplicite/objects/TestJava/TestjObjectChild.java</obo_script_id>
+		<obo_usets>1</obo_usets>
+		<obo_nosearch>1</obo_nosearch>
+		<obo_comment><![CDATA[Child of TestJavaObject]]></obo_comment>
+		<obo_type>O</obo_type>
+		<obo_searchspec/>
+		<obo_delspec/>
+		<obo_exportorder/>
+		<obo_distinct>0</obo_distinct>
+		<obo_indexable>0</obo_indexable>
+		<obo_groupby>0</obo_groupby>
+		<obo_dfltref/>
+		<obo_template_id.tpl_name>TestjObject</obo_template_id.tpl_name>
+		<obo_cache>D</obo_cache>
+		<obo_copy>1</obo_copy>
+		<obo_export>1</obo_export>
+		<obo_pagine>1</obo_pagine>
+		<obo_srh_predef>1</obo_srh_predef>
+		<obo_selrow>1</obo_selrow>
+		<obo_updall>1</obo_updall>
+		<obo_delall>1</obo_delall>
+		<obo_listsearch>1</obo_listsearch>
+		<obo_list_edit>N;L;E</obo_list_edit>
+		<obo_useform>1</obo_useform>
+		<obo_title/>
+		<obo_icon/>
+		<obo_refcount>0</obo_refcount>
+		<obo_tree>0</obo_tree>
+		<obo_viewmode>V</obo_viewmode>
+		<obo_historic/>
+		<obo_printable>1</obo_printable>
+		<obo_followlink>1</obo_followlink>
+		<obo_mergeable>0</obo_mergeable>
+		<obo_social>1</obo_social>
+		<obo_rowid_id.fld_name/>
+		<obo_extend_id.obj_name>TestjObject</obo_extend_id.obj_name>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+		<obo_btn_reload>P</obo_btn_reload>
+		<obo_btn_prefs>P</obo_btn_prefs>
+		<obo_btn_del>P</obo_btn_del>
+		<obo_btn_copy>P</obo_btn_copy>
+		<obo_btn_export>P</obo_btn_export>
+		<obo_btn_listadd>1</obo_btn_listadd>
+		<obo_btn_listedit>1</obo_btn_listedit>
+		<obo_btn_listupsert/>
+		<obo_btn_updall>P</obo_btn_updall>
+		<obo_btn_delall>P</obo_btn_delall>
+		<obo_btn_merge>P</obo_btn_merge>
+		<obo_btn_save>1</obo_btn_save>
+		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
+		<obo_prefix>objc</obo_prefix>
+		<obo_search_ts/>
+	</data>
+	<data>
+		<obo_name>TestjObjectGrandChild</obo_name>
+		<obo_dbtable>testj_object</obo_dbtable>
+		<obo_class/>
+		<obo_script_id>src/com/simplicite/objects/TestJava/TestjObjectGrandChild.java</obo_script_id>
+		<obo_usets>1</obo_usets>
+		<obo_nosearch>1</obo_nosearch>
+		<obo_comment/>
+		<obo_type>O</obo_type>
+		<obo_searchspec/>
+		<obo_delspec/>
+		<obo_exportorder/>
+		<obo_distinct>0</obo_distinct>
+		<obo_indexable>0</obo_indexable>
+		<obo_groupby>0</obo_groupby>
+		<obo_dfltref/>
+		<obo_template_id.tpl_name>TestjObject</obo_template_id.tpl_name>
+		<obo_cache>D</obo_cache>
+		<obo_copy>1</obo_copy>
+		<obo_export>1</obo_export>
+		<obo_pagine>1</obo_pagine>
+		<obo_srh_predef>1</obo_srh_predef>
+		<obo_selrow>1</obo_selrow>
+		<obo_updall>1</obo_updall>
+		<obo_delall>1</obo_delall>
+		<obo_listsearch>1</obo_listsearch>
+		<obo_list_edit>N;L;E</obo_list_edit>
+		<obo_useform>1</obo_useform>
+		<obo_title/>
+		<obo_icon/>
+		<obo_refcount>0</obo_refcount>
+		<obo_tree>0</obo_tree>
+		<obo_viewmode>V</obo_viewmode>
+		<obo_historic/>
+		<obo_printable>1</obo_printable>
+		<obo_followlink>1</obo_followlink>
+		<obo_mergeable>0</obo_mergeable>
+		<obo_social>1</obo_social>
+		<obo_rowid_id.fld_name/>
+		<obo_extend_id.obj_name>TestjObjectChild</obo_extend_id.obj_name>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+		<obo_btn_reload>P</obo_btn_reload>
+		<obo_btn_prefs>P</obo_btn_prefs>
+		<obo_btn_del>P</obo_btn_del>
+		<obo_btn_copy>P</obo_btn_copy>
+		<obo_btn_export>P</obo_btn_export>
+		<obo_btn_listadd>1</obo_btn_listadd>
+		<obo_btn_listedit>1</obo_btn_listedit>
+		<obo_btn_listupsert/>
+		<obo_btn_updall>P</obo_btn_updall>
+		<obo_btn_delall>P</obo_btn_delall>
+		<obo_btn_merge>P</obo_btn_merge>
+		<obo_btn_save>1</obo_btn_save>
+		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
+		<obo_prefix>objgc</obo_prefix>
+		<obo_search_ts/>
+	</data>
+	<data>
+		<obo_name>TestjObjectHierarchy</obo_name>
+		<obo_dbtable>testj_object_hierarchy</obo_dbtable>
+		<obo_class/>
+		<obo_script_id/>
+		<obo_usets>1</obo_usets>
+		<obo_nosearch>1</obo_nosearch>
+		<obo_comment/>
+		<obo_type>O</obo_type>
+		<obo_searchspec/>
+		<obo_delspec/>
+		<obo_exportorder/>
+		<obo_distinct>0</obo_distinct>
+		<obo_indexable>0</obo_indexable>
+		<obo_groupby>0</obo_groupby>
+		<obo_dfltref/>
+		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
+		<obo_cache>D</obo_cache>
+		<obo_copy>1</obo_copy>
+		<obo_export>1</obo_export>
+		<obo_pagine>1</obo_pagine>
+		<obo_srh_predef>1</obo_srh_predef>
+		<obo_selrow>1</obo_selrow>
+		<obo_updall>1</obo_updall>
+		<obo_delall>1</obo_delall>
+		<obo_listsearch>1</obo_listsearch>
+		<obo_list_edit>N;L;E</obo_list_edit>
+		<obo_useform>1</obo_useform>
+		<obo_title/>
+		<obo_icon/>
+		<obo_refcount>0</obo_refcount>
+		<obo_tree>0</obo_tree>
+		<obo_viewmode>T</obo_viewmode>
+		<obo_historic/>
+		<obo_printable>1</obo_printable>
+		<obo_followlink>1</obo_followlink>
+		<obo_mergeable>0</obo_mergeable>
+		<obo_social>1</obo_social>
+		<obo_rowid_id.fld_name/>
+		<obo_extend_id.obj_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+		<obo_btn_reload>P</obo_btn_reload>
+		<obo_btn_prefs>P</obo_btn_prefs>
+		<obo_btn_del>P</obo_btn_del>
+		<obo_btn_copy>P</obo_btn_copy>
+		<obo_btn_export>P</obo_btn_export>
+		<obo_btn_listadd>1</obo_btn_listadd>
+		<obo_btn_listedit>1</obo_btn_listedit>
+		<obo_btn_listupsert>1</obo_btn_listupsert>
+		<obo_btn_updall>P</obo_btn_updall>
+		<obo_btn_delall>P</obo_btn_delall>
+		<obo_btn_merge>P</obo_btn_merge>
+		<obo_btn_save>1</obo_btn_save>
+		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
+		<obo_prefix>obh</obo_prefix>
+		<obo_search_ts/>
+	</data>
 </object>
 <object>
 	<name>ObjectFieldSystem</name>
 	<action>upsert</action>
-	<data>
-		<obf_object_id.obo_name>TestJavaObject</obf_object_id.obo_name>
-		<obf_field_id.fld_name>tstjCode</obf_field_id.fld_name>
-		<obf_field_id.fld_type>3</obf_field_id.fld_type>
-		<obf_order>10</obf_order>
-		<obf_group_by/>
-		<obf_dfault_order/>
-		<obf_input/>
-		<obf_ref_field_id.fld_name/>
-		<obf_ref_object_id.obo_name/>
-		<obf_cascad/>
-		<obf_card/>
-		<obf_visible/>
-		<obf_ref_export>1</obf_ref_export>
-		<obf_copy/>
-		<obf_ref_order/>
-		<obf_fld_visible/>
-		<obf_fld_required/>
-		<obf_fld_updatable/>
-		<obf_fld_research/>
-		<obf_fld_more/>
-		<obf_fld_listmore/>
-		<obf_fld_researchreq/>
-		<obf_fld_dfault/>
-		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<obf_object_id.obo_name>TestJavaObject</obf_object_id.obo_name>
-		<obf_field_id.fld_name>tstjDesc</obf_field_id.fld_name>
-		<obf_field_id.fld_type>11</obf_field_id.fld_type>
-		<obf_order>20</obf_order>
-		<obf_group_by/>
-		<obf_dfault_order/>
-		<obf_input/>
-		<obf_ref_field_id.fld_name/>
-		<obf_ref_object_id.obo_name/>
-		<obf_cascad/>
-		<obf_card/>
-		<obf_visible/>
-		<obf_ref_export>1</obf_ref_export>
-		<obf_copy/>
-		<obf_ref_order/>
-		<obf_fld_visible/>
-		<obf_fld_required/>
-		<obf_fld_updatable/>
-		<obf_fld_research/>
-		<obf_fld_more/>
-		<obf_fld_listmore/>
-		<obf_fld_researchreq/>
-		<obf_fld_dfault/>
-		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<obf_object_id.obo_name>TestJavaObject</obf_object_id.obo_name>
-		<obf_field_id.fld_name>tstjFlag</obf_field_id.fld_name>
-		<obf_field_id.fld_type>8</obf_field_id.fld_type>
-		<obf_order>20</obf_order>
-		<obf_group_by/>
-		<obf_dfault_order/>
-		<obf_input/>
-		<obf_ref_field_id.fld_name/>
-		<obf_ref_object_id.obo_name/>
-		<obf_cascad/>
-		<obf_card/>
-		<obf_visible/>
-		<obf_ref_export>1</obf_ref_export>
-		<obf_copy/>
-		<obf_ref_order/>
-		<obf_fld_visible/>
-		<obf_fld_required/>
-		<obf_fld_updatable/>
-		<obf_fld_research/>
-		<obf_fld_more/>
-		<obf_fld_listmore/>
-		<obf_fld_researchreq/>
-		<obf_fld_dfault/>
-		<obf_field_id.fld_dfault><![CDATA[0]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<obf_object_id.obo_name>TestJavaObject</obf_object_id.obo_name>
-		<obf_field_id.fld_name>tstjDesc</obf_field_id.fld_name>
-		<obf_field_id.fld_type>11</obf_field_id.fld_type>
-		<obf_order>30</obf_order>
-		<obf_group_by/>
-		<obf_dfault_order/>
-		<obf_input/>
-		<obf_ref_field_id.fld_name/>
-		<obf_ref_object_id.obo_name/>
-		<obf_cascad/>
-		<obf_card/>
-		<obf_visible/>
-		<obf_ref_export>1</obf_ref_export>
-		<obf_copy/>
-		<obf_ref_order/>
-		<obf_fld_visible/>
-		<obf_fld_required/>
-		<obf_fld_updatable/>
-		<obf_fld_research/>
-		<obf_fld_more/>
-		<obf_fld_listmore/>
-		<obf_fld_researchreq/>
-		<obf_fld_dfault/>
-		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
 	<data>
 		<obf_object_id.obo_name>TestJavaService</obf_object_id.obo_name>
 		<obf_field_id.fld_name>testSrv1</obf_field_id.fld_name>
@@ -814,6 +823,93 @@
 		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
+	<data>
+		<obf_object_id.obo_name>TestjObject</obf_object_id.obo_name>
+		<obf_field_id.fld_name>testjObjCode</obf_field_id.fld_name>
+		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_order>10</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>TestjObject-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>TestjObject</obf_object_id.obo_name>
+		<obf_field_id.fld_name>testjObjDesc</obf_field_id.fld_name>
+		<obf_field_id.fld_type>11</obf_field_id.fld_type>
+		<obf_order>20</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>TestjObject-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>TestjObject</obf_object_id.obo_name>
+		<obf_field_id.fld_name>testjObjFlag</obf_field_id.fld_name>
+		<obf_field_id.fld_type>8</obf_field_id.fld_type>
+		<obf_order>20</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault><![CDATA[0]]></obf_field_id.fld_dfault>
+		<obf_area_id.ofa_name>TestjObject-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
 </object>
 <object>
 	<name>Function</name>
@@ -823,6 +919,42 @@
 		<fct_object_id.obj_type/>
 		<fct_object_id.obj_name/>
 		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fct_name>TESTJ_OBJ_CRUD</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
+		<fct_object_id.obj_name>TestjObject</fct_object_id.obj_name>
+		<fct_function>CMS</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fct_name>TESTJ_OBJC_CRUD</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
+		<fct_object_id.obj_name>TestjObjectChild</fct_object_id.obj_name>
+		<fct_function>CMS</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fct_name>TESTJ_OBJGC_R</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
+		<fct_object_id.obj_name>TestjObjectGrandChild</fct_object_id.obj_name>
+		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fct_name>TESTJ_OBJOBJ_CRUD</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
+		<fct_object_id.obj_name>TestjObjectHierarchy</fct_object_id.obj_name>
+		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
@@ -840,33 +972,6 @@
 		<fct_name>TestJavaExtObject-E</fct_name>
 		<fct_object_id.obj_type>E</fct_object_id.obj_type>
 		<fct_object_id.obj_name>TestJavaExtObject</fct_object_id.obj_name>
-		<fct_function>L</fct_function>
-		<fct_action_id.act_name/>
-		<fct_view_id.viw_name/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<fct_name>TestJavaObject-CUD</fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>TestJavaObject</fct_object_id.obj_name>
-		<fct_function>CMS</fct_function>
-		<fct_action_id.act_name/>
-		<fct_view_id.viw_name/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<fct_name>TestJavaObjectChild-CUD</fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>TestJavaObjectChild</fct_object_id.obj_name>
-		<fct_function>CMS</fct_function>
-		<fct_action_id.act_name/>
-		<fct_view_id.viw_name/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<fct_name>TestJavaObjectGrandChild-CUD</fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>TestJavaObjectGrandChild</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -935,36 +1040,6 @@
 	</data>
 	<data>
 		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
-		<grt_function_id.fct_name>TestJavaObject-CUD</grt_function_id.fct_name>
-		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>TestJavaObject</grt_function_id.fct_object_id.obj_name>
-		<grt_function_id.fct_action_id.act_name/>
-		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
-		<grt_activ>1</grt_activ>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
-		<grt_function_id.fct_name>TestJavaObjectChild-CUD</grt_function_id.fct_name>
-		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>TestJavaObjectChild</grt_function_id.fct_object_id.obj_name>
-		<grt_function_id.fct_action_id.act_name/>
-		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
-		<grt_activ>1</grt_activ>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
-		<grt_function_id.fct_name>TestJavaObjectGrandChild-CUD</grt_function_id.fct_name>
-		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>TestJavaObjectGrandChild</grt_function_id.fct_object_id.obj_name>
-		<grt_function_id.fct_action_id.act_name/>
-		<grt_function_id.fct_function>L</grt_function_id.fct_function>
-		<grt_activ>1</grt_activ>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
 		<grt_function_id.fct_name>TestJavaRESTExtObject-E</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
 		<grt_function_id.fct_object_id.obj_name>TestJavaRESTExtObject</grt_function_id.fct_object_id.obj_name>
@@ -993,13 +1068,53 @@
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
+	<data>
+		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>TESTJ_OBJ_CRUD</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>TestjObject</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>TESTJ_OBJC_CRUD</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>TestjObjectChild</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>TESTJ_OBJGC_R</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>TestjObjectGrandChild</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>L</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>TESTJ_OBJOBJ_CRUD</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>TestjObjectHierarchy</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
 </object>
 <object>
 	<name>ConstraintObject</name>
 	<action>upsert</action>
 	<data>
 		<cst_name>TestJavaObject-C1</cst_name>
-		<cst_object_id.obo_name>TestJavaObject</cst_object_id.obo_name>
+		<cst_object_id.obo_name>TestjObject</cst_object_id.obo_name>
 		<cst_order>1</cst_order>
 		<cst_desc/>
 		<cst_type>E</cst_type>
@@ -1007,25 +1122,6 @@
 		<cst_field_id.fld_name/>
 		<cst_expr><![CDATA[true]]></cst_expr>
 		<cst_method/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-</object>
-<object>
-	<name>ConstraintImpact</name>
-	<action>upsert</action>
-	<data>
-		<csi_const_id.cst_name>TestJavaObject-C1</csi_const_id.cst_name>
-		<csi_const_id.cst_object_id.obo_name>TestJavaObject</csi_const_id.cst_object_id.obo_name>
-		<csi_const_id.cst_order>1</csi_const_id.cst_order>
-		<csi_order>1</csi_order>
-		<csi_object_prop/>
-		<csi_field_prop>V</csi_field_prop>
-		<csi_apply>F</csi_apply>
-		<csi_expr><![CDATA[[VALUE:tstjFlag] == Tool.TRUE]]></csi_expr>
-		<csi_target/>
-		<csi_objfield_id.obf_object_id.obo_name>TestJavaObject</csi_objfield_id.obf_object_id.obo_name>
-		<csi_objfield_id.obf_field_id.fld_name>tstjDesc</csi_objfield_id.obf_field_id.fld_name>
-		<csi_objfield_id.obf_order>30</csi_objfield_id.obf_order>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 </object>
@@ -1217,7 +1313,7 @@
 	<action>upsert</action>
 	<data>
 		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>TestJavaObject</map_object_id.obj_name>
+		<map_object_id.obj_name>TestjObject</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>21000</map_order>
 		<map_ext/>
@@ -1225,7 +1321,7 @@
 	</data>
 	<data>
 		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>TestJavaObjectChild</map_object_id.obj_name>
+		<map_object_id.obj_name>TestjObjectChild</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>21010</map_order>
 		<map_ext/>
@@ -1233,9 +1329,17 @@
 	</data>
 	<data>
 		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>TestJavaObjectGrandChild</map_object_id.obj_name>
+		<map_object_id.obj_name>TestjObjectGrandChild</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>21020</map_order>
+		<map_ext>0</map_ext>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>TestjObjectHierarchy</map_object_id.obj_name>
+		<map_process_id.pcs_name/>
+		<map_order>21030</map_order>
 		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
@@ -1286,14 +1390,14 @@
 	<name>ObjectCtxHelp</name>
 	<action>upsert</action>
 	<data>
-		<och_object_id.obo_name>TestJavaObject</och_object_id.obo_name>
+		<och_object_id.obo_name>TestjObject</och_object_id.obo_name>
 		<och_context>S;L;C;U</och_context>
 		<och_lang>ENU</och_lang>
 		<och_help><![CDATA[<p>This business object uses a&nbsp;<strong>Java</strong>&nbsp;class</p>]]></och_help>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
-		<och_object_id.obo_name>TestJavaObject</och_object_id.obo_name>
+		<och_object_id.obo_name>TestjObject</och_object_id.obo_name>
 		<och_context>S;L;C;U</och_context>
 		<och_lang>FRA</och_lang>
 		<och_help><![CDATA[<p>Cet objet m&eacute;tier utilise une classe&nbsp;<strong>Java</strong></p>]]></och_help>
@@ -1406,6 +1510,12 @@
 		<scr_type>JSR</scr_type>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
+	<data>
+		<scr_code>TestJavaUnitTests</scr_code>
+		<scr_file>test/src/com/simplicite/tests/TestJava/TestJavaUnitTests.java</scr_file>
+		<scr_type>TST</scr_type>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
 </object>
 <object>
 	<name>ScriptUsage</name>
@@ -1463,7 +1573,7 @@
 			<object>
 				<name>ObjectInternal</name>
 				<data>
-					<obo_name>TestJavaObject</obo_name>
+					<obo_name>TestjObject</obo_name>
 				</data>
 			</object>
 		</scu_object>
@@ -1474,6 +1584,54 @@
 <object>
 	<name>TranslateField</name>
 	<action>upsert</action>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>app_TestJavaObject_fk</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>app test java object fk</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>testjObjCode</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Code</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>testjObjDesc</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Description</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>testjObjFlag</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Flag</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>testSrv1</tsl_id.fld_name>
@@ -1500,8 +1658,20 @@
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>tstjCode</tsl_id.fld_name>
-		<tsl_lang>ENU</tsl_lang>
+		<tsl_id.fld_name>app_TestJavaObject_fk</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>app test java object fk</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>testjObjCode</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Code</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
@@ -1512,8 +1682,8 @@
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>tstjDesc</tsl_id.fld_name>
-		<tsl_lang>ENU</tsl_lang>
+		<tsl_id.fld_name>testjObjDesc</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Description</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
@@ -1524,8 +1694,8 @@
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>tstjFlag</tsl_id.fld_name>
-		<tsl_lang>ENU</tsl_lang>
+		<tsl_id.fld_name>testjObjFlag</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Flag</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
@@ -1558,51 +1728,29 @@
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 		<tsl_tooltip/>
 	</data>
-	<data>
-		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>tstjCode</tsl_id.fld_name>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Code</tsl_value>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_placeholder/>
-		<tsl_listhelp/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-		<tsl_tooltip/>
-	</data>
-	<data>
-		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>tstjDesc</tsl_id.fld_name>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Description</tsl_value>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_placeholder/>
-		<tsl_listhelp/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-		<tsl_tooltip/>
-	</data>
-	<data>
-		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>tstjFlag</tsl_id.fld_name>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Flag</tsl_value>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_placeholder/>
-		<tsl_listhelp/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-		<tsl_tooltip/>
-	</data>
 </object>
 <object>
 	<name>TranslateFieldArea</name>
 	<action>upsert</action>
 	<data>
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>TestjObject-1</tsl_id.ofa_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>TestjObject-1</tsl_value>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
 		<tsl_id.ofa_name>TestServiceJava-1</tsl_id.ofa_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Test</tsl_value>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>TestjObject-1</tsl_id.ofa_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>TestjObject-1</tsl_value>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1638,30 +1786,6 @@
 	<action>upsert</action>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>TestJavaObject</tsl_id.obo_name>
-		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Java object</tsl_value>
-		<tsl_help/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>TestJavaObjectChild</tsl_id.obo_name>
-		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Java object (child)</tsl_value>
-		<tsl_help/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>TestJavaObjectGrandChild</tsl_id.obo_name>
-		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Java object (grand child)</tsl_value>
-		<tsl_help/>
-		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
-	</data>
-	<data>
-		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>TestJavaService</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Java service</tsl_value>
@@ -1678,25 +1802,33 @@
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>TestJavaObject</tsl_id.obo_name>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Object Java</tsl_value>
+		<tsl_id.obo_name>TestjObject</tsl_id.obo_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Java object</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>TestJavaObjectChild</tsl_id.obo_name>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Java object (héritier)</tsl_value>
+		<tsl_id.obo_name>TestjObjectChild</tsl_id.obo_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Java object (child)</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>TestJavaObjectGrandChild</tsl_id.obo_name>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Java object (héritier de l'hériter)</tsl_value>
+		<tsl_id.obo_name>TestjObjectGrandChild</tsl_id.obo_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Java object (grand child)</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>TestjObjectHierarchy</tsl_id.obo_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Java object hierarchy</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
@@ -1713,6 +1845,38 @@
 		<tsl_id.obo_name>TestJavaUser</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Test java user</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>TestjObject</tsl_id.obo_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Object Java</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>TestjObjectChild</tsl_id.obo_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Java object (héritier)</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>TestjObjectGrandChild</tsl_id.obo_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Java object (héritier de l'hériter)</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>TestjObjectHierarchy</tsl_id.obo_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Hiérarchie objet Java</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
