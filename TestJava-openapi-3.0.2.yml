@@ -26,7 +26,7 @@ components:
           description: Test 1
           type: string
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
     ArrayOfTestJavaService:
       type: array
@@ -794,7 +794,7 @@ components:
           description: Max size of lists
           type: integer
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
         usr_work_num:
           description: Work phone number
@@ -827,7 +827,7 @@ components:
           description: Description
           type: string
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
         testjObjCode:
           description: Code
@@ -846,7 +846,7 @@ components:
           description: Description
           type: string
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
         testjObjCode:
           description: Code
@@ -864,7 +864,7 @@ components:
       type: object
       properties:
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
     TreeviewData:
       type: object
@@ -879,7 +879,7 @@ components:
           description: Description
           type: string
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
         testjObjCode:
           description: Code

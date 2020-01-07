@@ -119,6 +119,12 @@ No custom action
 
 
 
+`TestJavaMappedRESTExtObject` external object definition
+--------------------------------------------------------
+
+Test **mapped** REST service external object
+
+
 `TestJavaRESTExtObject` external object definition
 --------------------------------------------------
 
