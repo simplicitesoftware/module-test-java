@@ -18,6 +18,6 @@ public class TestJavaExtObject extends ExternalObject {
 	@Override
 	public String display(Parameters params) {
 		AppLog.info(getClass(), "display", TestJavaCommon.helloworld() + " from external object " + getName(), getGrant());
-		return javascript(getName() + ".render();");
+		return javascript(getName() + ".render(" + params.toJSON() + ");");
 	}
 }

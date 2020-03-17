@@ -25,10 +25,6 @@ This module is for testing Java features.
 | `testSrv1`                                                   | char(100)                                |          | yes       |          | -                                                                                |
 | `testSrv2`                                                   | text(1000000)                            |          | yes       |          | -                                                                                |
 
-### Custom actions
-
-No custom action
-
 `TestJavaUser` business object definition
 -----------------------------------------
 
@@ -38,10 +34,6 @@ No custom action
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-
-### Custom actions
-
-No custom action
 
 `TestjObject` business object definition
 ----------------------------------------
@@ -56,10 +48,6 @@ Test Java object
 | `testjObjDesc`                                               | html(4000)                               |          | yes       |          | -                                                                                |
 | `testjObjFlag`                                               | boolean                                  |          | yes       |          | -                                                                                |
 
-### Custom actions
-
-No custom action
-
 `TestjObjectChild` business object definition
 ---------------------------------------------
 
@@ -69,10 +57,6 @@ Child of TestJavaObject
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-
-### Custom actions
-
-No custom action
 
 `TestjObjectGrandChild` business object definition
 --------------------------------------------------
@@ -84,10 +68,6 @@ No custom action
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 
-### Custom actions
-
-No custom action
-
 `TestjObjectHierarchy` business object definition
 -------------------------------------------------
 
@@ -97,10 +77,6 @@ No custom action
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-
-### Custom actions
-
-No custom action
 
 `TestJavaWorkflow` business process definition
 ----------------------------------------------

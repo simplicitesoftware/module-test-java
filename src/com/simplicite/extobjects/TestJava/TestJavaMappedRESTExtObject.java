@@ -14,8 +14,9 @@ public class TestJavaMappedRESTExtObject extends com.simplicite.webapp.services.
 		setDebug(true);
 		setUseCache(true);
 
-		setOpenAPIVersion(JSONTool.OPENAPI_OAS2);
+		setOpenAPISpec(JSONTool.OPENAPI_OAS2);
 		setOpenAPIDesc("This is a **custom API** for various business object\n\n- System parameters\n- Users\n- Responsibilities\n\n> NB: these are system objets");
+		setOpenAPIVers("v1");
 
 		addObject("params", "SystemParam", "This is the **system parameter** object");
 		addField("params", "code", "sys_code", "This is the system parameter **code**", "TEST_CODE");

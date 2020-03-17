@@ -28,8 +28,9 @@ public class GrantHooks extends GrantHooksInterface {
 	 */
 	public static void preLoadGrant(Grant g) {
 		try {
-			AppLog.info(GrantHooks.class, "preLoadGrant", "Grant " + g.getLogin() + " (endpoint " + g.getEndpoint() + ") pre load (java) !", null);
-		} catch (Exception e) {
+			if (!g.isPublic())
+				AppLog.info(GrantHooks.class, "preLoadGrant", "Grant " + g.getLogin() + ", session info " + g.getSessionInfo().toString() + " (endpoint " + g.getEndpoint() + ") pre load (java) !", null);
+		} catch (Throwable e) {
 			AppLog.error(GrantHooks.class, "preLoadGrant", null, e, null);
 		}
 	}
@@ -39,9 +40,19 @@ public class GrantHooks extends GrantHooksInterface {
 	 */
 	public static void postLoadGrant(Grant g) {
 		try {
-			AppLog.info(GrantHooks.class, "postLoadGrant", "Grant " + g.getLogin() + " (endpoint " + g.getEndpoint() + ") post load (java) !", null);
-		} catch (Exception e) {
-			AppLog.error(GrantHooks.class, "preLoadGrant", null, e, null);
+			//AppLog.info(GrantHooks.class, "postLoadGrant", "Grant " + g.getLogin() + ", session info " + g.getSessionInfo().toString() + " (endpoint " + g.getEndpoint() + ") post load (java) !", null);
+			if (!g.isPublic())
+				AppLog.info(GrantHooks.class, "postLoadGrant", "Grant " + g.getLogin() + ", token " + g.getSessionInfo().getToken() + ", ID token " + g.getSessionInfo().getIDToken() + ", refresh token " + g.getSessionInfo().getRefreshToken() + " (endpoint " + g.getEndpoint() + ") post load (java) !", null);
+		} catch (Throwable e) {
+			AppLog.error(GrantHooks.class, "postLoadGrant", null, e, null);
+		}
+	}
+	
+	public static void socialPost(Grant g, String postId) {
+		try {
+			AppLog.info(GrantHooks.class, "socialPost", "Social post by " + g.getLogin() + " (" + postId + ")", null);
+		} catch (Throwable e) {
+			AppLog.error(GrantHooks.class, "socialPost", null, e, null);
 		}
 	}
 }
