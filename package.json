@@ -6,5 +6,5 @@
     "files": ["TestJava.xml"],
     "repository": {},
     "version": "4.0",
-    "dependencies": [{"Simplicite": "4.0"}]
+    "dependencies": {"Simplicite": "4.0"}
 }

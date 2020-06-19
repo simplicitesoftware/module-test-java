@@ -87,15 +87,12 @@ components:
           - SystemV/YST9YDT
           - US/Alaska
           - AST
-          - America/Dawson
           - America/Ensenada
           - America/Los_Angeles
           - America/Santa_Isabel
           - America/Tijuana
           - America/Vancouver
-          - America/Whitehorse
           - Canada/Pacific
-          - Canada/Yukon
           - Etc/GMT+8
           - Mexico/BajaNorte
           - PST8PDT
@@ -109,6 +106,7 @@ components:
           - America/Cambridge_Bay
           - America/Chihuahua
           - America/Creston
+          - America/Dawson
           - America/Dawson_Creek
           - America/Denver
           - America/Edmonton
@@ -119,8 +117,10 @@ components:
           - America/Ojinaga
           - America/Phoenix
           - America/Shiprock
+          - America/Whitehorse
           - America/Yellowknife
           - Canada/Mountain
+          - Canada/Yukon
           - Etc/GMT+7
           - MST7MDT
           - Mexico/BajaSur
@@ -294,6 +294,7 @@ components:
           - America/Mendoza
           - America/Miquelon
           - America/Montevideo
+          - America/Nuuk
           - America/Paramaribo
           - America/Punta_Arenas
           - America/Recife
@@ -690,9 +691,6 @@ components:
         usr_image_id:
           description: Picture
           type: object
-        usr_subhead:
-          description: Sub-head
-          type: boolean
         usr_minrows:
           description: Min size of lists
           type: integer
@@ -713,8 +711,8 @@ components:
           - BE
           - CH
           - IE
-          - CA
           - US
+          - CA
         usr_title:
           description: Title
           type: string
@@ -725,15 +723,13 @@ components:
         usr_logout:
           description: Logout
           type: string
+          example: yyyy-MM-dd HH:mm:ss
         usr_home_id__viw_name:
           description: Home page
           type: string
         usr_menu_defdomain_id:
           description: Domain menu by default
           type: string
-        usr_menu_defhidden:
-          description: deprecated
-          type: boolean
         usr_menu_defcollapsed:
           description: Menu collapsed by default
           type: boolean
@@ -743,6 +739,7 @@ components:
         usr_last_logon:
           description: Last logon
           type: string
+          example: yyyy-MM-dd HH:mm:ss
         usr_first_name:
           description: First name
           type: string
@@ -805,9 +802,6 @@ components:
         usr_state:
           description: State
           type: string
-        usr_extra:
-          description: Extra zone visible
-          type: boolean
         usr_dateformat:
           description: Date format
           type: string
@@ -993,23 +987,14 @@ paths:
       - schema:
           type: string
         in: query
-        name: usr_login
-        description: Search filter for Login
-        required: false
-      - schema:
-          type: string
-          enum:
-          - ENU
-          - FRA
-        in: query
-        name: usr_lang
-        description: Search filter for Language
-        required: false
-      - schema:
-          type: string
-        in: query
         name: usr_image_id
         description: Search filter for Picture
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_login
+        description: Search filter for Login
         required: false
       - schema:
           type: string
@@ -1045,15 +1030,12 @@ paths:
           - SystemV/YST9YDT
           - US/Alaska
           - AST
-          - America/Dawson
           - America/Ensenada
           - America/Los_Angeles
           - America/Santa_Isabel
           - America/Tijuana
           - America/Vancouver
-          - America/Whitehorse
           - Canada/Pacific
-          - Canada/Yukon
           - Etc/GMT+8
           - Mexico/BajaNorte
           - PST8PDT
@@ -1067,6 +1049,7 @@ paths:
           - America/Cambridge_Bay
           - America/Chihuahua
           - America/Creston
+          - America/Dawson
           - America/Dawson_Creek
           - America/Denver
           - America/Edmonton
@@ -1077,8 +1060,10 @@ paths:
           - America/Ojinaga
           - America/Phoenix
           - America/Shiprock
+          - America/Whitehorse
           - America/Yellowknife
           - Canada/Mountain
+          - Canada/Yukon
           - Etc/GMT+7
           - MST7MDT
           - Mexico/BajaSur
@@ -1252,6 +1237,7 @@ paths:
           - America/Mendoza
           - America/Miquelon
           - America/Montevideo
+          - America/Nuuk
           - America/Paramaribo
           - America/Punta_Arenas
           - America/Recife
@@ -1661,17 +1647,6 @@ paths:
       - schema:
           type: string
           enum:
-          - '0'
-          - '1'
-          - '2'
-          - '3'
-        in: query
-        name: usr_active
-        description: Search filter for Active
-        required: false
-      - schema:
-          type: string
-          enum:
           - MR
           - MRS
           - MS
@@ -1682,20 +1657,40 @@ paths:
       - schema:
           type: string
         in: query
-        name: usr_last_name
-        description: Search filter for Last name
-        required: false
-      - schema:
-          type: string
-        in: query
         name: usr_first_name
         description: Search filter for First name
         required: false
       - schema:
           type: string
         in: query
+        name: usr_last_name
+        description: Search filter for Last name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - ENU
+          - FRA
+        in: query
+        name: usr_lang
+        description: Search filter for Language
+        required: false
+      - schema:
+          type: string
+        in: query
         name: usr_email
         description: Search filter for Email address
+        required: false
+      - schema:
+          type: string
+          enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+        in: query
+        name: usr_active
+        description: Search filter for Active
         required: false
       - schema:
           type: string
@@ -1767,8 +1762,8 @@ paths:
           - BE
           - CH
           - IE
-          - CA
           - US
+          - CA
         in: query
         name: usr_country
         description: Search filter for Country
@@ -1794,12 +1789,6 @@ paths:
       - schema:
           type: boolean
         in: query
-        name: usr_menu_defhidden
-        description: Search filter for deprecated
-        required: false
-      - schema:
-          type: boolean
-        in: query
         name: usr_menu_defcollapsed
         description: Search filter for Menu collapsed by default
         required: false
@@ -1814,18 +1803,6 @@ paths:
         in: query
         name: usr_menu_defdomain_id__obd_name
         description: Search filter for Default opened domain
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: usr_extra
-        description: Search filter for Extra zone visible
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: usr_subhead
-        description: Search filter for Sub-head
         required: false
       - schema:
           type: string

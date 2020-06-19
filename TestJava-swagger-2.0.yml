@@ -43,21 +43,13 @@ paths:
         type: boolean
         required: false
       - in: query
-        name: usr_login
-        description: Search filter for Login
-        type: string
-        required: false
-      - in: query
-        name: usr_lang
-        description: Search filter for Language
-        type: string
-        required: false
-        enum:
-        - ENU
-        - FRA
-      - in: query
         name: usr_image_id
         description: Search filter for Picture
+        type: string
+        required: false
+      - in: query
+        name: usr_login
+        description: Search filter for Login
         type: string
         required: false
       - in: query
@@ -97,15 +89,12 @@ paths:
         - SystemV/YST9YDT
         - US/Alaska
         - AST
-        - America/Dawson
         - America/Ensenada
         - America/Los_Angeles
         - America/Santa_Isabel
         - America/Tijuana
         - America/Vancouver
-        - America/Whitehorse
         - Canada/Pacific
-        - Canada/Yukon
         - Etc/GMT+8
         - Mexico/BajaNorte
         - PST8PDT
@@ -119,6 +108,7 @@ paths:
         - America/Cambridge_Bay
         - America/Chihuahua
         - America/Creston
+        - America/Dawson
         - America/Dawson_Creek
         - America/Denver
         - America/Edmonton
@@ -129,8 +119,10 @@ paths:
         - America/Ojinaga
         - America/Phoenix
         - America/Shiprock
+        - America/Whitehorse
         - America/Yellowknife
         - Canada/Mountain
+        - Canada/Yukon
         - Etc/GMT+7
         - MST7MDT
         - Mexico/BajaSur
@@ -304,6 +296,7 @@ paths:
         - America/Mendoza
         - America/Miquelon
         - America/Montevideo
+        - America/Nuuk
         - America/Paramaribo
         - America/Punta_Arenas
         - America/Recife
@@ -705,16 +698,6 @@ paths:
         type: integer
         required: false
       - in: query
-        name: usr_active
-        description: Search filter for Active
-        type: string
-        required: false
-        enum:
-        - '0'
-        - '1'
-        - '2'
-        - '3'
-      - in: query
         name: usr_title
         description: Search filter for Title
         type: string
@@ -724,20 +707,38 @@ paths:
         - MRS
         - MS
       - in: query
-        name: usr_last_name
-        description: Search filter for Last name
-        type: string
-        required: false
-      - in: query
         name: usr_first_name
         description: Search filter for First name
         type: string
         required: false
       - in: query
+        name: usr_last_name
+        description: Search filter for Last name
+        type: string
+        required: false
+      - in: query
+        name: usr_lang
+        description: Search filter for Language
+        type: string
+        required: false
+        enum:
+        - ENU
+        - FRA
+      - in: query
         name: usr_email
         description: Search filter for Email address
         type: string
         required: false
+      - in: query
+        name: usr_active
+        description: Search filter for Active
+        type: string
+        required: false
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
       - in: query
         name: usr_home_id
         description: Search filter for Home page
@@ -801,8 +802,8 @@ paths:
         - BE
         - CH
         - IE
-        - CA
         - US
+        - CA
       - in: query
         name: row_module_id
         description: Search filter for Module
@@ -819,11 +820,6 @@ paths:
         type: boolean
         required: false
       - in: query
-        name: usr_menu_defhidden
-        description: Search filter for deprecated
-        type: boolean
-        required: false
-      - in: query
         name: usr_menu_defcollapsed
         description: Search filter for Menu collapsed by default
         type: boolean
@@ -837,16 +833,6 @@ paths:
         name: usr_menu_defdomain_id__obd_name
         description: Search filter for Default opened domain
         type: string
-        required: false
-      - in: query
-        name: usr_extra
-        description: Search filter for Extra zone visible
-        type: boolean
-        required: false
-      - in: query
-        name: usr_subhead
-        description: Search filter for Sub-head
-        type: boolean
         required: false
       - in: query
         name: usr_logout
@@ -2400,15 +2386,12 @@ definitions:
         - SystemV/YST9YDT
         - US/Alaska
         - AST
-        - America/Dawson
         - America/Ensenada
         - America/Los_Angeles
         - America/Santa_Isabel
         - America/Tijuana
         - America/Vancouver
-        - America/Whitehorse
         - Canada/Pacific
-        - Canada/Yukon
         - Etc/GMT+8
         - Mexico/BajaNorte
         - PST8PDT
@@ -2422,6 +2405,7 @@ definitions:
         - America/Cambridge_Bay
         - America/Chihuahua
         - America/Creston
+        - America/Dawson
         - America/Dawson_Creek
         - America/Denver
         - America/Edmonton
@@ -2432,8 +2416,10 @@ definitions:
         - America/Ojinaga
         - America/Phoenix
         - America/Shiprock
+        - America/Whitehorse
         - America/Yellowknife
         - Canada/Mountain
+        - Canada/Yukon
         - Etc/GMT+7
         - MST7MDT
         - Mexico/BajaSur
@@ -2607,6 +2593,7 @@ definitions:
         - America/Mendoza
         - America/Miquelon
         - America/Montevideo
+        - America/Nuuk
         - America/Paramaribo
         - America/Punta_Arenas
         - America/Recife
@@ -3003,9 +2990,6 @@ definitions:
       usr_image_id:
         description: Picture
         type: object
-      usr_subhead:
-        description: Sub-head
-        type: boolean
       usr_minrows:
         description: Min size of lists
         type: integer
@@ -3026,8 +3010,8 @@ definitions:
         - BE
         - CH
         - IE
-        - CA
         - US
+        - CA
       usr_title:
         description: Title
         type: string
@@ -3038,15 +3022,13 @@ definitions:
       usr_logout:
         description: Logout
         type: string
+        example: yyyy-MM-dd HH:mm:ss
       usr_home_id__viw_name:
         description: Home page
         type: string
       usr_menu_defdomain_id:
         description: Domain menu by default
         type: string
-      usr_menu_defhidden:
-        description: deprecated
-        type: boolean
       usr_menu_defcollapsed:
         description: Menu collapsed by default
         type: boolean
@@ -3056,6 +3038,7 @@ definitions:
       usr_last_logon:
         description: Last logon
         type: string
+        example: yyyy-MM-dd HH:mm:ss
       usr_first_name:
         description: First name
         type: string
@@ -3118,9 +3101,6 @@ definitions:
       usr_state:
         description: State
         type: string
-      usr_extra:
-        description: Extra zone visible
-        type: boolean
       usr_dateformat:
         description: Date format
         type: string

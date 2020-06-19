@@ -107,3 +107,9 @@ Test **mapped** REST service external object
 Test REST service external object
 
 
+`TestJavaStaticSite` external object definition
+-----------------------------------------------
+
+
+
+
