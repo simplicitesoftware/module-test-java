@@ -1,4 +1,4 @@
-if (typeof TestJavaExtObject === "undefined") TestJavaExtObject = (function($) {
+var TestJavaExtObject = TestJavaExtObject || (function($) {
 	function render() {
 		$('#testjavaobject').html("Hello world!");
 	}

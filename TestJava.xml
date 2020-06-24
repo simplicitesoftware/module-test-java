@@ -9,7 +9,9 @@
 		<mdl_prefix>test</mdl_prefix>
 		<mdl_url><![CDATA[https://www.simplicite.io/resources/modules/testjava-app-4.0.xml]]></mdl_url>
 		<mdl_lastupd>2020-02-27 10:52:09</mdl_lastupd>
-		<mdl_comment><![CDATA[This module is for testing Java features.]]></mdl_comment>
+		<mdl_comment><![CDATA[This module is for testing platform features.
+
+All items in this module are developped in Java.]]></mdl_comment>
 	</data>
 </object>
 <object>
@@ -376,6 +378,17 @@
 	<name>ObjectExternal</name>
 	<action>upsert</action>
 	<data>
+		<obe_name>TestJavaCytoscape</obe_name>
+		<obe_type>E</obe_type>
+		<obe_url/>
+		<obe_comment/>
+		<obe_help/>
+		<obe_class/>
+		<obe_script_id>src/com/simplicite/extobjects/TestJava/TestJavaCytoscape.java</obe_script_id>
+		<obe_icon>science</obe_icon>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
 		<obe_name>TestJavaExtObject</obe_name>
 		<obe_type>E</obe_type>
 		<obe_url/>
@@ -383,6 +396,17 @@
 		<obe_help/>
 		<obe_class/>
 		<obe_script_id>src/com/simplicite/extobjects/TestJava/TestJavaExtObject.java</obe_script_id>
+		<obe_icon>science</obe_icon>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obe_name>TestJavaJQPlot</obe_name>
+		<obe_type>E</obe_type>
+		<obe_url/>
+		<obe_comment><![CDATA[Custom jQPlot dashboard]]></obe_comment>
+		<obe_help/>
+		<obe_class/>
+		<obe_script_id>src/com/simplicite/extobjects/TestJava/TestJavaJQPlot.java</obe_script_id>
 		<obe_icon>science</obe_icon>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
@@ -409,6 +433,17 @@
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
+		<obe_name>TestJavaSignature</obe_name>
+		<obe_type>E</obe_type>
+		<obe_url/>
+		<obe_comment/>
+		<obe_help/>
+		<obe_class/>
+		<obe_script_id>src/com/simplicite/extobjects/TestJava/TestJavaSignature.java</obe_script_id>
+		<obe_icon>science</obe_icon>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
 		<obe_name>TestJavaStaticSite</obe_name>
 		<obe_type>E</obe_type>
 		<obe_url/>
@@ -417,6 +452,17 @@
 		<obe_class/>
 		<obe_script_id>src/com/simplicite/extobjects/TestJava/TestJavaStaticSite.java</obe_script_id>
 		<obe_icon/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obe_name>TestJavaTimeline</obe_name>
+		<obe_type>E</obe_type>
+		<obe_url/>
+		<obe_comment/>
+		<obe_help/>
+		<obe_class/>
+		<obe_script_id>src/com/simplicite/extobjects/TestJava/TestJavaTimeline.java</obe_script_id>
+		<obe_icon>science</obe_icon>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 </object>
@@ -514,7 +560,7 @@
 		<obo_list_edit>N;L;E</obo_list_edit>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
-		<obo_icon/>
+		<obo_icon>user</obo_icon>
 		<obo_refcount>0</obo_refcount>
 		<obo_tree>0</obo_tree>
 		<obo_viewmode>V</obo_viewmode>
@@ -638,7 +684,7 @@
 		<obo_list_edit>N;L;E</obo_list_edit>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
-		<obo_icon/>
+		<obo_icon>science</obo_icon>
 		<obo_refcount>0</obo_refcount>
 		<obo_tree>0</obo_tree>
 		<obo_viewmode>V</obo_viewmode>
@@ -700,7 +746,7 @@
 		<obo_list_edit>N;L;E</obo_list_edit>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
-		<obo_icon/>
+		<obo_icon>science</obo_icon>
 		<obo_refcount>0</obo_refcount>
 		<obo_tree>0</obo_tree>
 		<obo_viewmode>V</obo_viewmode>
@@ -985,6 +1031,15 @@
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
+		<fct_name>TestJavaCytoscape-E</fct_name>
+		<fct_object_id.obj_type>E</fct_object_id.obj_type>
+		<fct_object_id.obj_name>TestJavaCytoscape</fct_object_id.obj_name>
+		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
 		<fct_name>TestJavaDomain-D</fct_name>
 		<fct_object_id.obj_type>D</fct_object_id.obj_type>
 		<fct_object_id.obj_name>TestJavaDomain</fct_object_id.obj_name>
@@ -997,6 +1052,15 @@
 		<fct_name>TestJavaExtObject-E</fct_name>
 		<fct_object_id.obj_type>E</fct_object_id.obj_type>
 		<fct_object_id.obj_name>TestJavaExtObject</fct_object_id.obj_name>
+		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fct_name>TestJavaJQPlot-E</fct_name>
+		<fct_object_id.obj_type>E</fct_object_id.obj_type>
+		<fct_object_id.obj_name>TestJavaJQPlot</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -1021,9 +1085,27 @@
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
+		<fct_name>TestJavaSignature-E</fct_name>
+		<fct_object_id.obj_type>E</fct_object_id.obj_type>
+		<fct_object_id.obj_name>TestJavaSignature</fct_object_id.obj_name>
+		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
 		<fct_name>TestJavaStaticSite-E</fct_name>
 		<fct_object_id.obj_type>E</fct_object_id.obj_type>
 		<fct_object_id.obj_name>TestJavaStaticSite</fct_object_id.obj_name>
+		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fct_name>TestJavaTimeline-E</fct_name>
+		<fct_object_id.obj_type>E</fct_object_id.obj_type>
+		<fct_object_id.obj_name>TestJavaTimeline</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -1063,6 +1145,16 @@
 	</data>
 	<data>
 		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>TestJavaCytoscape-E</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>TestJavaCytoscape</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>L</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
 		<grt_function_id.fct_name>TestJavaDomain-D</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>D</grt_function_id.fct_object_id.obj_type>
 		<grt_function_id.fct_object_id.obj_name>TestJavaDomain</grt_function_id.fct_object_id.obj_name>
@@ -1076,6 +1168,16 @@
 		<grt_function_id.fct_name>TestJavaExtObject-E</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
 		<grt_function_id.fct_object_id.obj_name>TestJavaExtObject</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>L</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>TestJavaJQPlot-E</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>TestJavaJQPlot</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -1106,6 +1208,26 @@
 		<grt_function_id.fct_name>TestServiceJava-R</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
 		<grt_function_id.fct_object_id.obj_name>TestJavaService</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>L</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>TestJavaSignature-E</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>TestJavaSignature</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>L</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>TestJavaTimeline-E</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>TestJavaTimeline</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -1441,6 +1563,38 @@
 	</data>
 	<data>
 		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>TestJavaCytoscape</map_object_id.obj_name>
+		<map_process_id.pcs_name/>
+		<map_order>21210</map_order>
+		<map_ext>0</map_ext>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>TestJavaSignature</map_object_id.obj_name>
+		<map_process_id.pcs_name/>
+		<map_order>21220</map_order>
+		<map_ext>0</map_ext>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>TestJavaJQPlot</map_object_id.obj_name>
+		<map_process_id.pcs_name/>
+		<map_order>21230</map_order>
+		<map_ext>0</map_ext>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>TestJavaTimeline</map_object_id.obj_name>
+		<map_process_id.pcs_name/>
+		<map_order>21240</map_order>
+		<map_ext>0</map_ext>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
 		<map_object_id.obj_name>TestJavaService</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>21300</map_order>
@@ -1558,6 +1712,42 @@
 			<object>
 				<name>ObjectExternal</name>
 				<data>
+					<obe_name>TestJavaCytoscape</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>HTML</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>HTML</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaCytoscape/HTML.html</res_file>
+		<res_file_compiled/>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaCytoscape</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>JS</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>SCRIPT</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaCytoscape/SCRIPT.js</res_file>
+		<res_file_compiled>resources/ObjectExternal/TestJavaCytoscape/SCRIPT.min.js</res_file_compiled>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
 					<obe_name>TestJavaStaticSite</obe_name>
 				</data>
 			</object>
@@ -1568,6 +1758,132 @@
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/TestJavaStaticSite/SITE.zip</res_file>
 		<res_file_compiled/>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaSignature</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>CSS</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>STYLES</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaSignature/STYLES.less</res_file>
+		<res_file_compiled>resources/ObjectExternal/TestJavaSignature/STYLES.min.css</res_file_compiled>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaSignature</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>HTML</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>HTML</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaSignature/HTML.html</res_file>
+		<res_file_compiled/>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaSignature</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>JS</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>SCRIPT</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaSignature/SCRIPT.js</res_file>
+		<res_file_compiled>resources/ObjectExternal/TestJavaSignature/SCRIPT.min.js</res_file_compiled>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaJQPlot</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>HTML</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>HTML</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaJQPlot/HTML.html</res_file>
+		<res_file_compiled/>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaJQPlot</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>JS</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>SCRIPT</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaJQPlot/SCRIPT.js</res_file>
+		<res_file_compiled>resources/ObjectExternal/TestJavaJQPlot/SCRIPT.min.js</res_file_compiled>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaTimeline</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>HTML</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>HTML</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaTimeline/HTML.html</res_file>
+		<res_file_compiled/>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaTimeline</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>JS</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>SCRIPT</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaTimeline/SCRIPT.js</res_file>
+		<res_file_compiled>resources/ObjectExternal/TestJavaTimeline/SCRIPT.min.js</res_file_compiled>
 		<res_image/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
@@ -1976,10 +2292,26 @@
 	<action>upsert</action>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaCytoscape</tsl_id.obe_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Cytoscape test</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obe_name>TestJavaExtObject</tsl_id.obe_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Java external object</tsl_value>
 		<tsl_help><![CDATA[<p>This external object uses <strong>Java</strong> class</p>]]></tsl_help>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaJQPlot</tsl_id.obe_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>JQPlot test</tsl_value>
+		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2000,9 +2332,33 @@
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaSignature</tsl_id.obe_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Signature test</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obe_name>TestJavaStaticSite</tsl_id.obe_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Static web site</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaTimeline</tsl_id.obe_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Timeline test</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaCytoscape</tsl_id.obe_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Test cytoscape</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
@@ -2012,6 +2368,14 @@
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Object externe Java</tsl_value>
 		<tsl_help><![CDATA[<p>Cet object externe utilise une classe <strong>Java</strong></p>]]></tsl_help>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaJQPlot</tsl_id.obe_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Test JQplot</tsl_value>
+		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2032,9 +2396,25 @@
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaSignature</tsl_id.obe_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Test signature</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obe_name>TestJavaStaticSite</tsl_id.obe_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Web site statique</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaTimeline</tsl_id.obe_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Test timeline</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>

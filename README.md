@@ -11,7 +11,9 @@
 `TestJava` module definition
 ============================
 
-This module is for testing Java features.
+This module is for testing platform features.
+
+All items in this module are developped in Java.
 
 `TestJavaService` business object definition
 --------------------------------------------
@@ -89,10 +91,22 @@ Child of TestJavaObject
 * `Create`: 
 * `End`: 
 
+`TestJavaCytoscape` external object definition
+----------------------------------------------
+
+
+
+
 `TestJavaExtObject` external object definition
 ----------------------------------------------
 
 
+
+
+`TestJavaJQPlot` external object definition
+-------------------------------------------
+
+Custom jQPlot dashboard
 
 
 `TestJavaMappedRESTExtObject` external object definition
@@ -107,8 +121,20 @@ Test **mapped** REST service external object
 Test REST service external object
 
 
+`TestJavaSignature` external object definition
+----------------------------------------------
+
+
+
+
 `TestJavaStaticSite` external object definition
 -----------------------------------------------
+
+
+
+
+`TestJavaTimeline` external object definition
+---------------------------------------------
 
 
 

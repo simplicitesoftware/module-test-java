@@ -2,7 +2,7 @@
     "date": "Thu Feb 27 10:52:09 CET 2020",
     "name": "TestJava",
     "format": "xml",
-    "description": "This module is for testing Java features.",
+    "description": "This module is for testing platform features.\n\nAll items in this module are developped in Java.",
     "files": ["TestJava.xml"],
     "repository": {},
     "version": "4.0",
