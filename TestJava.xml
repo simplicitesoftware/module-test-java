@@ -7,7 +7,12 @@
 		<mdl_name>TestJava</mdl_name>
 		<mdl_version>4.0</mdl_version>
 		<mdl_prefix>test</mdl_prefix>
-		<mdl_url><![CDATA[https://www.simplicite.io/resources/modules/testjava-app-4.0.xml]]></mdl_url>
+		<mdl_url><![CDATA[{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-test-java.git"
+	}
+}]]></mdl_url>
 		<mdl_lastupd>2020-02-27 10:52:09</mdl_lastupd>
 		<mdl_comment><![CDATA[This module is for testing platform features.
 

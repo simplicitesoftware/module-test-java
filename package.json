@@ -4,7 +4,7 @@
     "format": "xml",
     "description": "This module is for testing platform features.\n\nAll items in this module are developped in Java.",
     "files": ["TestJava.xml"],
-    "repository": {},
+    "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-test-java.git"}},
     "version": "4.0",
     "dependencies": {"Simplicite": "4.0"}
 }
