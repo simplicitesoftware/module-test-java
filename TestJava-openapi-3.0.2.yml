@@ -686,7 +686,7 @@ components:
           - Etc/GMT-14
           - Pacific/Kiritimati
         row_module_id__mdl_name:
-          description: Module Name
+          description: Module name
           type: string
         usr_image_id:
           description: Picture
@@ -711,8 +711,8 @@ components:
           - BE
           - CH
           - IE
-          - US
           - CA
+          - US
         usr_title:
           description: Title
           type: string
@@ -781,6 +781,12 @@ components:
         usr_city:
           description: City
           type: string
+        usr_lang_pref:
+          description: Preferred language
+          type: string
+          enum:
+          - ENU
+          - FRA
         usr_lang:
           description: Language
           type: string
@@ -823,6 +829,12 @@ components:
         row_id:
           description: Unique technical row ID
           type: string
+        testjObjDocument:
+          description: Document to upload to EDM
+          type: object
+        testjObjDocumentURL:
+          description: EDM document URL
+          type: string
         testjObjCode:
           description: Code
           type: string
@@ -841,6 +853,12 @@ components:
           type: string
         row_id:
           description: Unique technical row ID
+          type: string
+        testjObjDocument:
+          description: Document to upload to EDM
+          type: object
+        testjObjDocumentURL:
+          description: EDM document URL
           type: string
         testjObjCode:
           description: Code
@@ -874,6 +892,12 @@ components:
           type: string
         row_id:
           description: Unique technical row ID
+          type: string
+        testjObjDocument:
+          description: Document to upload to EDM
+          type: object
+        testjObjDocumentURL:
+          description: EDM document URL
           type: string
         testjObjCode:
           description: Code
@@ -1762,8 +1786,8 @@ paths:
           - BE
           - CH
           - IE
-          - US
           - CA
+          - US
         in: query
         name: usr_country
         description: Search filter for Country
@@ -1778,7 +1802,7 @@ paths:
           type: string
         in: query
         name: row_module_id__mdl_name
-        description: Search filter for Module Name
+        description: Search filter for Module name
         required: false
       - schema:
           type: boolean
@@ -1826,6 +1850,15 @@ paths:
         in: query
         name: usr_dateformat
         description: Search filter for Date format
+        required: false
+      - schema:
+          type: string
+          enum:
+          - ENU
+          - FRA
+        in: query
+        name: usr_lang_pref
+        description: Search filter for Preferred language
         required: false
       - schema:
           type: string
@@ -2926,6 +2959,18 @@ paths:
         name: testjObjDesc
         description: Search filter for Description
         required: false
+      - schema:
+          type: string
+        in: query
+        name: testjObjDocument
+        description: Search filter for Document to upload to EDM
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: testjObjDocumentURL
+        description: Search filter for EDM document URL
+        required: false
       tags:
       - TestjObjectGrandChild
   /rest/TestJavaUser/{row_id}:
@@ -3226,6 +3271,18 @@ paths:
         in: query
         name: testjObjDesc
         description: Search filter for Description
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: testjObjDocumentURL
+        description: Search filter for EDM document URL
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: testjObjDocument
+        description: Search filter for Document to upload to EDM
         required: false
       tags:
       - TestjObject
@@ -3547,6 +3604,18 @@ paths:
         in: query
         name: testjObjDesc
         description: Search filter for Description
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: testjObjDocument
+        description: Search filter for Document to upload to EDM
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: testjObjDocumentURL
+        description: Search filter for EDM document URL
         required: false
       tags:
       - TestjObjectChild

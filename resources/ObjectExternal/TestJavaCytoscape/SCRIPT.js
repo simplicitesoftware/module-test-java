@@ -38,7 +38,7 @@ var TestJavaCytoscape = TestJavaCytoscape || (function($) {
 	}
 
 	return {
-		render: function(params) {
+		render: /*function(params) {
 			if (typeof cytoscape === "undefined") {
 				$ui.loadScript({
 					url: "https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.14.0/cytoscape.min.js",
@@ -47,6 +47,6 @@ var TestJavaCytoscape = TestJavaCytoscape || (function($) {
 			} else {
 				_render(params);
 			}
-		}
+		}*/_render
 	};
 })(jQuery);

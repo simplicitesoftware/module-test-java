@@ -802,8 +802,8 @@ paths:
         - BE
         - CH
         - IE
-        - US
         - CA
+        - US
       - in: query
         name: row_module_id
         description: Search filter for Module
@@ -811,7 +811,7 @@ paths:
         required: false
       - in: query
         name: row_module_id__mdl_name
-        description: Search filter for Module Name
+        description: Search filter for Module name
         type: string
         required: false
       - in: query
@@ -854,6 +854,14 @@ paths:
         - DMY
         - MDY
         - CHF
+      - in: query
+        name: usr_lang_pref
+        description: Search filter for Preferred language
+        type: string
+        required: false
+        enum:
+        - ENU
+        - FRA
       - in: query
         name: usr_uuid
         description: Search filter for UUID
@@ -1774,6 +1782,16 @@ paths:
         description: Search filter for Description
         type: string
         required: false
+      - in: query
+        name: testjObjDocument
+        description: Search filter for Document to upload to EDM
+        type: string
+        required: false
+      - in: query
+        name: testjObjDocumentURL
+        description: Search filter for EDM document URL
+        type: string
+        required: false
       tags:
       - TestjObjectGrandChild
   /rest/TestJavaUser/{row_id}:
@@ -2023,6 +2041,16 @@ paths:
       - in: query
         name: testjObjDesc
         description: Search filter for Description
+        type: string
+        required: false
+      - in: query
+        name: testjObjDocumentURL
+        description: Search filter for EDM document URL
+        type: string
+        required: false
+      - in: query
+        name: testjObjDocument
+        description: Search filter for Document to upload to EDM
         type: string
         required: false
       tags:
@@ -2292,6 +2320,16 @@ paths:
       - in: query
         name: testjObjDesc
         description: Search filter for Description
+        type: string
+        required: false
+      - in: query
+        name: testjObjDocument
+        description: Search filter for Document to upload to EDM
+        type: string
+        required: false
+      - in: query
+        name: testjObjDocumentURL
+        description: Search filter for EDM document URL
         type: string
         required: false
       tags:
@@ -2985,7 +3023,7 @@ definitions:
         - Etc/GMT-14
         - Pacific/Kiritimati
       row_module_id__mdl_name:
-        description: Module Name
+        description: Module name
         type: string
       usr_image_id:
         description: Picture
@@ -3010,8 +3048,8 @@ definitions:
         - BE
         - CH
         - IE
-        - US
         - CA
+        - US
       usr_title:
         description: Title
         type: string
@@ -3080,6 +3118,12 @@ definitions:
       usr_city:
         description: City
         type: string
+      usr_lang_pref:
+        description: Preferred language
+        type: string
+        enum:
+        - ENU
+        - FRA
       usr_lang:
         description: Language
         type: string
@@ -3122,6 +3166,12 @@ definitions:
       row_id:
         description: Unique technical row ID
         type: string
+      testjObjDocument:
+        description: Document to upload to EDM
+        type: object
+      testjObjDocumentURL:
+        description: EDM document URL
+        type: string
       testjObjCode:
         description: Code
         type: string
@@ -3140,6 +3190,12 @@ definitions:
         type: string
       row_id:
         description: Unique technical row ID
+        type: string
+      testjObjDocument:
+        description: Document to upload to EDM
+        type: object
+      testjObjDocumentURL:
+        description: EDM document URL
         type: string
       testjObjCode:
         description: Code
@@ -3173,6 +3229,12 @@ definitions:
         type: string
       row_id:
         description: Unique technical row ID
+        type: string
+      testjObjDocument:
+        description: Document to upload to EDM
+        type: object
+      testjObjDocumentURL:
+        description: EDM document URL
         type: string
       testjObjCode:
         description: Code

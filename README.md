@@ -49,6 +49,8 @@ Test Java object
 | `testjObjCode`                                               | char(50)                                 | yes*     | yes       |          | -                                                                                |
 | `testjObjDesc`                                               | html(4000)                               |          | yes       |          | -                                                                                |
 | `testjObjFlag`                                               | boolean                                  |          | yes       |          | -                                                                                |
+| `testjObjDocumentURL`                                        | url(255)                                 |          | yes       |          | -                                                                                |
+| `testjObjDocument`                                           | document                                 |          | yes       |          | -                                                                                |
 
 `TestjObjectChild` business object definition
 ---------------------------------------------
@@ -137,5 +139,11 @@ Test REST service external object
 ---------------------------------------------
 
 
+
+
+`TestjEDM` external object definition
+-------------------------------------
+
+Test EDM
 
 
