@@ -9,16 +9,18 @@ import com.simplicite.util.Globals;
 import com.simplicite.util.Grant;
 import com.simplicite.util.AppLog;
 
+import com.simplicite.commons.TestJava.TestJavaCommon;
+
 /**
- * Unit tests TestJavaUnitTests
+ * Unit tests
  */
 public class TestJavaUnitTests {
-	@Test
+	/*@Test
 	public void test() {
 		try {
 			Grant sys = Grant.getSystemAdmin();
 			
-			AppLog.info(getClass(), "test", "System user: " + sys.toString(), sys);
+			AppLog.info("System user: " + sys.toString(), sys);
 			assertEquals(Globals.getSystemLogin(), sys.getLogin());
 
 			Grant g = new Grant();
@@ -30,5 +32,13 @@ public class TestJavaUnitTests {
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
+	}*/
+	
+	@Test
+	public void testShared() {
+		Grant sys = Grant.getSystemAdmin();
+		String hello = new TestJavaCommon(sys.getLogin()).hello();
+		AppLog.info(hello, sys);
+		assertEquals("Hello system", hello);
 	}
 }

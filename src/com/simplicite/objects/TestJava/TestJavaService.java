@@ -29,15 +29,15 @@ public class TestJavaService extends ObjectService {
 			"<?xml version=\"1.0\"?>\n" +
 			"<company>\n" +
 			"	<staff>\n" +
-			"		<firstname>yong</firstname>\n" +
-			"		<lastname>mook kim</lastname>\n" +
-			"		<nickname>mkyong</nickname>\n" +
+			"		<firstname>foo</firstname>\n" +
+			"		<lastname>bar</lastname>\n" +
+			"		<nickname>foobar</nickname>\n" +
 			"		<salary>100000</salary>\n" +
 			"	</staff>\n" +
 			"	<staff>\n" +
-			"		<firstname>low</firstname>\n" +
-			"		<lastname>yin fong</lastname>\n" +
-			"		<nickname>fong fong</nickname>\n" +
+			"		<firstname>foo</firstname>\n" +
+			"		<lastname>baz</lastname>\n" +
+			"		<nickname>foobaz</nickname>\n" +
 			"		<salary>200000</salary>\n" +
 			"	</staff>\n" +
 			"</company>";

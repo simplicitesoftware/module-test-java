@@ -1,9 +1,9 @@
 {
+    "date": "2021-03-12 18:11:47",
     "name": "TestJava",
     "format": "xml",
-    "description": "",
     "files": ["TestJava.xml"],
     "repository": {},
     "version": "4.0",
-    "dependencies": {"Simplicite": "4.0"}
+    "platform": "5.2.0-alpha"
 }

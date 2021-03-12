@@ -102,7 +102,6 @@ paths:
         - SystemV/PST8
         - SystemV/PST8PDT
         - US/Pacific
-        - US/Pacific-New
         - PST
         - America/Boise
         - America/Cambridge_Bay
@@ -429,6 +428,7 @@ paths:
         - Africa/Gaborone
         - Africa/Harare
         - Africa/Johannesburg
+        - Africa/Juba
         - Africa/Khartoum
         - Africa/Kigali
         - Africa/Lubumbashi
@@ -474,7 +474,6 @@ paths:
         - Africa/Asmera
         - Africa/Dar_es_Salaam
         - Africa/Djibouti
-        - Africa/Juba
         - Africa/Kampala
         - Africa/Mogadishu
         - Africa/Nairobi
@@ -492,6 +491,7 @@ paths:
         - Europe/Minsk
         - Europe/Moscow
         - Europe/Simferopol
+        - Europe/Volgograd
         - Indian/Antananarivo
         - Indian/Comoro
         - Indian/Mayotte
@@ -510,7 +510,6 @@ paths:
         - Europe/Samara
         - Europe/Saratov
         - Europe/Ulyanovsk
-        - Europe/Volgograd
         - Indian/Mahe
         - Indian/Mauritius
         - Indian/Reunion
@@ -573,7 +572,6 @@ paths:
         - Etc/GMT-7
         - Indian/Christmas
         - VST
-        - Antarctica/Casey
         - Asia/Brunei
         - Asia/Choibalsan
         - Asia/Chongqing
@@ -622,6 +620,7 @@ paths:
         - Australia/Yancowinna
         - ACT
         - Antarctica/DumontDUrville
+        - Antarctica/Macquarie
         - Asia/Ust-Nera
         - Asia/Vladivostok
         - Australia/ACT
@@ -646,7 +645,7 @@ paths:
         - AET
         - Australia/LHI
         - Australia/Lord_Howe
-        - Antarctica/Macquarie
+        - Antarctica/Casey
         - Asia/Magadan
         - Asia/Sakhalin
         - Asia/Srednekolymsk
@@ -730,6 +729,21 @@ paths:
         type: string
         required: false
       - in: query
+        name: usr_work_num
+        description: Search filter for Work phone number
+        type: string
+        required: false
+      - in: query
+        name: usr_home_num
+        description: Search filter for Home phone
+        type: string
+        required: false
+      - in: query
+        name: usr_cell_num
+        description: Search filter for Mobile/cellular phone number
+        type: string
+        required: false
+      - in: query
         name: usr_active
         description: Search filter for Active
         type: string
@@ -747,21 +761,6 @@ paths:
       - in: query
         name: usr_home_id__viw_name
         description: Search filter for Home page
-        type: string
-        required: false
-      - in: query
-        name: usr_work_num
-        description: Search filter for Work phone number
-        type: string
-        required: false
-      - in: query
-        name: usr_home_num
-        description: Search filter for Home phone
-        type: string
-        required: false
-      - in: query
-        name: usr_cell_num
-        description: Search filter for Mobile/cellular phone number
         type: string
         required: false
       - in: query
@@ -802,8 +801,8 @@ paths:
         - BE
         - CH
         - IE
-        - CA
         - US
+        - CA
       - in: query
         name: row_module_id
         description: Search filter for Module
@@ -1783,13 +1782,13 @@ paths:
         type: string
         required: false
       - in: query
-        name: testjObjDocument
-        description: Search filter for Document to upload to EDM
+        name: testjObjDocumentURL
+        description: Search filter for EDM document URL
         type: string
         required: false
       - in: query
-        name: testjObjDocumentURL
-        description: Search filter for EDM document URL
+        name: testjObjDocument
+        description: Search filter for Document to upload to EDM
         type: string
         required: false
       tags:
@@ -2323,13 +2322,13 @@ paths:
         type: string
         required: false
       - in: query
-        name: testjObjDocument
-        description: Search filter for Document to upload to EDM
+        name: testjObjDocumentURL
+        description: Search filter for EDM document URL
         type: string
         required: false
       - in: query
-        name: testjObjDocumentURL
-        description: Search filter for EDM document URL
+        name: testjObjDocument
+        description: Search filter for Document to upload to EDM
         type: string
         required: false
       tags:
@@ -2437,7 +2436,6 @@ definitions:
         - SystemV/PST8
         - SystemV/PST8PDT
         - US/Pacific
-        - US/Pacific-New
         - PST
         - America/Boise
         - America/Cambridge_Bay
@@ -2764,6 +2762,7 @@ definitions:
         - Africa/Gaborone
         - Africa/Harare
         - Africa/Johannesburg
+        - Africa/Juba
         - Africa/Khartoum
         - Africa/Kigali
         - Africa/Lubumbashi
@@ -2809,7 +2808,6 @@ definitions:
         - Africa/Asmera
         - Africa/Dar_es_Salaam
         - Africa/Djibouti
-        - Africa/Juba
         - Africa/Kampala
         - Africa/Mogadishu
         - Africa/Nairobi
@@ -2827,6 +2825,7 @@ definitions:
         - Europe/Minsk
         - Europe/Moscow
         - Europe/Simferopol
+        - Europe/Volgograd
         - Indian/Antananarivo
         - Indian/Comoro
         - Indian/Mayotte
@@ -2845,7 +2844,6 @@ definitions:
         - Europe/Samara
         - Europe/Saratov
         - Europe/Ulyanovsk
-        - Europe/Volgograd
         - Indian/Mahe
         - Indian/Mauritius
         - Indian/Reunion
@@ -2908,7 +2906,6 @@ definitions:
         - Etc/GMT-7
         - Indian/Christmas
         - VST
-        - Antarctica/Casey
         - Asia/Brunei
         - Asia/Choibalsan
         - Asia/Chongqing
@@ -2957,6 +2954,7 @@ definitions:
         - Australia/Yancowinna
         - ACT
         - Antarctica/DumontDUrville
+        - Antarctica/Macquarie
         - Asia/Ust-Nera
         - Asia/Vladivostok
         - Australia/ACT
@@ -2981,7 +2979,7 @@ definitions:
         - AET
         - Australia/LHI
         - Australia/Lord_Howe
-        - Antarctica/Macquarie
+        - Antarctica/Casey
         - Asia/Magadan
         - Asia/Sakhalin
         - Asia/Srednekolymsk
@@ -3048,8 +3046,8 @@ definitions:
         - BE
         - CH
         - IE
-        - CA
         - US
+        - CA
       usr_title:
         description: Title
         type: string
