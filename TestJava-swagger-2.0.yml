@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: TestJava 4.0
+#             |_| Module: TestJava 5
 paths:
   /rest/TestJavaUser:
     get:
@@ -3299,7 +3299,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module TestJava
   title: TestJava
-  version: '4.0'
+  version: '5'
 tags:
 - name: TestJavaService
   description: Java service
