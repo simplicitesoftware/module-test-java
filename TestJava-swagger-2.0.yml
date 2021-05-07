@@ -801,8 +801,8 @@ paths:
         - BE
         - CH
         - IE
-        - US
         - CA
+        - US
       - in: query
         name: row_module_id
         description: Search filter for Module
@@ -1989,6 +1989,57 @@ paths:
         required: true
       tags:
       - TestJavaUser
+  /rest/TestServiceObject:
+    get:
+      summary: Search TestServiceObject business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testserviceobject-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfTestServiceObject'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: testjSrvCode
+        description: Search filter for Code
+        type: string
+        required: false
+      - in: query
+        name: testjSrvLabel
+        description: Search filter for Label
+        type: string
+        required: false
+      tags:
+      - TestServiceObject
   /rest/TestjObject:
     get:
       summary: Search TestjObject business object records or get contextualized metadata
@@ -2267,6 +2318,168 @@ paths:
         required: false
       tags:
       - TestJavaService
+  /rest/TestServiceObject/{row_id}:
+    post:
+      summary: Create a new TestServiceObjectbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testserviceobject-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestServiceObject'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/TestServiceObject'
+        in: body
+        name: body
+      tags:
+      - TestServiceObject
+      consumes:
+      - application/json
+    get:
+      summary: Get a TestServiceObject business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testserviceobject-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestServiceObject'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - TestServiceObject
+    delete:
+      summary: Delete a TestServiceObject business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testserviceobject-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - TestServiceObject
+    put:
+      summary: Update a TestServiceObjectbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testserviceobject-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestServiceObject'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/TestServiceObject'
+        in: body
+        name: body
+      tags:
+      - TestServiceObject
+      consumes:
+      - application/json
   /rest/TestjObjectChild:
     get:
       summary: Search TestjObjectChild business object records or get contextualized
@@ -3046,8 +3259,8 @@ definitions:
         - BE
         - CH
         - IE
-        - US
         - CA
+        - US
       usr_title:
         description: Title
         type: string
@@ -3288,6 +3501,22 @@ definitions:
         type: integer
         enum:
         - 403
+  TestServiceObject:
+    type: object
+    properties:
+      testjSrvLabel:
+        description: Label
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
+      testjSrvCode:
+        description: Code
+        type: string
+  ArrayOfTestServiceObject:
+    type: array
+    items:
+      $ref: '#/definitions/TestServiceObject'
 swagger: '2.0'
 info:
   license:
@@ -3313,3 +3542,5 @@ tags:
   description: Java object (grand child)
 - name: TestjObjectHierarchy
   description: Java object hierarchy
+- name: TestServiceObject
+  description: Service object example

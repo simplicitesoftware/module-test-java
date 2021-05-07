@@ -86,7 +86,7 @@ public class PlatformHooks extends com.simplicite.util.engine.PlatformHooksInter
 		return super.event(g, origin, data);	
 	}
 
-/**
+	/**
 	 * Social post hook
 	 */
 	@Override
@@ -95,6 +95,19 @@ public class PlatformHooks extends com.simplicite.util.engine.PlatformHooksInter
 			AppLog.info("Social post by " + g.getLogin() + " (" + postId + ")", g);
 		} catch (Throwable e) {
 			AppLog.error(null, e, null);
+		}
+	}
+	
+	/**
+	 * Unit tests method
+	 */
+	@Override
+	public String unitTests() {
+		try {
+			return "Unit tests";
+		} catch (Exception e) {
+			AppLog.error(null, e, null);
+			return e.getMessage();
 		}
 	}
 }

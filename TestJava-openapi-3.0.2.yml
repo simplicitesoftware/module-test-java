@@ -710,8 +710,8 @@ components:
           - BE
           - CH
           - IE
-          - US
           - CA
+          - US
         usr_title:
           description: Title
           type: string
@@ -952,6 +952,22 @@ components:
           type: integer
           enum:
           - 403
+    TestServiceObject:
+      type: object
+      properties:
+        testjSrvLabel:
+          description: Label
+          type: string
+        row_id:
+          description: Unique technical row ID
+          type: string
+        testjSrvCode:
+          description: Code
+          type: string
+    ArrayOfTestServiceObject:
+      type: array
+      items:
+        $ref: '#/components/schemas/TestServiceObject'
   securitySchemes:
     basicAuth:
       scheme: basic
@@ -1784,8 +1800,8 @@ paths:
           - BE
           - CH
           - IE
-          - US
           - CA
+          - US
         in: query
         name: usr_country
         description: Search filter for Country
@@ -3207,6 +3223,66 @@ paths:
         required: true
       tags:
       - TestJavaUser
+  /rest/TestServiceObject:
+    get:
+      summary: Search TestServiceObject business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-testserviceobject-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfTestServiceObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: testjSrvCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: testjSrvLabel
+        description: Search filter for Label
+        required: false
+      tags:
+      - TestServiceObject
   /rest/TestjObject:
     get:
       summary: Search TestjObject business object records or get contextualized metadata
@@ -3539,6 +3615,201 @@ paths:
         required: false
       tags:
       - TestJavaService
+  /rest/TestServiceObject/{row_id}:
+    post:
+      summary: Create a new TestServiceObjectbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestServiceObject'
+      operationId: obj-testserviceobject-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestServiceObject'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - TestServiceObject
+    get:
+      summary: Get a TestServiceObject business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-testserviceobject-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestServiceObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - TestServiceObject
+    delete:
+      summary: Delete a TestServiceObject business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-testserviceobject-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - TestServiceObject
+    put:
+      summary: Update a TestServiceObjectbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestServiceObject'
+      operationId: obj-testserviceobject-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestServiceObject'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - TestServiceObject
   /rest/TestjObjectChild:
     get:
       summary: Search TestjObjectChild business object records or get contextualized
@@ -3641,3 +3912,5 @@ tags:
   description: Java object (grand child)
 - name: TestjObjectHierarchy
   description: Java object hierarchy
+- name: TestServiceObject
+  description: Service object example

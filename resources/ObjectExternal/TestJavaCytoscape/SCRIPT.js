@@ -1,6 +1,6 @@
-var TestJavaCytoscape = TestJavaCytoscape || (function($) {
+var TestJavaCytoscape = (function() {
 
-	function _render(params) {
+	function render(params) {
 		var p = params.parameters;
 		console.log(p);
 		var code = null;
@@ -10,14 +10,14 @@ var TestJavaCytoscape = TestJavaCytoscape || (function($) {
 			$ui.getUIObject(p.object, function(obj) {
 				console.log(obj);
 				title.append(": Code = " + obj.item.appObj1Code);
-				_chart(obj.item.appObj1Code, obj.item.appObj1Color);
+				chart(obj.item.appObj1Code, obj.item.appObj1Color);
 			});
 		} else {
-			_chart("item")
+			chart("item")
 		}
 	}
 	
-	function _chart(code, color) {
+	function chart(code, color) {
 		cytoscape({
 		  container: $("#testcytoscape"),
 		  elements: [
@@ -37,16 +37,5 @@ var TestJavaCytoscape = TestJavaCytoscape || (function($) {
 
 	}
 
-	return {
-		render: /*function(params) {
-			if (typeof cytoscape === "undefined") {
-				$ui.loadScript({
-					url: "https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.14.0/cytoscape.min.js",
-					onload: function() { _render(params); }
-				});
-			} else {
-				_render(params);
-			}
-		}*/_render
-	};
-})(jQuery);
+	return { render: render };
+})();

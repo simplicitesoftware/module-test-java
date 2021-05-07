@@ -1,6 +1,6 @@
-var TestJavaSignature = TestJavaSignature || (function ($) {
+var TestJavaSignature = (function() {
 
-	function _render(params) {
+	function render(params) {
 		var sp = new SignaturePad(document.getElementById('signature-pad'), { backgroundColor: 'rgb(255, 255, 255)' });
 
 		$("#signature-save").click(function() {
@@ -14,12 +14,12 @@ var TestJavaSignature = TestJavaSignature || (function ($) {
 			if (typeof SignaturePad === "undefined") {
 				$ui.loadScript({
 					url: "https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js",
-					onload: function() { _render(params); }
+					onload: function() { render(params); }
 				});
 			} else {
-				_render(params);
+				render(params);
 			}
 		}
 	};
 
-})(jQuery);
+})();

@@ -1,5 +1,6 @@
 package com.simplicite.objects.TestJava;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.json.JSONObject;
@@ -10,6 +11,7 @@ import com.simplicite.util.ObjectDB;
 import com.simplicite.util.ObjectField;
 import com.simplicite.util.DocumentDB;
 import com.simplicite.util.Message;
+import com.simplicite.util.tools.HTMLTool;
 import com.simplicite.util.tools.RESTTool;
 import com.simplicite.util.tools.Base64Tool;
 
@@ -34,8 +36,14 @@ public class TestjObject extends ObjectDB {
 	 * Pre validate hook
 	 */
 	@Override
-	public List<String> preValidate() {
+	public List<String> preValidate()
+	{
 		AppLog.info("Pre Validate (java) for " + getRowId(), getGrant());
+		/*
+		ArrayList<String> errs = new ArrayList<String>();
+		errs.add("This is a non blocking error");
+		return errs;
+		*/
 		return null;
 	}
 
@@ -63,7 +71,7 @@ public class TestjObject extends ObjectDB {
 				RESTTool.post(new JSONObject()
 					.put("name", doc.getPath())
 					.put("data", Base64Tool.encodeBytes(doc.getBytes(true))),
-				"https://dev40.dev.simplicite.io/ext/TestjEDM"));
+				HTMLTool.getPublicExternalObjectURL("TestjEDM")));
 
 			setFieldValue("testjObjDocumentURL", res.getString("url"));
 		} catch (Throwable e) {

@@ -1,4 +1,4 @@
-var TestJavaTimeline = TestJavaTimeline || (function($) {
+var TestJavaTimeline = (function() {
 
 	function calendar() {
 		new FullCalendar.Calendar($("#testtimeline")[0], {
@@ -17,4 +17,4 @@ var TestJavaTimeline = TestJavaTimeline || (function($) {
 		$ui.loadCalendar(calendar);
 	}};
 
-})(jQuery);
+})();
