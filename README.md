@@ -105,6 +105,12 @@ Child of TestJavaObject
 * `Create`: 
 * `End`: 
 
+`TestJavaChartJS` external object definition
+--------------------------------------------
+
+Chart.js example
+
+
 `TestJavaCytoscape` external object definition
 ----------------------------------------------
 

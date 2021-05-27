@@ -524,17 +524,23 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<ofa_title>0</ofa_title>
 		<ofa_ui><![CDATA[<div>
   <div class="row">
-    <div class="col-sm-10">
-      <div class="field" data-field="testjObjCode"></div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="field" data-field="testjObjCode"></div>
+        </div>
+        <div class="col-sm-2">
+          <div class="field" data-field="testjObjFlag"></div>
+        </div>
+      </div>
+      <div class="field" data-field="testjObjDesc"></div>
     </div>
-    <div class="col-sm-2">
-      <div class="field" data-field="testjObjFlag"></div>
+    <div class="col-sm-6">
+      <div class="extern" data-embedded="true" data-extern="TestJavaChartJS" data-title="false" style="width: 100%; height: 100%;"></div>
     </div>
   </div>
-  <div class="field" data-field="testjObjDesc"></div>
-  <div class="area" data-area="2"></div>
-</div>
-]]></ofa_ui>
+  <div class="area" data-area="2:-"></div>
+</div>]]></ofa_ui>
 		<ofa_icon/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
@@ -600,6 +606,17 @@ All items in this module are developped in Java.]]></mdl_comment>
 <object>
 	<name>ObjectExternal</name>
 	<action>upsert</action>
+	<data>
+		<obe_name>TestJavaChartJS</obe_name>
+		<obe_type>E</obe_type>
+		<obe_url/>
+		<obe_comment><![CDATA[Chart.js example]]></obe_comment>
+		<obe_help/>
+		<obe_class/>
+		<obe_script_id>src/com/simplicite/extobjects/TestJava/TestJavaChartJS.java</obe_script_id>
+		<obe_icon>science</obe_icon>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
 	<data>
 		<obe_name>TestJavaCytoscape</obe_name>
 		<obe_type>E</obe_type>
@@ -1508,6 +1525,15 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 	<data>
+		<fct_name>TestJavaChartJS-E</fct_name>
+		<fct_object_id.obj_type>E</fct_object_id.obj_type>
+		<fct_object_id.obj_name>TestJavaChartJS</fct_object_id.obj_name>
+		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
 		<fct_name>TestJavaCytoscape-E</fct_name>
 		<fct_object_id.obj_type>E</fct_object_id.obj_type>
 		<fct_object_id.obj_name>TestJavaCytoscape</fct_object_id.obj_name>
@@ -1643,6 +1669,16 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<grt_function_id.fct_name>TestjEDM-E</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
 		<grt_function_id.fct_object_id.obj_name>TestjEDM</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>L</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>TESTJAVA_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>TestJavaChartJS-E</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>TestJavaChartJS</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -2112,7 +2148,7 @@ All items in this module are developped in Java.]]></mdl_comment>
 	</data>
 	<data>
 		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>TestJavaTimeline</map_object_id.obj_name>
+		<map_object_id.obj_name>TestJavaChartJS</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>21240</map_order>
 		<map_ext>0</map_ext>
@@ -2120,9 +2156,17 @@ All items in this module are developped in Java.]]></mdl_comment>
 	</data>
 	<data>
 		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>TestjHTTPTracer</map_object_id.obj_name>
+		<map_object_id.obj_name>TestJavaTimeline</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>21250</map_order>
+		<map_ext>0</map_ext>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<map_domain_id.obd_name>TestJavaDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>TestjHTTPTracer</map_object_id.obj_name>
+		<map_process_id.pcs_name/>
+		<map_order>21260</map_order>
 		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
@@ -2457,6 +2501,60 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/TestJavaTimeline/SCRIPT.js</res_file>
 		<res_file_compiled>resources/ObjectExternal/TestJavaTimeline/SCRIPT.min.js</res_file_compiled>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaChartJS</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>CSS</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>STYLES</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaChartJS/STYLES.less</res_file>
+		<res_file_compiled>resources/ObjectExternal/TestJavaChartJS/STYLES.min.css</res_file_compiled>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaChartJS</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>HTML</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>HTML</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaChartJS/HTML.html</res_file>
+		<res_file_compiled/>
+		<res_image/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>TestJavaChartJS</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>JS</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>SCRIPT</res_code>
+		<res_cached>0</res_cached>
+		<res_file>resources/ObjectExternal/TestJavaChartJS/SCRIPT.js</res_file>
+		<res_file_compiled>resources/ObjectExternal/TestJavaChartJS/SCRIPT.min.js</res_file_compiled>
 		<res_image/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
@@ -3013,6 +3111,14 @@ All items in this module are developped in Java.]]></mdl_comment>
 	<action>upsert</action>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaChartJS</tsl_id.obe_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Chart.js test</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obe_name>TestJavaCytoscape</tsl_id.obe_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Cytoscape test</tsl_value>
@@ -3081,6 +3187,14 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<tsl_id.obe_name>TestjEDM</tsl_id.obe_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Test EDM</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obe_name>TestJavaChartJS</tsl_id.obe_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Test Chart.js</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
