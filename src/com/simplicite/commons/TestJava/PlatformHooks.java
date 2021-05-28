@@ -98,9 +98,7 @@ public class PlatformHooks extends com.simplicite.util.engine.PlatformHooksInter
 		}
 	}
 	
-	/**
-	 * Unit tests method
-	 */
+	/* Unit tests method (for versions 5.1+)
 	@Override
 	public String unitTests() {
 		try {
@@ -109,5 +107,5 @@ public class PlatformHooks extends com.simplicite.util.engine.PlatformHooksInter
 			AppLog.error(null, e, null);
 			return e.getMessage();
 		}
-	}
+	}*/
 }
