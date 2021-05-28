@@ -98,7 +98,7 @@ public class PlatformHooks extends com.simplicite.util.engine.PlatformHooksInter
 		}
 	}
 	
-	/* Unit tests method (for versions 5.1+)
+	/* Unit tests method (only applicable to versions 5.1+)
 	@Override
 	public String unitTests() {
 		try {

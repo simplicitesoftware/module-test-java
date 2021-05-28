@@ -1,7 +1,7 @@
-var TestJavaExtObject = TestJavaExtObject || (function($) {
-	function render() {
-		$('#testjavaobject').html("Hello world!");
-	}
-
-	return { render: render };
-})(jQuery);
+var TestJavaExtObject = (function() {
+	return {
+		render: function() {
+			$('#testjavaobject').html("Hello world!");
+		}
+	};
+})();

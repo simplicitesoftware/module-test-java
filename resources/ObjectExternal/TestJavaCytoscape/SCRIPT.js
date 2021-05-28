@@ -19,20 +19,20 @@ var TestJavaCytoscape = (function() {
 	
 	function chart(code, color) {
 		cytoscape({
-		  container: $("#testcytoscape"),
-		  elements: [
-		  	{ data: { id: "a", label: code + "-a" } },
-		  	{ data: { id: "b", label: code + "-b" } },
-		  	{ data: { id: "c", label: code + "-c" } },
-		  	{ data: { id: "ab", source: "a", target: "b" } },
-		  	{ data: { id: "bc", source: "b", target: "c" } },
-		  	{ data: { id: "ca", source: "a", target: "c" } }
-		  ],
-		  style: [
-		    { selector: "node", style: { "background-color": color || "#ccc", "label": "data(label)" } },
-		    { selector: "edge", style: { "width": 3, "line-color": "#ccc", "target-arrow-color": "#ccc", "target-arrow-shape": "triangle" } }
-		  ],
-		  layout: { name: "grid", rows: 1 }
+			container: $("#testcytoscape"),
+			elements: [
+				{ data: { id: "a", label: code + "-a" } },
+				{ data: { id: "b", label: code + "-b" } },
+				{ data: { id: "c", label: code + "-c" } },
+				{ data: { id: "ab", source: "a", target: "b" } },
+				{ data: { id: "bc", source: "b", target: "c" } },
+				{ data: { id: "ca", source: "a", target: "c" } }
+			],
+			style: [
+				{ selector: "node", style: { "background-color": color || "#ccc", "label": "data(label)" } },
+				{ selector: "edge", style: { "width": 3, "line-color": "#ccc", "target-arrow-color": "#ccc", "target-arrow-shape": "triangle" } }
+			],
+			layout: { name: "grid", rows: 1 }
 		});
 
 	}
