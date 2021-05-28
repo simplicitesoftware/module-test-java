@@ -724,7 +724,7 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<obe_help/>
 		<obe_class/>
 		<obe_script_id>src/com/simplicite/extobjects/TestJava/TestjHTTPTracer.java</obe_script_id>
-		<obe_icon/>
+		<obe_icon>science</obe_icon>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
 </object>
@@ -760,7 +760,7 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<obo_list_edit>N;L;E</obo_list_edit>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
-		<obo_icon/>
+		<obo_icon>science</obo_icon>
 		<obo_refcount>0</obo_refcount>
 		<obo_tree>0</obo_tree>
 		<obo_viewmode>V</obo_viewmode>
@@ -1090,7 +1090,7 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<obo_list_edit>N;L;E</obo_list_edit>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
-		<obo_icon/>
+		<obo_icon>science</obo_icon>
 		<obo_refcount>0</obo_refcount>
 		<obo_tree>0</obo_tree>
 		<obo_viewmode>T</obo_viewmode>
@@ -1173,7 +1173,7 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<obo_list_edit/>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
-		<obo_icon/>
+		<obo_icon>science</obo_icon>
 		<obo_refcount>0</obo_refcount>
 		<obo_tree>0</obo_tree>
 		<obo_viewmode>T</obo_viewmode>
@@ -3007,7 +3007,7 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>TestJavaService</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Java service</tsl_value>
+		<tsl_value>Java service object 1</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>
@@ -3055,7 +3055,7 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>TestJavaService</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Service java</tsl_value>
+		<tsl_value>Object service java 1</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>TestJava</row_module_id.mdl_name>
 	</data>

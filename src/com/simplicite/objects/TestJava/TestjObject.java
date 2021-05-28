@@ -71,7 +71,7 @@ public class TestjObject extends ObjectDB {
 				RESTTool.post(new JSONObject()
 					.put("name", doc.getPath())
 					.put("data", Base64Tool.encodeBytes(doc.getBytes(true))),
-				HTMLTool.getPublicExternalObjectURL("TestjEDM")));
+				getGrant().getContextURL() + HTMLTool.getPublicExternalObjectURL("TestjEDM")));
 
 			setFieldValue("testjObjDocumentURL", res.getString("url"));
 		} catch (Throwable e) {

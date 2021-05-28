@@ -3531,7 +3531,7 @@ info:
   version: '5'
 tags:
 - name: TestJavaService
-  description: Java service
+  description: Java service object 1
 - name: TestJavaUser
   description: Test java user
 - name: TestjObject
@@ -3543,4 +3543,4 @@ tags:
 - name: TestjObjectHierarchy
   description: Java object hierarchy
 - name: TestServiceObject
-  description: Service object example
+  description: Java service object 2
