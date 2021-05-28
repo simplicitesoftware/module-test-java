@@ -1,30 +1,22 @@
 var TestJavaChartJS = (function() {
-	function chart(params) {
-		console.log(params);
-		var p = params.parameters;
-		if (p.object)
-			console.log("Called from " + p.object + " (row ID " + p.row_id + ")");
+
+	function chart(spec) {
 		try {
 			new Chart(document.getElementById("testjavachartjs-chart"), {
 				type: 'line',
 				data: {
-					labels: [1,2,3,4,5,6,7,8,9,10],
+					labels: spec.labels,
 					datasets: [{ 
-						data: [168,170,178,190,203,276,408,547,675,734],
-						label: "Serie 1",
+						data: spec.data,
+						label: spec.name,
 						borderColor: "#3e95cd",
-						fill: false
-					}, { 
-						data: [6,3,2,2,7,26,82,172,312,433],
-						label: "Serie 2",
-						borderColor: "#8e5ea2",
 						fill: false
 					}]
 				},
 				options: {
 					title: {
 						display: true,
-						text: "Chart.js example"
+						text: spec.title
 					}
 				}
 			});
@@ -35,7 +27,14 @@ var TestJavaChartJS = (function() {
 
 	return {
 		render: function(params) {
-			$ui.loadCharts(function() { chart(params); });
+			$ui.loadCharts(function() {
+				$.ajax({ url: params.baselocation, method: "post", dataType: "json" }).done(function(spec) {
+					chart(spec);
+				}).fail(function(status, err) {
+					$("testjavachartjs").text("Error: status = " + status + ", message = " + err.message);
+				})
+			});
 		}
 	};
+
 })();

@@ -205,14 +205,14 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>4000</fld_size>
 		<fld_minsize/>
-		<fld_precision/>
+		<fld_precision>h=15</fld_precision>
 		<fld_fromdate_id.fld_name/>
 		<fld_dfault/>
 		<fld_indexable>0</fld_indexable>
@@ -524,7 +524,7 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<ofa_title>0</ofa_title>
 		<ofa_ui><![CDATA[<div>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-5">
       <div class="row">
         <div class="col-sm-10">
           <div class="field" data-field="testjObjCode"></div>
@@ -535,7 +535,7 @@ All items in this module are developped in Java.]]></mdl_comment>
       </div>
       <div class="field" data-field="testjObjDesc"></div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-7">
       <div class="extern" data-embedded="true" data-extern="TestJavaChartJS" data-title="false" style="width: 100%; height: 100%;"></div>
     </div>
   </div>
