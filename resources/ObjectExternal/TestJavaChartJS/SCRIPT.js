@@ -28,7 +28,7 @@ var TestJavaChartJS = (function() {
 	return {
 		render: function(params) {
 			$ui.loadCharts(function() {
-				$.ajax({ url: params.baselocation, method: "post", dataType: "json" }).done(function(spec) {
+				$.ajax({ url: params.baselocation, method: "post", dataType: "json", data: params.parameters }).done(function(spec) {
 					chart(spec);
 				}).fail(function(status, err) {
 					$("testjavachartjs").text("Error: status = " + status + ", message = " + err.message);

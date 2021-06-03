@@ -710,8 +710,8 @@ components:
           - BE
           - CH
           - IE
-          - CA
           - US
+          - CA
         usr_title:
           description: Title
           type: string
@@ -1800,8 +1800,8 @@ paths:
           - BE
           - CH
           - IE
-          - CA
           - US
+          - CA
         in: query
         name: usr_country
         description: Search filter for Country

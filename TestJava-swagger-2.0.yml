@@ -801,8 +801,8 @@ paths:
         - BE
         - CH
         - IE
-        - CA
         - US
+        - CA
       - in: query
         name: row_module_id
         description: Search filter for Module
@@ -3259,8 +3259,8 @@ definitions:
         - BE
         - CH
         - IE
-        - CA
         - US
+        - CA
       usr_title:
         description: Title
         type: string
