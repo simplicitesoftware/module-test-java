@@ -1791,6 +1791,11 @@ paths:
         description: Search filter for Document to upload to EDM
         type: string
         required: false
+      - in: query
+        name: testjObj1Max
+        description: Search filter for Max start value for chart
+        type: integer
+        required: false
       tags:
       - TestjObjectGrandChild
   /rest/TestJavaUser/{row_id}:
@@ -2102,6 +2107,16 @@ paths:
         name: testjObjDocument
         description: Search filter for Document to upload to EDM
         type: string
+        required: false
+      - in: query
+        name: testjObj1Start
+        description: Search filter for Start value for chart
+        type: integer
+        required: false
+      - in: query
+        name: testjObj1Inc
+        description: Search filter for Increment
+        type: integer
         required: false
       tags:
       - TestjObject
@@ -2543,6 +2558,11 @@ paths:
         name: testjObjDocument
         description: Search filter for Document to upload to EDM
         type: string
+        required: false
+      - in: query
+        name: testjObj1Max
+        description: Search filter for Max start value for chart
+        type: integer
         required: false
       tags:
       - TestjObjectChild
@@ -3374,6 +3394,9 @@ definitions:
       testjObjDesc:
         description: Description
         type: string
+      testjObj1Max:
+        description: Max start value for chart
+        type: integer
       row_id:
         description: Unique technical row ID
         type: string
@@ -3399,6 +3422,12 @@ definitions:
       testjObjDesc:
         description: Description
         type: string
+      testjObj1Start:
+        description: Start value for chart
+        type: integer
+      testjObj1Inc:
+        description: Increment
+        type: integer
       row_id:
         description: Unique technical row ID
         type: string
@@ -3438,6 +3467,9 @@ definitions:
       testjObjDesc:
         description: Description
         type: string
+      testjObj1Max:
+        description: Max start value for chart
+        type: integer
       row_id:
         description: Unique technical row ID
         type: string

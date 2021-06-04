@@ -825,6 +825,9 @@ components:
         testjObjDesc:
           description: Description
           type: string
+        testjObj1Max:
+          description: Max start value for chart
+          type: integer
         row_id:
           description: Unique technical row ID
           type: string
@@ -850,6 +853,12 @@ components:
         testjObjDesc:
           description: Description
           type: string
+        testjObj1Start:
+          description: Start value for chart
+          type: integer
+        testjObj1Inc:
+          description: Increment
+          type: integer
         row_id:
           description: Unique technical row ID
           type: string
@@ -889,6 +898,9 @@ components:
         testjObjDesc:
           description: Description
           type: string
+        testjObj1Max:
+          description: Max start value for chart
+          type: integer
         row_id:
           description: Unique technical row ID
           type: string
@@ -2985,6 +2997,12 @@ paths:
         name: testjObjDocument
         description: Search filter for Document to upload to EDM
         required: false
+      - schema:
+          type: integer
+        in: query
+        name: testjObj1Max
+        description: Search filter for Max start value for chart
+        required: false
       tags:
       - TestjObjectGrandChild
   /rest/TestJavaUser/{row_id}:
@@ -3357,6 +3375,18 @@ paths:
         in: query
         name: testjObjDocument
         description: Search filter for Document to upload to EDM
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: testjObj1Start
+        description: Search filter for Start value for chart
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: testjObj1Inc
+        description: Search filter for Increment
         required: false
       tags:
       - TestjObject
@@ -3885,6 +3915,12 @@ paths:
         in: query
         name: testjObjDocument
         description: Search filter for Document to upload to EDM
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: testjObj1Max
+        description: Search filter for Max start value for chart
         required: false
       tags:
       - TestjObjectChild

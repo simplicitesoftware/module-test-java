@@ -51,6 +51,8 @@ Test Java object
 | `testjObjFlag`                                               | boolean                                  |          | yes       |          | -                                                                                |
 | `testjObjDocumentURL`                                        | url(255)                                 |          | yes       |          | -                                                                                |
 | `testjObjDocument`                                           | document                                 |          | yes       |          | -                                                                                |
+| `testjObj1Start`                                             | int(3)                                   | yes      | yes       |          | -                                                                                |
+| `testjObj1Inc`                                               | int(3)                                   | yes      | yes       |          | -                                                                                |
 
 `TestjObjectChild` business object definition
 ---------------------------------------------
