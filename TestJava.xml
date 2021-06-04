@@ -286,7 +286,7 @@ All items in this module are developped in Java.]]></mdl_comment>
 		<fld_copy>1</fld_copy>
 		<fld_size>4000</fld_size>
 		<fld_minsize/>
-		<fld_precision>h=15</fld_precision>
+		<fld_precision>h=12</fld_precision>
 		<fld_fromdate_id.fld_name/>
 		<fld_dfault/>
 		<fld_indexable>0</fld_indexable>
